@@ -1,0 +1,2267 @@
+---
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+bib-humanities: true
+documentclass: book
+bibliography: references.bib
+always_allow_html: true
+header-includes:
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+- \usepackage[default]{sourcesanspro}
+- \usepackage[T1]{fontenc}
+- \usepackage{amsmath}
+---
+
+
+```{block type='savequote', quote_author='(ref:edgar-quote)', include=knitr::is_latex_output()}
+“All is changed, save the river and the hill--
+Even they are changed.
+Only the burning sun and the quiet stars are the same.
+And we--we, the memories, stand here in awe,
+Our eyes closed with the weariness of tears--
+In immeasurable weariness"
+```
+(ref:edgar-quote) --- Edgar Lee Masters.
+
+# Transformation of Microfinance Institutions and its Effects on Financial Inclusion in Africa 
+\chaptermark{MFI Transformation and Financial Inclusion}
+\minitoc <!-- this will include a mini table of contents-->
+
+\newpage
+
+\begin{center}
+
+\textbf{Abstract}
+
+\end{center}
+
+> The shift away from the not-for-profit microfinance institutions (MFIs) model has seen the rise of commercial MFIs in forms like commercial banks, credit unions, and rural banks and the not-for-profit, non-governmental organisations (NGOs). The shift arose partly due to neo-liberalism and the need for MFIs to reach the financially excluded more sustainably than had been the case. Therefore, this article examines how the shift has affected financial inclusion in Africa, utilising data from the Microfinance Information Exchange (MIX). Our results show that the change from the NGO model to the commercial models could negatively affect the depth of financial outreach, especially given that NGOs characteristically have better outreach to women and advance smaller denomination loans on average. Also, NGOs have higher median gross loans than other legal forms of MFIs except for credit unions/ cooperatives, although commercial banks have the highest average gross loans. These results remain robust upon removing outliers and controlling for factors that affect the ability of MFIs to offer financial services to the poor.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
+library("pacman")
+library("bookdown") 
+library("broom") 
+library("car") 
+library("caret") 
+library("corrplot") 
+library("dtplyr")
+library("excelR") 
+library("GGally") 
+library("ggalt") 
+library("ggeasy") 
+library("gghalves") 
+library("ggrepel")  
+library("ggthemes") 
+library("gmnl") 
+library("gmodels") 
+library("gplots") 
+library("gridExtra") 
+library("gtable")
+library("here") 
+library("janitor") 
+library("kableExtra") 
+library("knitr") 
+library("lme4") 
+library("lmtest")
+library("magrittr") 
+library("margins") 
+library("mice") 
+library("nnet") 
+library("pacman") 
+library("patchwork") 
+library("pcse")
+library("pglm") 
+library("plm") 
+library("prettydoc") 
+library("pROC") 
+library("psych") 
+library("Rchoice") 
+library("rDEA")
+library("readxl")
+library("rmarkdown") 
+library("skimr") 
+library("stargazer") 
+library("tidymodels") 
+library("tidyverse")
+library("treemapify") 
+library("viridis") 
+library("wesanderson") 
+library("zoo")
+
+#########################################
+options(digits = 3)
+options(knitr.kable.NA = "-")
+theme_set(ggthemes::theme_clean())
+#########################################
+```
+
+
+\newpage
+
+## Background
+
+In 1992, PRODEM, a micro-finance institution (MFI) in Bolivia, converted from a non-governmental organisation (NGO) to a commercial bank, BANCOSOL. In fact, in the immediate past three decades, numerous NGO MFIs across the globe have adopted the commercial forms of microfinance (Table 1). In this article, we examine how the conversion of MFIs to the commercial model affects financial inclusion in terms of the depth and breadth of outreach to the financially excluded. Depth refers to the extent of the traditional financially excluded clients reached by MFIs. If an MFI serves more financially excluded people like women and the poor, it has deeper outreach.
+
+On the other hand, breadth refers to the sheer number of clients reached regardless of their level of financial exclusion. Thus, an MFI that offers more loans to many people has more breadth of outreach. In other words, we explore how the transformation of MFIs typically drives their average loan balance per borrower, the proportion of women borrowers and gross loans. The former two metrics capture depth while the latter proxies breadth ^[The quote at the beginning of the chapter is from the poem *Edith Conant* by Edgar Lee Masters in @masters2007spoon].
+
+The study focuses on Africa, a continent that is the epicentre of financial exclusion despite remarkable economic progress of the last three decades [@beck2014sme; @allen2011african]. Evaluating the effects of transformation by using global metrics is likely to mask regional heterogeneity, given that these effects could manifest differently in varying settings [@d2017ngos; @d2013unsubsidized] [^1].
+
+[^1]: We use the terms financial sustainability/ efficiency/ profitability on the one hand and social performance/ outreach on the other interchangeably. By Financial sustainability, we refer to the capability of a firm to turn a profit, which allows it to meet its obligations without relying on donations and subsidies. Social performance/ outreach is the firm's ability to reach out and avail financial services to the financially excluded members of society, including the poor, women, and rural dwellers- referring to both breadth and depth.
+
+Most pioneer microfinance institutions adopted a not-for-profit model [@dichter1996questioning], operating mainly as non-governmental organisations (NGOs). However, the dominance of neo-liberalism in organising production has seen many donors scale back and push MFIs to strive for financial sustainability [@bateman2010doesn]. The arguments for the commercial approach to running microfinance activities revolve around sustainability. The financial sustainability school posits that MFIs can best serve the financially excluded when they have a degree of financial self-sufficiency [@kodongo2013individual]. For instance, profit-oriented MFIs could offer financial services to the relatively well-off at market rates and use the proceeds (profits) to subsidise services to the poor more than relying on donations and subsidies alone. Hence, MFIs pursuing the for-profit model may experience mission expansion [@mersland2010microfinance; @louis2013financial]. Also, donor funds are volatile and subject to political and economic conditions [@garmaise2013cheap; @d2017aid]. In this respect, a substantial body of research finds that the transformation of microfinance institutions enhances outreach to the financially excluded [@frank2008stemming; @gutierrez2009social; @mersland2010microfinance; @quayes2012depth; @mia2017mission; @d2013unsubsidized].
+
+The proponents of MFI transformation point to the concerning possibility of mission drift. Mission drift happens when MFIs focus less on providing financial services to the financially excluded in favour of making profits. Some researchers have found this to be the case [@louis2013financial; @bos2015practice; @d2013unsubsidized; @hartarska2012governance]. Two theories can be said to underpin the MFI transformation phenomenon. The first is the agency theory on the conflicts between providers of capital and managers. In a quest to minimise agency conflicts, managers may consciously or sub-consciously place less emphasis on the social mission of MFIs, reaching out to the financially excluded. Instead, managers may more overtly focus on pursuing financial returns for shareholders and debt-holders, thus causing mission drift. The theory presumes that the motivation for all fund providers is financial returns, which is not always the case.
+
+The second one, the institutional theory, examines the rise, persistence and decline of institutional structures over time. The central question here is; What drives the adoption and fall of certain institutional norms [@powell2012new]? In this respect, some institutionalists claim that prevailing institutional culture is more potent than market forces in driving the adoption or rejection of emergent institutional structures. Institutionalists posit that one of the drivers is coercion. In the case of MFIs, some donors have put implicit or explicit pressure on financial sustainability.
+
+Additionally, the adoption of institutional norms in most cases arises out of the need to fit into the institutional environment. The desire to be compliant may explain the prevalence of NGOs not-for-profit type MFIs in the early years of the microfinance paradigm and the trend towards the transformation of MFIs to commercial entities that is now ongoing. Notably, institutional theory sheds light on the dilemmas managers face when institutional norms change [@thornton2015institutional]. For instance, how can managers of MFIs reconcile financial sustainability with the original priority of outreach to the financially excluded?
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tibble)
+
+tribble(~ Institution, ~ Country, ~ Year, ~ Converted_to,
+        "Finansol", "Colombia", "1993", "Commercial Finance Company",
+        "OIBM", "Malawi", "2002", "NBFI",
+        "PRIDE", "Tanzania", "2009", "NBFI",
+        "Kenya Women Finance Trust", "Kenya", "2010", "NBFI",
+        "Faulu", "Kenya", "2010", "NBFI",
+        "OI-SASL", "Ghana", "2013", "NBFI") %>%
+  
+  kbl(., caption = "Sample of Transformed MFIs", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = FALSE, font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction from the literature",
+           
+           general_title = "",
+           
+           number = c("This is a snapshot of the many MFIs that have converted over the years accross the globe"),
+           number_title = "Note: ")
+```
+
+
+As noted earlier, research outcomes on the effects of the transformation of microfinance institutions are mixed. @morduch2019challenges argue that if commercial MFIs could sustainably achieve financial sustainability while also reaching the poor, NGOs would not exist. In that context, therefore, the most critical question relates to how the transformation of MFIs would affect their core mission of providing financial services to the financially excluded. The issue is vital due to the legitimacy that MFIs derive from serving the financially excluded. Besides, financial inclusion is central to alleviating poverty and achieving inclusive growth, an essential dimension of financial development. In this article, we use data from the Microfinance Information Exchange (MIX) to evaluate the ways that the transformation of MFIs affects financial inclusion in Africa.
+
+We capture the extent of financial inclusion in Africa by using three metrics:
+
+- The percentage of female borrowers.
+- Average loan balance per borrower.
+- The ratio of the gross loan portfolio to total assets of each MFI [@d2017ngos].
+
+The first two metrics proxy the depth of outreach, with more significant outreach to women indicating deeper outreach, given that women form a substantial proportion of the financially excluded population in Africa [@ayyagari2013financing]. A higher average loan balance per borrower, on the other hand, corresponds to a lower depth of outreach to any group of the financially excluded. The presumption is that financially excluded people usually borrow in smaller denominations that have drawn reservations from some researchers who argue poor people could progressively demand bigger loans as they get better off. Also, MFIs regularly use progressive lending where people who successfully pay off loans qualify for larger loan amounts. Finally, gross loans to assets capture the breadth of outreach, with higher ratios indicating more breadth.
+
+We have organised the rest of the article as follows. Section 1.1 highlights the results of the study. In section 2, we review the background literature on MFI transformation. In section 3, we describe the methodology and, in section 4, we present and discuss the results and close with concluding remarks in section 5. 
+
+### Summary of Results
+
+Overall, we find that the conversion away from the NGO, not-for-profit model in Africa is harmful to financial inclusion's depth and breadth. NGO-type MFIs consistently outperform the commercial-oriented MFIs regarding the outreach to women borrowers. Additionally, NGO-type MFIs have the lowest average loan balance per borrower, indicating that they reach out to the poorest and, presumably, more financially excluded people. Turning to the ratio of gross loans to assets, NGO-type MFIs come second to credit unions/ cooperatives, thus indicating that breadth and depth of outreach are not necessarily mutually exclusive. Further examination of the trend suggests that profit-oriented MFIs reflect a measure of mission drift.
+
+On the one hand, serving poor, financially excluded people is costly, which hurts the profitability of MFIs. On the other hand, profit orientation implies commercial capital, interest expense on debt capital and dividends on equity capital. If it is hard to reconcile these two objectives, we are inclined to back the literature that opposes the commercialisation of MFIs. As we shall see later, it seems odd that NGO-type MFIs lend more gross loans (breadth) than most commercial-oriented MFIs, though it turns out that both cooperatives and NGO-type MFIs hold the lowest volume of assets relative to other legal types. Furthermore, the other important drivers of financial inclusion are the age of MFI, operating expense to assets ratio, donations to assets ratio, capital to assets ratio, asset structure, size, education and profit margin. In the next section, we highlight the methodology and then go to the details of the results.
+
+## Theory and Empirical Literature
+
+The extent to which the transformation of MFIs affects financial inclusion has been the subject of substantial research. However, there is a lack of consensus on the outcomes about its effects. Theories underlying aspects of the transformation of MFIs are the agency theory [@jensen1976theory] and institutional theory [@powell2012new]. Agency theory, in this case, implies that injection of commercial capital, a consequence of transformation, is likely to motivate managers to target financial return at the expense of social return to satisfy shareholders and debt-holders, the conventional providers of commercial capital. From this perspective, transformation implies that mission drift is inevitable. Indeed, @morduch2019challenges argue that if mission drift is not an issue in microfinance, then the NGOs MFI model would not exist, meaning that NGOs (not-for-profit) MFIs exist to fill a gap left by commercial MFIs.
+
+The institutionalists weigh how specific organisational structures dominate and ultimately decline and get discarded [@powell2012new]. Institutionalists note that in certain situations, people adopt given structures without critical scrutiny to fit into the prevailing institutional environment merely. This argument could partly explain the prevalence of NGO MFI models at the early stages of microfinance evolution and the current rise of MFI commercialisation. However, the pressure to change takes several forms, with the most notable one being coercive pressure, where stakeholders put forth overt or covert pressure for MFIs to convert. In the case of MFIs, the pressure to adopt a commercial model came with the rise of neo-liberal thought around production and its funding [@bateman2010doesn], with major donors like USAID signalling their expectation that MFIs should become more financially sustainable going forward [@d2013unsubsidized]. The problem for MFIs that transform is how best to balance between social goals of reaching the poor and the commercial goals that come with commercial capital and the attendant decline of donor funding.
+
+@thornton2002rise and @thornton2015institutional note that "the meaning and legitimacy of various sources of organisational identity, strategy and structure are shaped by a prevailing institutional logic". The management of transformed MFIs can identify with microfinance as a social pursuit by emphasising social goals over profits. Alternatively, they may view microfinance as a financial venture by placing profits over social outreach. The former corresponds to the welfare model of microfinance, which posits that the social mission of microfinance is incompatible with the profit motive. The latter is the financial sustainability model, which views financial returns as a precondition for the sustainable pursuit of financial services goals of reaching the financially excluded. A third model, the win-win approach, attempts to reconcile the welfare and sustainability approach by proposing that financial and social performance are not always substituting but complementary. Different researchers have availed evidence in support of either school, as described next.
+
+As noted, support for MFI transformation rests on two primary grounds. First, donations are subject to social, economic, and political conditions [@garmaise2013cheap; @armendariz2013subsidy; @d2017aid]. Consequently, some researchers argue that microfinance can only be sustainable if MFIs have a level of financial self-sufficiency. In this regard, these scholars note that MFIs could advance financial services to the financially well-off and use the proceeds (profits) to reach more financially excluded people at subsidised rates, which would then lead to "mission expansion" as opposed to "mission drift". @frank2008stemming provides empirical support for these arguments noting that transformed MFIs score higher in terms of client outreach and the number of female clients reached, although the proportion of female clients reached declines. They also find that transformed MFIs record higher growth in gross loan portfolio with better product diversification.
+
+Similarly, @d2017ngos finds that transformed MFIs charge a lower interest rate to micro-borrowers. @louis2013financial, using self-organising maps and k-means clustering, find a positive relationship between financial sustainability and social performance to imply that steps to enhance financial sustainability are good. Other researchers that have found a positive link between financial and social efficiency include @gutierrez2009social, @mersland2010microfinance, and @quayes2012depth.
+
+In contrast to the above findings, several researchers have found transformation to be harmful in terms of outreach to the financially excluded. For instance, @d2017ngos find that although transformed MFIs charge lower interest and experience a drop in operating expenses, their average loan sizes increase, indicative of mission drift. @mia2017mission also find a trade-off between depth of outreach and the profit motive of MFIs in Bangladesh using both static and dynamic panel data methods. @d2013unsubsidized notes that MFIs with little or no subsidies exhibit more significant mission drift. In our case, NGOs have the highest donations, implying that they may show greater social inclination. For instance, firms in Africa and Asia compensate for low subsidies by charging higher interest rates, while Latin America serves fewer women. In Europe and Central Asia, the tendency is to serve fewer indigent clients. @bos2015practice also notes that MFIs that stay close to their original mission are the most socially efficient, while those that attempt to pursue a double bottom line are relatively inefficient. Further, they note that not all MFIs suffer mission drift the same way, arguing that MFIs with high input-output efficiency may not experience mission drift at all.
+
+Besides, @campion1999institutional argue that the presence or absence of mission drift in a transformed MFI is a corporate governance issue and an outcome of the challenges of the scaling up of MF services. They argue that good corporate governance allows the management to balance between financial performance and outreach. It means that MFIs could address mission drift problems through proper corporate governance regardless of whether an MFI is an NGO or commercial-type entity. Moreover, @marti2016financial argue that different social groups such as employees, management, and MFI clients are likely to have different views, including varying definitions of social welfare. Thus, the presence or absence of mission drift may not arise from deliberate management decisions but instead from conflicting viewpoints on the meaning of social welfare between stakeholders. Given the conflicting evidence and varying views regarding mission drift in MFIs, the arguments by @morduch1999microfinance and @morduch2000microfinance that the microfinance industry should accommodate different legal forms of MFIs to serve different clients' needs appear to be valid.
+
+## Method
+
+We run fixed and random effects models based on the results of the Hausmann Tests (see Appendix 1). The design of fixed effects models allows for the study of the causes of changes within an entity. It accomplishes this by controlling for all time-invariant differences between the individuals, so the estimated coefficients of the fixed-effects models cannot be biased because of omitted time-invariant characteristics, such as culture [@torres2007panel]. On the other hand, Random effect models assist in controlling for unobserved heterogeneity when the heterogeneity is constant over time and uncorrelated with the explanatory variables. Following @roberts2013endogeneity, we fit the following model.
+
+\begin{equation}
+y_{it} = \hat{a} + \hat{b}x_{it} + \mu_{it}
+\end{equation}
+
+In this case, $y_{it}$ is the independent variable; interchangeably represented by per cent of female borrowers, average loan balance per borrower, and gross loan portfolio to total assets. The first two metrics capture financial depth, while gross loans capture the breadth of outreach.
+
+Also, $x_{it}$ is a matrix of independent variables. The variable of interest in our case is the current legal form of the MFI, which enters the model as a dummy representing NGOs, NBFIs, commercial banks, rural banks and credit unions/ cooperatives [@ayyagari2013financing]. The other control variables include age dummy, a dummy for region, operating expenses to assets ratio, donations to assets ratio, equity capital to assets ratio, asset structure, size (logarithm of total assets), education, and profit margin all of which are derived from the literature [@ayyagari2013financing; @d2017ngos; @d2013unsubsidized]. 
+
+Finally, $\mu_{it}$ is the error term that we assume has zero mean conditional on $x_{it}$.
+
+Further,
+
+
+\begin{equation}
+\mu_{it} = c_{i} + \varepsilon_{it}
+\end{equation}
+
+
+In the equation, $c_{i}$ captures the aggregate effects of the unobserved, time-invariant explanatory variables for $y_{it}$. 
+
+In the case where $c_{i}$ and $x_{it}$ are correlated, then $c_{i}$ is a fixed effect, otherwise, it is a random effect. Note that the existence of fixed effects implies the presence of endogeneity. For random effects, on the other hand, endogeneity is not a concern. However, the random-effects model affects the computation of standard errors [@roberts2013endogeneity]. To eliminate the fixed effect prone to endogeneity, we run the within estimator model [@clark2015should]. We present the results from the estimation of the empirical model in the next section.
+
+## Results
+
+In this section, we begin by visualizing the study variables followed by summary statistics of the variables. We then run and discuss the results of the regression model.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+## legal traditions 
+### Common law countries in Africa
+common <- tibble(country = c("Botswana", "Gambia, The", "Ghana", "Kenya", "Lesotho", "Liberia", "Malawi", "Namibia", "Nigeria", "Sierra Leone", "South Africa", "South Sudan", "Sudan", "Eswatini", "Tanzania", "Uganda", "Zambia", "Zimbabwe"), trad = c(rep("common", 18)))
+
+### Civil law countries in Africa
+civil <- tibble(country = c("Algeria", "Benin", "Burkina Faso", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo, Rep.", "Cote d'Ivoire", "Gabon", "Guinea", "Madagascar", "Mali", "Mauritania", "Morocco", "Niger", "Senegal", "Togo", "Tunisia"), trad = c(rep("civil", 19)))
+
+### Other legal traditions in Africa
+others <- tibble(country = c("Equatorial Guinea", "Angola", "Burundi", "Cape Verde", "Congo, Dem. Rep.", "Egypt, Arab Republic of", "Ethiopia", "Eritrea", "Guinea-Bissau", "Mozambique", "Rwanda"), trad = c(rep("others", 11)))
+
+###Putting them all together
+legal <- rbind(common, civil, others)
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Bond market data - private and public bond market capitalization to GDP
+bonds <- read_excel("bonds_oluoch.xlsx") %>% 
+  
+  janitor::clean_names()
+
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Add the financial development index to the dataset
+## Countries not part of Africa
+mideast <- c("Bahrain", "Iran, Islamic Rep.", "Iraq", "Israel", "Jordan", "Kuwait", "Lebanon", "Malta", "Oman", "Qatar", "Saudi Arabia", "Syrian Arab Republic", "United Arab Emirates", "West Bank and Gaza", "Yemen, Rep.")
+
+## Load the financial structure data
+finstr <- read_excel("FinancialStructureDatabase20191018.xlsx", sheet = 4) %>% 
+  
+  ## Select desired variables
+  select(country, region, year, pcrdbgdp, stmktcap, stvaltraded, stturnover, listco_pc) %>% 
+  
+  ### Filter out regions not in Africa or middle east
+  filter(region == "Sub-Saharan Africa" | region == "Middle East & North Africa") %>% 
+  ### Filter out countries in middle east and select year 1999 onwards
+  filter(!country %in% mideast, year >= 1999) %>% 
+  
+## Replace NAs
+          group_by(country) %>% 
+  
+          mutate(pcrdbgdp = replace_na(pcrdbgdp, median(pcrdbgdp, na.rm = TRUE)),
+                 
+                 pcrdbgdp = replace_na(pcrdbgdp, 0),
+                 
+                 stmktcap = replace_na(stmktcap, median(stmktcap, na.rm = TRUE)),
+                 
+                 stmktcap = replace_na(stmktcap, 0)) %>% ungroup() %>% 
+  
+## Join with the bonds data
+  left_join(bonds, by = c("country", "year")) %>% 
+  
+## rename bonds columns 
+  rename(prbonds = outstanding_t_bonds_percent_gdp, 
+         
+         pubonds = outstanding_c_bonds_percent_gdp) %>% 
+  
+  ## Replace NAs in public bond and private bond markets 
+  mutate(pubonds = replace_na(pubonds, 0), 
+         
+         prbonds = replace_na(prbonds, 0)) %>% 
+  
+         ## Rename Ivory Coast
+         mutate(country = if_else(country == "Côte d'Ivoire", "Cote d'Ivoire", 
+                                  
+                                  country))
+
+## View missing data points
+#mice::md.pattern(finstr)
+
+#finstr %>% select(pcrdbgdp, stmktcap) %>% cor(.) %>% 
+  
+  #corrplot(method = "number", type = "lower")
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+## Read in the dataset 
+my_data <- read_csv("amelia.csv") %>% 
+
+## Region
+mutate(region = if_else(region == "Middle East and North Africa", 
+                        
+                        "North_Africa", region)) %>% 
+
+# Clean the names 
+janitor::clean_names() %>% 
+  
+# Set up factor variables 
+## legal status 
+mutate(currentlegalstatus = factor(currentlegalstatus, 
+                           levels = c("NGO", "Bank", "NBFI", 
+                            "Credit Union/ Cooperative", 
+                            "Rural Bank")), 
+      ## Age
+      age = factor(age, levels = c("New", "Young", "Mature")),
+       
+      ## Region 
+      region = factor(region, levels = c("North_Africa", "Africa"))) %>% 
+  
+      ## Add the financial structure data     
+      left_join(finstr, by = c("country", "year")) %>% 
+  
+      ## Add a binary variable for the legal dummy- NGO vs Others
+      mutate(currentlegaldummy = case_when(currentlegalstatus == "NGO" ~ "NGO",
+                                           
+                                           TRUE ~ "others"),
+      
+        currentlegaldummy = factor(currentlegaldummy, levels = c("NGO", "others")),
+        
+        legal_tradition = factor(legal_tradition, 
+                                 
+                                 levels = c("Common", "Civil", "Other"))
+        
+        ) %>% 
+  ## Select required variables 
+  select(mfiid, mfiname, year, country, currentlegaldummy, currentlegalstatus, 
+         
+         percent_of_female_borrowers, operational_self_sufficiency,
+         
+         age, legal_tradition, region.x, asset_structure, 
+         
+         assets, kkm, education, pcrdbgdp, stmktcap, prbonds, 
+         
+         gdp_growth_annual, donations, donations_assets_ratio, 
+         
+         profit_margin, capital_asset_ratio,
+         
+         debt_to_equity_ratio, operating_expense_assets, 
+         
+         average_loan_balance_per_borrower, gross_loan_portfolio_to_total_assets, 
+         
+         deposits_to_total_assets) %>% 
+  
+          ## Rename region
+         rename(region = region.x) %>% 
+  
+  group_by(country) %>% 
+  
+  mutate(kkm = replace_na(kkm, median(kkm, na.rm = TRUE)),
+         education = replace_na(education, median(education, na.rm = TRUE)),
+         prbonds = replace_na(prbonds, median(prbonds, na.rm = TRUE)),
+         pcrdbgdp = replace_na(pcrdbgdp, median(pcrdbgdp, na.rm = TRUE)),
+         stmktcap = replace_na(stmktcap, median(stmktcap, na.rm = TRUE))) %>% 
+  
+  ungroup() %>% 
+  
+  group_by(mfiid) %>% 
+  
+  mutate(asset_structure = replace_na(asset_structure, median(asset_structure, na.rm = TRUE)), 
+         
+         percent_of_female_borrowers = replace_na(percent_of_female_borrowers, 
+                                                  
+                                                  median(percent_of_female_borrowers, na.rm = TRUE)),
+         
+         operational_self_sufficiency = replace_na(operational_self_sufficiency, 
+                                                   
+                                                   median(operational_self_sufficiency, na.rm = TRUE)),
+         
+         assets = replace_na(assets, median(assets, na.rm = TRUE)),
+         
+         donations = replace_na(donations, median(donations, na.rm = TRUE)),
+         
+         donations_assets_ratio = replace_na(donations_assets_ratio, 
+                                             
+                                  median(donations_assets_ratio, na.rm = TRUE)), 
+         
+         profit_margin = replace_na(profit_margin, median(profit_margin, na.rm = TRUE)),
+         
+         capital_asset_ratio = replace_na(capital_asset_ratio, median(capital_asset_ratio, na.rm = TRUE)),
+         
+         debt_to_equity_ratio = replace_na(debt_to_equity_ratio, median(debt_to_equity_ratio, na.rm = TRUE)),
+         
+         operating_expense_assets = replace_na(operating_expense_assets, median(operating_expense_assets, na.rm = TRUE)),
+         
+         deposits_to_total_assets = replace_na(deposits_to_total_assets, median(deposits_to_total_assets, na.rm = TRUE))
+         
+         
+         ) %>% 
+  
+  ungroup() %>% 
+  
+  group_by(region) %>% 
+  
+  mutate(education = replace_na(education, median(education, na.rm = TRUE)),
+         
+         kkm = replace_na(kkm, median(kkm, na.rm = TRUE)),
+         
+         gdp_growth_annual = replace_na(gdp_growth_annual, 
+                                        
+         median(gdp_growth_annual, na.rm = TRUE))) %>% 
+  
+  ungroup() %>% 
+  
+  group_by(currentlegalstatus) %>% 
+  
+  mutate(assets = replace_na(assets, median(assets, na.rm = TRUE)), 
+         
+         percent_of_female_borrowers = replace_na(percent_of_female_borrowers, 
+                                                  
+                        median(percent_of_female_borrowers, na.rm = TRUE)),
+         
+         operational_self_sufficiency = replace_na(operational_self_sufficiency, 
+                                                   
+                        median(operational_self_sufficiency, na.rm = TRUE)),
+         
+         donations = replace_na(donations, median(donations, na.rm = TRUE)),
+         
+         donations_assets_ratio = replace_na(donations_assets_ratio, 
+                                             
+                                  median(donations_assets_ratio, na.rm = TRUE)),
+         
+         profit_margin = replace_na(profit_margin, median(profit_margin, na.rm = TRUE)),
+         
+         capital_asset_ratio = replace_na(capital_asset_ratio, median(capital_asset_ratio, na.rm = TRUE)),
+         
+         asset_structure = replace_na(asset_structure, median(asset_structure, na.rm = TRUE)),
+         
+         debt_to_equity_ratio = replace_na(debt_to_equity_ratio, median(debt_to_equity_ratio, na.rm = TRUE)),
+         
+         operating_expense_assets = replace_na(operating_expense_assets, median(operating_expense_assets, na.rm = TRUE)),
+         
+         deposits_to_total_assets = replace_na(deposits_to_total_assets, median(deposits_to_total_assets, na.rm = TRUE))
+         
+         ) %>% 
+  
+  ungroup() %>% 
+  
+  mutate(dummy = if_else(currentlegaldummy == "NGO", 0, 1)) %>% 
+  
+  mutate(assets = log(assets + 1),
+         
+         pcrdbgdp = log(pcrdbgdp + 1),
+         
+         stmktcap = log(stmktcap + 1),
+         
+         prbonds = log(prbonds + 1)) %>% 
+  
+  add_count(mfiid, name = "count") %>% 
+  
+  mutate(currentlegalstatus = fct_recode(currentlegalstatus, Coop = "Credit Union/ Cooperative")) %>% 
+  
+  mutate(finsoc = case_when(operational_self_sufficiency >= 1 & percent_of_female_borrowers > 0.5 ~ "SS",
+                            
+                            operational_self_sufficiency > 1 & percent_of_female_borrowers < 0.5 ~ "SF", 
+                            
+                            operational_self_sufficiency < 1 & percent_of_female_borrowers >= 0.5 ~ "FS",
+                            
+                            TRUE ~ "FF")) %>% 
+  
+mutate(finsoc = factor(finsoc, levels = c("FF", "SF", "FS", "SS"))) %>% 
+  
+## replace negative donations with zero
+mutate(donations = case_when(donations <= 0 ~ 1,
+                             TRUE ~ donations))
+## Write a csv for the data
+my_data %>% write.csv(., "data.csv")
+
+## Visualize missing data
+#md.pattern(data)
+## Amelia::missmap(data)
+
+## MFIs with three (3) or more years of data
+data3 <- my_data %>% 
+  
+  group_by(mfiid) %>% 
+  
+  filter(n() > 3)
+  
+data3 %>% write.csv(., "data3.csv")
+
+## MFIs with three (3) or more years of data
+data5 <- my_data %>% 
+  
+  group_by(mfiid) %>% 
+  
+  filter(n() > 5)  
+  
+data5 %>% write.csv(., "data5.csv")
+```
+
+
+######################################################################### 
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+### Important functions ----
+## Regression function - fixed, random and pooling
+modelling <- function(data, depvar,
+                      effect = c("individual", "twoways", "time", "nested"),
+                      model = c("within", "random", "ht", "between", "pooling", "fd"),
+                      inst.method = c("bvk", "baltagi", "am", "bms"),
+                      random.method = c("swar", "amemiya", "walhus", "nerlove"),
+                      digits = 4, index = c("mfiid", "year")){
+  
+## Load libraries
+  library(plm)
+  library(broom)
+  library(pcse)
+  library(car)
+  library(zoo)
+  library(lmtest)
+  library(broom)
+  library(stargazer)
+  
+  ## match arguments
+  effect <- match.arg(effect)
+  model <- match.arg(model)
+  inst.method <- match.arg(inst.method)
+  random.method <- match.arg(random.method)
+  
+  ## Run the Model
+  unadjusted <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+          data = data, effect = effect,
+          model = model, 
+          inst.method = inst.method, index = index, 
+          digits = digits)
+
+unadjusted
+}
+```
+
+########################################################################## 
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+## Hausmann Test function
+hausmann_test <- function(data, depvar){
+  
+  library(plm)
+  library(broom)
+  library(pcse)
+  library(car)
+  library(zoo)
+  library(lmtest)
+  library(broom)
+  
+  fixed <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin, 
+               data = data, effect = "individual", model = "within", 
+      index = c("mfiid", "year")) 
+  
+  random <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin, 
+          data = data, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+ 
+  broom::tidy(phtest(fixed, random))
+}
+
+```
+
+############################################ 
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Median function
+median_n <- function(x){median(x, na.rm = TRUE)}
+```
+
+############################################ 
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+theme_niwot <- function(){
+  theme_bw() +
+    theme(axis.text = element_text(size = 7), 
+          axis.title.x = element_blank(),
+          axis.title.y = element_text(size = 8),
+          axis.line.x = element_line(color="black"), 
+          axis.line.y = element_line(color="black"),
+          panel.border = element_blank(),
+          panel.grid.major.x = element_blank(),                                          
+          panel.grid.minor.x = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.grid.major.y = element_blank(),  
+          plot.margin = unit(c(1, 1, 1, 1), units = , "cm"),
+          plot.title = element_text(size = 10, vjust = 1, hjust = 0),
+          legend.text = element_text(size = 8),          
+          legend.title = element_blank(),                              
+          legend.position = c(0.95, 0.15), 
+          legend.key = element_blank(),
+          legend.background = element_rect(color = "black", 
+                                           fill = "transparent", 
+                                           size = 2, linetype = "blank"))
+}
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+###########################################
+#' ggplot Flat Violin
+#' @export
+#' @details Copy-pasted from https://gist.githubusercontent.com/benmarwick/2a1bb0133ff568cbe28d/raw/fb53bd97121f7f9ce947837ef1a4c65a73bffb3f/geom_flat_violin.R
+#' somewhat hackish solution to:
+#' https://twitter.com/EamonCaddigan/status/646759751242620928
+#' based mostly on copy/pasting from ggplot2 geom_violin source:
+#' https://github.com/hadley/ggplot2/blob/master/R/geom-violin.r
+#' @examples:
+#' ggplot(diamonds, aes(cut, carat)) +
+#'   geom_flat_violin() +
+#'   coord_flip()
+#' @import ggplot2
+geom_flat_violin <- function(mapping = NULL, data = NULL, stat = "ydensity",
+                             position = "dodge", trim = TRUE, scale = "area",
+                             show.legend = NA, inherit.aes = TRUE, ...) {
+  layer(
+    data = data,
+    mapping = mapping,
+    stat = stat,
+    geom = GeomFlatViolin,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(
+      trim = trim,
+      scale = scale,
+      ...
+    )
+  )
+}
+
+#' @rdname ggplot2-ggproto
+#' @format NULL
+#' @usage NULL
+#' @export
+GeomFlatViolin <-
+  ggproto("GeomFlatViolin", Geom,
+          setup_data = function(data, params) {
+            data$width <- data$width %||%
+              params$width %||% (resolution(data$x, FALSE) * 0.9)
+
+            # ymin, ymax, xmin, and xmax define the bounding rectangle for each group
+            data %>%
+              group_by(group) %>%
+              mutate(ymin = min(y),
+                     ymax = max(y),
+                     xmin = x,
+                     xmax = x + width / 2)
+
+          },
+
+          draw_group = function(data, panel_scales, coord) {
+            # Find the points for the line to go all the way around
+            data <- transform(data, xminv = x,
+                              xmaxv = x + violinwidth * (xmax - x))
+
+            # Make sure it's sorted properly to draw the outline
+            newdata <- rbind(plyr::arrange(transform(data, x = xminv), y),
+                             plyr::arrange(transform(data, x = xmaxv), -y))
+
+            # Close the polygon: set first and last point the same
+            # Needed for coord_polar and such
+            newdata <- rbind(newdata, newdata[1,])
+
+            ggplot2:::ggname("geom_flat_violin", GeomPolygon$draw_panel(newdata, panel_scales, coord))
+          },
+
+          draw_key = draw_key_polygon,
+
+          default_aes = aes(weight = 1, colour = "grey20", fill = "white", size = 0.5,
+                            alpha = NA, linetype = "solid"),
+
+          required_aes = c("x", "y")
+  )
+
+
+"%||%" <- function(a, b) {
+  if (!is.null(a)) a else b
+}
+###########################################################
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# plotting function
+plotter <- function(data, x , y, z, xlabel, ylabel, title){
+  
+  library(tidyverse)
+  library(ggthemes)
+  library(gghalves)
+  library(ggalt)  
+  library(ggrepel)  # for annotations
+  library(viridis)  # for nice colors
+  library(broom)  # for cleaning up models
+  library(treemapify)  # for making area graphs
+  library(wesanderson)  # for nice colors
+  
+  ggplot(data = data, mapping = aes(x = reorder({{x}}, {{y}}, median_n), 
+  y = {{y}}, fill = {{z}})) + 
+  geom_boxplot(width = 0.2, outlier.shape = NA, alpha = 0.8, aes(fill = {{z}})) +
+  geom_half_violin(position = position_nudge(x = 0.2, y = 0), alpha = 0.8) + 
+    geom_point(position = position_jitter(width = 0.15), size = 1, alpha = 0.1) + 
+    scale_y_log10() + labs(y = ylabel, x = xlabel, 
+  title = title) + 
+  theme_niwot() + 
+  theme(legend.position = "none") + 
+  stat_summary(fun = mean, geom = "point", 
+                size = 1, color = "red")}
+
+##################################################
+second_plotter <- function(data, x , y, z, xlabel, ylabel, title){
+
+library(ggalt)  
+library(ggrepel)  # for annotations
+library(viridis)  # for nice colours
+library(broom)  # for cleaning up models
+# devtools::install_github("wilkox/treemapify")
+library(treemapify)  # for making area graphs
+library(wesanderson)  # for nice colours
+
+  ggplot(data = data, 
+           mapping = aes(x = reorder({{x}}, {{y}}, median_n), y = {{y}}, fill = {{z}})) +
+    
+    # The half violins
+    geom_flat_violin(position = position_nudge(x = 0.2, y = 0), alpha = 0.8) +
+    
+    # The points
+    geom_point(aes(y = {{y}}, color = {{x}}), 
+    
+    position = position_jitter(width = 0.15), size = 1, alpha = 0.1) +
+    
+    # The boxplots
+    geom_boxplot(width = 0.2, outlier.shape = NA, alpha = 0.8) +
+    
+    # \n adds a new line which creates some space between the axis and axis title
+    labs(x = xlabel, y = ylabel, title = title) +
+    
+    # Removing legends
+    guides(fill = FALSE, color = FALSE) +
+    
+    # Setting the limits of the y axis
+    #scale_y_continuous(limits = c(0, 1.2)) +
+    
+    # Picking nicer colours
+    scale_fill_manual(values = c("#5A4A6F", "#E47250",  "#EBB261", "#9D5A6C", "#FFFF80FF")) +
+    
+    scale_colour_manual(values = c("#5A4A6F", "#E47250",  "#EBB261", "#9D5A6C", "#FFFF80FF")) +
+    
+    theme_niwot() + scale_y_log10()
+}
+
+##################################################
+# plotting scatter diagrams 
+plotter_scatter <- function(data, x, y, z, 
+                            xlab, ylab, title) {
+  
+  # Load libraries
+  library(tidyverse)
+  library(gghalves)
+  library(ggeasy)
+  library(ggthemes)
+  
+  # write the function
+  data %>% ggplot(aes(x = {{x}}, y = {{y}}, col = {{z}})) + 
+    
+    geom_point(shape = 1, size = 2) + 
+    
+    labs(x = xlab, y = ylab, title = title)
+}
+```
+
+### Exploratory Data Analysis
+
+In this section, we explore the data by visualizing the pertinent variables and computing their summary statistics. 
+
+#### Data Visualization
+
+Figure 1 shows the correlation matrix and a graphical view of the relationships between the numeric variables. The highest level of correlation is between operating expense to assets ratio and donations to assets ratio, meaning that MFIs that receive more donations spend relatively more, which is suitable for financial inclusion. On the other hand, the relatively low correlations between the variables suggest that multicollinearity is not likely to be a significant concern for the regression analysis that we embark on later in the article. The main diagonal shows the distribution of the individual variables. In this case, there is high skewness exhibited by the donations to assets ratio, average loan balance per borrower and gross loans to assets ratio. It means that relatively few firms account for a considerable chunk of the donations received, in this case among NGOs, cooperatives and NBFIs. The highest correlation exists between the operating expenses to assets ratio and donations to assets ratio, meaning that donor-funded MFIs have more operating costs probably because they are less constrained by profit/ interest seeking shareholders and debt holders. This observation may imply that if it is expensive to administer and monitor small loans, then the profit-oriented model is not suitable for financial inclusion as it constrains spending. The summary statistics in Table 2, Table 3, and Table 4 that follow highlight the discussed issues but offer a more comprehensive array of statistical measures, including the mean, standard deviation and quantiles.
+
+
+\newpage
+\blandscape
+
+```{r plots2, fig.cap = "Correlation Matrix for Independent Variables", echo = FALSE, message = FALSE, warning = FALSE, fig.width=9, fig.height=6}
+my_data %>% select(operating_expense_assets, 
+          donations_assets_ratio, 
+          capital_asset_ratio,
+          asset_structure, assets, 
+          education, profit_margin) %>% 
+  
+  ggpairs(columnLabels = c("OperatingExpense/Assets",
+                          "Donations/Assets", "Capital/Assets", 
+                          "Asset Structure", "Size- Lassets", "Education", 
+                          "Profit Margin")) + 
+  
+  theme_bw() + labs(title = "Correlation Matrix: Dependent Variables")
+```
+
+\elandscape
+
+
+Next, we visualise each of the numeric variables against the current legal forms (status) of MFIs. We use the median of the variables to stand for the variables. Figure 2 (Panel A) shows that mature MFIs form the bulk of MFIs in the sample. Among mature MFIs, NGOs and cooperatives are the majority, indicating their relatively longer operational cycle than NBFIs, banks, and rural banks. As expected, NGOs receive the highest share of donations, followed by credit unions and NBFIs, while commercial banks receive the least donations (Figure 2- Panel B). The result relating to NGOs is not surprising given they are rooted in the welfare model of microfinance. Most donors are likely to channel their funds to MFIs that place social performance over profits. When commercial capital almost entirely replaces donations, outreach to the poor may likely be affected [@roberts2013profit], given that managers may emphasise impressing shareholders and debt-holders in line with the agency theory. As noted by @d2013unsubsidized, MFIs with little or no subsidies exhibit more significant mission drift. Hence, outreach to the poor would suffer even more where the capital providers do not have a sense of the hybrid nature of microfinance. Therefore, the rise of blended finance where commercial capital funds social causes may partly mitigate this scenario [@attridge2019blended].
+
+Donations do not prevent NGOs and NBFIs from raising capital as they have the highest capital to assets ratio- which primarily reflects equity injections (Figure 2: Panel C). Commercial banks, credit unions and rural banks follow in that order. The observation is surprising given that NGOs and NBFIs still exhibit a high level of social performance even with a relatively high capital to assets feature. Therefore, it could imply that the profit vs social orientation of an MFI could be driven not just by the needs of the providers of funds but also by the internal governance, mission, and strategic direction of an MFI [@campion1999institutional]. In this respect, an MFI's social mission could outweigh the needs of capital providers. Also, the equity capital NGOs may attract may be preferential in terms of expected returns, as with blended finance [@rode2019blended]. In this case, donors could provide dedicated capital that does not pressure management to make high interest or dividends payments, allowing MFIs to remain predominantly on the social mission path [@lopatta2016microfinance]. ^[Apart from credit unions/cooperatives and rural banks, we use acronyms for other legal forms of MFIs. NGO stands for non-governmental organisations, while NBFI connotes non-bank financial institutions. The term bank represents microfinance-oriented commercial banks.]
+
+Appendix 10 and 11 show the visualisation for the debt to equity ratio and deposits to assets ratio. While NGOs attract more equity capital, rural banks, commercial banks, and credit unions rely more on debt, especially deposits form of debt, to finance their operations. The analysis shows that while all MFIs are raising capital, the sources are different for commercial MFIs vis-a-vis NGOs. While NGOs are inclined to using more equity, commercial MFIs appear to rely more on debt. Debt capital gives rise to fixed obligations that may exacerbate mission drift, and hence the conversion of NGOs to commercial entities could be harmful to social outreach. However, the relative inability to garner deposits maybe detrimental to NGOs' ability to access cheap, less restrictive capital.
+
+Lastly, for asset structure (tangibility), the ratio of non-current assets to total assets, credit unions lead followed by commercial banks, NGOs, NBFIs, and rural banks. Asset structure captures the extent to which MFIs invest in physical infrastructure relative to the total asset base. Credit unions tend to serve a narrow geographic region and traditionally put up brick and mortar branches to serve their customers [@mckillop2011credit]. Like credit unions, commercial banks tended to have more branches, having taken root before the advent of fintech, reducing the need for physical branches. NGOs, NBFIs, and rural banks have the lowest rates of asset tangibility, especially those of more recent origins, and using rural agents to meet customers rather than set up an expansive network of branches [@kent2013bankers].
+
+Figure 3 (Panel A) shows that NGOs exhibit the highest median operating expense to assets ratio followed by NBFIs while credit unions trail. As we see later in the analysis, operating expenses positively relate to the depth of outreach- per cent of female borrowers and breadth of outreach in terms of gross loans to assets. Therefore, NGOs will do better in social outreach as they incur more costs to reach out to the financially excluded. Indeed, literature shows that outreach to the poor is expensive partly due to the dis-economies of scale in serving the poor, financially excluded clients [@mia2017mission]. One of the efficiency enhancement opportunities from the transformation of MFIs to the for-profit approach to microfinance services delivery is that managers could trim operating expenses to increase profits hurting financial inclusion.
+
+Turning to profitability in Figure 3 (Panel B), we find that rural and commercial banks post the highest median profits, while NBFIs and NGOs trail (Figure 3- Panel B). This result probably partially illustrates the emphasis on social performance over financial performance by the management. NGOs and NBFIs are more likely to favour the social goal. When we take this result together with the observation that NGOs tend to have more operating expenses, we conclude that the desire by managers of commercial banks and other for-profit MFIs to mitigate agency conflicts leads to less operating expenses, more profitability and, hence, lower outreach to the financially excluded [@jensen1976theory].
+
+Overall, the pattern indicates that while NGOs spend the most in operating expenses to reach the financially excluded, these efforts come at the cost of profitability. In contrast, profit-oriented MFIs are keen to manage expenses that improve profitability, presumably at the expense of outreach to the financially excluded. It is worth noting that NGOs have a relatively low asset base and hold relatively fewer non-current assets to total assets. The observation could mean that NGOs do not invest heavily in brick and mortar branches or serve a relatively limited geographic range. Finally, NGOs have the highest capital (equity) to asset ratio despite the push towards commercial capital. Much could be from investors, who put forth dedicated equity capital because they are keen on social performance and not profits [@mia2017mission].
+
+We now turn to Figure 4. The first graph (Figure 4- Panel A) shows that commercial banks have the most prominent asset size (total assets), while NGOs and cooperatives have the smallest in that order. Banks tend to have a much broader geographic presence and hence attract more clients, which means more assets accumulation. Again, capital adequacy requirements by central banks have implications on the assets that banks hold. Furthermore, commercial banks are generally dominant in many developing countries meaning that they have a long operating history which implies a bigger size [@levine2002bank]. Figure 4 panel B shows that NGOs and NBFIs serve proportionately more women borrowers, indicating their outreach depth. Given that much of the donor funds accrues to NGOs, the conversion to the for-profit model would be detrimental to financial inclusion if coupled with a reduction in donor funding. 
+
+Commercial banks and credit unions have the highest average loan balance per borrower (depth of outreach), while NBFIs and NGOs come last in that order (Figure 4- Panel C). As an indicator of outreach to the poor, the average loan balance per borrower is better when lower, indicating that more impoverished people get access to financial services. Again, it appears that profit-orientation by commercial banks may cause MFIs to reach less financially excluded people in favour of making profits. For credit unions, the observation could arise due to the limited geographic range of operations where they serve people with a common interest like the type of occupation, meaning that their members may not be suffering from financial exclusion in the first place [@armendariz2013subsidy].
+
+NGOs have the highest median gross loans to total assets ratio, surprising given their relatively smaller size. On the other hand, banks and rural banks, respectively, have the lowest gross loans to assets, meaning they are less efficient in converting their assets into credit (Figure 4- Panel D). Again, it shows, at least in the case of Africa, that the breadth and depth of financial outreach are not always mutually exclusive. In this case, NGOs can reach the most impoverished borrowers, going by the per cent of female borrowers and average loan balance per borrower, while at the same time seemingly reaching a broad customer base as indicated by the gross loans to assets. So far, the bulk of MFIs population leans towards the welfare orientation where profitability overtly seems incompatible with outreach to the financially excluded [@lopatta2016microfinance].
+
+
+\newpage
+\blandscape
+
+
+```{r, fig.cap = "Operating Expense, Donations, Capital and Asset Structure of MFIs by Legal Status", echo = FALSE, message = FALSE, warning = FALSE, fig.width=9, fig.height=6}
+box1 <- my_data %>% ggplot(aes(x = age, fill = currentlegalstatus)) + 
+  
+  geom_bar() + labs(x = "Age", y = "Count") + 
+  
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+
+box2 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = donations_assets_ratio, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Donations/Assets Ratio (log Scale)", 
+        title = "Panel B: Donations to Assets Ratio by MFIs Legal Status")
+
+box3 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = capital_asset_ratio, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Capital/Assets Ratio (log Scale)", 
+        title = "Panel C: Capital to Assets Ratio by MFIs Legal Status")
+
+box4 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = asset_structure, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Asset Structure (log Scale)", 
+        title = "Panel D: Asset Structure of MFIs by MFI Legal Status")
+
+library(patchwork)
+(box1 + box2) / (box3 + box4) + plot_annotation(title = "", caption = "Source: Authors' construction from MIX Data. \n NB: The y-Axis is in log scale")
+```
+
+\newpage
+
+```{r, fig.cap = "Asset Structure, Profit Margin, Donations, Capital to Assets Ratio by Current Legal Status", echo = FALSE, message = FALSE, warning = FALSE, fig.width=9, fig.height=6}
+box9 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = my_data$operating_expense_assets, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Opareting Expense to Assets (log Scale)", 
+        title = "Panel A: Operating Expense to Assets Ratio of MFIs by MFI Legal Status")
+
+box10 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = profit_margin, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Profit Margin (log Scale)", 
+        title = "Panel B: Profit Margin by MFIs Legal Status")
+
+
+library(patchwork)
+
+(box9 + box10) + plot_annotation(title = "", caption = "Source: Authors' construction from MIX Data \n
+                                                The y-Axis is in log scale")
+
+
+```
+
+\elandscape
+
+\newpage
+\blandscape
+
+```{r, fig.cap = "Size, Profit Margin, Average Loan Balance per Borrower and Gross of MFIs by Legal Status", echo = FALSE, message = FALSE, warning = FALSE, fig.width=9, fig.height=6}
+box5 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = assets, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Size - Log of Total Assets (log Scale)", 
+        title = "Panel A: Relative Size of MFIs by MFI Legal Status")
+
+box6 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = percent_of_female_borrowers, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Percent of Female Borrowers (log Scale)", 
+        title = "Panel B: Percent of Female Borrowers by MFIs Legal Status")
+
+box7 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = average_loan_balance_per_borrower, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Loan Balance per Borrower (log Scale)", 
+        title = "Panel C: Loan Balance per Borrower by MFIs Legal Status")
+
+box8 <- second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = gross_loan_portfolio_to_total_assets, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Gross Loans/ Assets (log Scale)", 
+        title = "Panel D: Gross Loans to Assets by MFIs Legal Status")
+
+library(patchwork)
+
+(box5 + box6)/ (box7 + box8) + plot_annotation(title = "", caption = "Source: Authors' construction from MIX Data \n
+                                                The y-Axis is in log scale")
+```
+
+\elandscape
+\newpage
+
+
+#### Trends in Dependent and Independent Variables
+
+Figure 4 below maps the trends, over time, for donations, capital, profits and operating expense to assets ratio, respectively. Figure 5 (*Panel A*) shows that the median donations to assets ratio have been downward for 1999-2019. The observation confirms the neo-liberal shift in the MFI paradigm where donors expect MFIs to be more financially self-sustainable. The trend is expected in light of the abundance of literature on the conversion of MFIs from NGOs and subsequent drop in donor funding [@d2017ngos]. As donations dry up, we expect the debt and equity capital components to fill the void.
+
+Surprisingly, the capital to assets ratio, which captures the extent of the equity capital injection, is also on a downward trend despite the drive towards the commercialization of MFIs (*Figure 5, Panel B*). The observation could be due to a rise in the total asset base of MFIs, as they scale up, with equity capital being a relatively smaller external capital component than debt. *Appendix 8* shows a steady increase in the debt/equity ratio, which means that most MFIs, like commercial banks, use debt (including deposits) to finance their operations. In this respect, debt gives rise to fixed obligations which could hurt profitability during economic downturns.
+
+MFI profitability in Figure 5 (*Panel C*) shows that the median profitability for MFIs is meager and almost invariant over time, except \*for a significant dip in mean profitability around 2008-2009 during the global financial crisis period. The result is consistent with the empirical regularity that shows microfinance as a low margin business, largely reflecting the primacy of social mission in microfinance [@hartarska2012governance]. An important observation is that there are no distinctive profitability changes even as more MFIs adopt the commercial model. This observation means that either the commercialization was not very successful in generating profits or that the extent to which MFIs were able to make profits post-transformation is particularly peculiar to each MFI or to each of the legal forms of MFIs.
+
+Lastly, for Figure 5 (*Panel D*), the operating expenses to assets ratio remains approximately constant except for a dip in the 1999-2001 period. As the regressions show in a later section, the operating expense to assets ratio relates positively to outreach depth and breadth. In this case, the drop in the ratio between 1999 and 2001 could have worsened financial inclusion outcomes. However, the operating expenses to assets ratio have levelled off; thus, it could be indicating a sustained commitment to outreach even in the face of the desire to make profits.
+
+Next, we turn to Figure 6, which shows a rise in MFI size, average loan balance per borrower, and gross loans to total assets, while the per cent of female borrowers is on a downward trend. The rise in the average loan's balance per borrower and the accompanying drop in the proportion of female borrowers indicates a consistent decline in the outreach of MFIs to the financially excluded, as MFIs rely less on donations and more on commercial capital. It further shows the effects of the neo-liberal, for-profit paradigm, which may be hurting the social performance of MFIs, precisely the depth of outreach. However, it appears the breadth of outreach is getting better with time as MFIs give more loans. Taken together, it implies that MFIs provide larger loans to less financially excluded people in a bid to make ample financial return to allow for financial sustainability and payment of dividends and interest to investors.
+
+Appendices 12-14 show the breakdown, by legal forms of MFIs, of the trends for per cent of female borrowers, average loan balance per borrower and gross loans to assets. The movement is generally downwards for women borrowers except under the commercial banking legal forms, which have low outreach to women, but that is relatively constant after the initial spike in the early 2000s. The trends indicate a weakening depth of outreach. For average loan balance per borrower, NGOs and rural banks remain relatively constant. At the same time, other legal forms have rising average loan size trends, which indicates worsening outreach by banks, credit unions, and NBFIs. Lastly, gross loans are rising except for rural banks, showing a better breadth of outreach over time.
+
+```{r, fig.cap = "Trends in MFI Donations, Capital, Profitability, and Operating Expenses", echo = FALSE, message = FALSE, warning = FALSE}
+## Percent of female borrowers - trends over time
+female <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_female = mean(percent_of_female_borrowers, na.rm = TRUE), 
+                               
+  median_female = median(percent_of_female_borrowers, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_female), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_female), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2018, y = 0.55, label = "Median") + 
+  
+  geom_text(x = 2018, y = 0.57, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Percent of Female Borrowers", title = "Panel B: Trends in the Percent of Female Borrowers") + 
+  
+  ggthemes::theme_clean()
+
+## Average loan Balance per borrower
+avloan <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_average_loan = mean(average_loan_balance_per_borrower, na.rm = TRUE), 
+                               
+  median_average_loan = median(average_loan_balance_per_borrower, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_average_loan), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_average_loan), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2018, y = 500, label = "Median") + 
+  
+  geom_text(x = 2016, y = 1200, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Average Loan Balance per Borrower", title = "Panel C: Trends in Average Loan Balance per Borrower") + 
+  
+  ggthemes::theme_clean()
+
+
+## Gross loan portfolio to assets 
+grossloan <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_gross_loans = mean(gross_loan_portfolio_to_total_assets, na.rm = TRUE), 
+                               
+  median_gross_loans = median(gross_loan_portfolio_to_total_assets, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_gross_loans), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_gross_loans), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2012, y = 0.64, label = "Median") + 
+  
+  geom_text(x = 2013, y = 0.7, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Gross Loans to Assets", title = "Panel D: Trends in Gross Loans to Assets Ratio") + 
+  
+  ggthemes::theme_clean()
+
+## Capital assets ratio
+capital <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_capital = mean(capital_asset_ratio, na.rm = TRUE), 
+                               
+  median_capital = median(capital_asset_ratio, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_capital), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_capital), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2017, y = 0.22, label = "Median") + 
+  
+  geom_text(x = 2017, y = 0.27, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Capital/Assets Ratio", title = "Panel B: Trends in Capital to Assets Ratio") + 
+  
+  ggthemes::theme_clean()
+
+## Operating expense to assets ratio
+expense <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_op = mean(operating_expense_assets, na.rm = TRUE), 
+                               
+  median_op = median(operating_expense_assets, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_op), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_op), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2010, y = 0.18, label = "Median") + 
+  
+  geom_text(x = 2015, y = 0.22, label = "Mean") +
+  
+  labs(x = "Year", y = "Mean/Median Operating Expense to Assets", title = "Panel D: Trends in Operating Expense to Assets Ratio") + 
+  
+  ggthemes::theme_clean()
+
+## Donations to assets ratio
+donations <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_don = mean(donations_assets_ratio, na.rm = TRUE), 
+                               
+  median_don = median(donations_assets_ratio, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_don), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_don), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2010, y = 0.01, label = "Median") + 
+  
+  geom_text(x = 2010, y = 0.04, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Donations/Assets Ratio", title = "Panel A: Trends in Donations to Assets Ratio") + 
+  
+  ggthemes::theme_clean()
+
+## Profit Margin
+profit <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_profit = mean(profit_margin, na.rm = TRUE), 
+                               
+  median_profit = median(profit_margin, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_profit), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_profit), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2009, y = 0.01, label = "Median") + 
+  
+  geom_text(x = 2010, y = -5, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Profit Margin", title = "panel C: Trends in Profitability") + 
+  
+  ggthemes::theme_clean()
+
+## Size - Log of assets
+size <- my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_size = mean(assets, na.rm = TRUE), 
+                               
+  median_size = median(assets, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_size), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_size), linetype = "dashed", color = "red") +
+  
+  geom_text(x = 2000, y = 6.05, label = "Median") + 
+  
+  geom_text(x = 2000, y = 5.99, label = "Mean")+
+  
+  labs(x = "Year", y = "Mean/Median Size (Log of Assets)", title = "Panel A: Trends in MFI Size") + 
+  
+  ggthemes::theme_clean()
+```
+
+
+\blandscape
+\newpage
+
+### Descriptive Statistics: Trends Over 2000-2020
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width=8, fig.height=4.5}
+(donations + capital) /(profit + expense) + plot_annotation(title = "", caption = "Source: Authors' construction from MIX data")
+```
+
+\newpage
+```{r, fig.cap = "Trends in MFI Size, Female Borrowers, Average Loan Balances, and Gross Loans", echo = FALSE, message = FALSE, warning = FALSE, fig.width=9, fig.height=6}
+(size + female) / (avloan + grossloan) + plot_annotation(title = "", caption = "Source: Authors' construction from MIX data")
+```
+
+\elandscape
+
+### Summary Statistics
+
+Tables 2 and 3 show the summary statistics of the variables applied in the regression analysis later on. The summary indicates that there is not a wide variation in the composition of the legal forms of MFIs, with banks (619) and rural banks (138) having the least number of entities in the sample dataset. Turning to age, mature MFIs dominate in the sample dataset, followed by new MFIs (0-4 years) and young MFIs (4-8 years). Table 3 shows a summary of the three dependent variables. We have visualized and discussed the breakdown of these variables by MFI legal status in figure 4. 
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+tribble(~ Variable, ~ Counts,
+          "Current Legal Status", "Credit Unions: 1427, NBFI: 1315, NGO: 1250, Bank: 619",
+          "Age", "Mature: 2558, New: 1200, Young: 1024") %>% 
+  
+  kbl(., caption = "Summary Statistics for Categrical Independent Variables", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = TRUE, font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction from the MIX data",
+           
+           general_title = "",
+           
+           number = c("Legal status include NGO, Non-Bank Financial Institutions (NBFIs), Credit Unions, and Banks", "Age has mature MFIs older than 8 years, young ones (4 - 8 years), and new ones that are 4 years or less"),
+           number_title = "Note: ")
+  
+
+###############################################
+```
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+my_data %>% 
+  
+  select(percent_of_female_borrowers,
+                                                 
+  average_loan_balance_per_borrower, gross_loan_portfolio_to_total_assets) %>% 
+  
+  skimr::skim() %>% 
+  
+  select(-n_missing, -numeric.hist, -skim_type) %>% 
+  
+  rename(Variable = skim_variable, Completeness = complete_rate, Mean = numeric.mean, 
+         
+         SD = numeric.sd, Min = numeric.p0, Q1 = numeric.p25, Median = numeric.p50, 
+         
+         Q3 = numeric.p75, Max = numeric.p100) %>% 
+  
+  select(-Completeness, -Min, -Max) %>% 
+  
+  kbl(., caption = "Summary Statistics for Numeric Dependent Variables", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = FALSE, font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction from the MIX data",
+           
+           general_title = "",
+           
+           number = c("The summary statistics are disaggregated by MFI legal status"),
+           number_title = "Note: ")
+################################################################
+```
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+my_data %>%
+  
+  select(operating_expense_assets, 
+          donations_assets_ratio, 
+          capital_asset_ratio,
+          asset_structure, assets, 
+          education, profit_margin) %>% 
+  
+  skim() %>% 
+  
+  select(-n_missing, -numeric.hist, -skim_type) %>% 
+  
+  rename(Variable = skim_variable, Completeness = complete_rate, Mean = numeric.mean, 
+         
+         SD = numeric.sd, Min = numeric.p0, Q1 = numeric.p25, Median = numeric.p50, 
+         
+         Q3 = numeric.p75, Max = numeric.p100) %>% 
+  
+  select(-Completeness) %>% 
+  
+  kbl(., caption = "Summary Statistics for Continous Independent Variables", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_paper(full_width = FALSE, font_size = 10) %>% 
+  
+  footnote(general = "Source: Authors' construction from the MIX data",
+           
+           general_title = "",
+           
+           number = c("The summary statistics are disaggregated by MFI legal status"),
+           number_title = "Note: ")
+#########################################################################
+```
+
+\newpage
+
+### Regression Analysis
+
+This section describes the results of the deeper data analysis, that is, regression models in Table 5 and 6, and Appendix 1 taken alongside the results of the exploratory data analysis. Table 5 shows the output for the fixed effects model (see results of the Hausmann test in Appendix 2) [^2]. Table 6 presents the results of the random effects and the pooled OLS models. We describe the impact of transformation on each dependent variable: the MFI outreach proxies of per cent of women borrowers, average loan balance per borrower, and gross loans to assets. We are working with an unbalanced panel dataset; we run three regressions for each outcome variable. First, we run the regression using the entire dataset, then rerun the regression using data for MFIs with at least three years (panels) of data. Lastly, we run another regression for MFIs with at least five years of data [^3]. Table 5 shows the results of the fixed-effects model, while Table 6 presents the random effects and pooled OLS models. The discussion that follows mainly draws from the fixed and random-effects models. 
+
+[^2]: Further, Appendix 3 and 4 show significant fixed effects. Hence, in all models, we favour the fixed-effects model. Also, both the fixed and random-effects models take precedence over the pooled OLS. We run both the fixed and random effects model to interpret the results from the dummy variables that drop out in the fixed-effects model.
+
+[^3]: The mean and median number of years (panels) per MFI in the dataset are three and five years.
+
+#### Percent of Women Borrowers
+
+The legal status of an MFI is a significant driver of outreach to women, with NGOs faring better (see Table 6). Note that NGOs are the base outcome in current legal status, while banks, NBFIs, cooperatives/credit unions, and rural banks are the alternative outcomes. The basis for picking NGOs as the base outcome stems from the trend of NGOs converting to the commercial model, the core of this article. Other positive outreach drivers include education, operating expenses to assets ratio, profit margin, and capital-to-assets ratio. North Africa fares worse in MFI outreach than Sub-Sahara Africa despite being represented entirely by NGOs in the sample, showing the importance of considering regional disparities. Table 6 of the random effects and pooled OLS model shows that NGOs outperform other legal forms of MFIs in reaching out to women. The result implies that the transformation of MFIs can negatively impact financial inclusion efforts as commercial MFIs are less keen to reach the financially excluded, which contradicts some previous research [@ledgerwood1998microfinance; @ledgerwood2006transforming; @hartarska2012governance; @bos2015practice]. Again, the results highlight the potential regional disparities even within Africa, which may question the inferences made using global datasets. 
+
+The results gain more credence when examining the operating expenses to assets ratio (Table 5 and 6). There is a positive and significant relationship between operating expense to assets ratio on the one hand and per cent of women borrowers on the other. It means that an MFI has to spend more to reach financially excluded clients, which means lesser profits at a given level of revenue. As expected, the conversion of MFIs from NGOs to the commercial model could reduce operating expenses in the quest for profits in line with the profit incentive arising from the agency theory [@eisenhardt1989agency]. Hence, it arguably follows that pursuit of profit is bad for financial inclusion by causing mission drift in line with prior research [@wagenaar2012institutional; @roberts2013profit; @lopatta2016microfinance; @mia2017mission]. Except in the unlikely scenario where MFIs generate profits by raising revenue without lowering costs, Africa's MFIs and regulators should rethink the case for the transformation of MFIs into the commercial model.
+
+Indeed, profitability has a positive relationship, albeit insignificant on women borrowers' per cent (see Table 5 and 6). With this hindsight, it would appear like the viable explanation for the profitability-operating expense-financial inclusion issue is that for commercial MFIs, it is to reduce operating expenses in the short run if that translates into higher profits. Higher profitability allows the MFIs to reach more financially excluded clients while cross-subsidising them in the medium to long term. @d2017ngos note that for transformed MFIs, profits tend to drop in the short term but not necessarily in the long term. The drop in profitability is driven by transformed MFIs charging lower interest rates, a contentious issue in micro-finance. Therefore, it would be worth examining the dynamics between profitability, operating expense, and financial inclusion for MFIs over a more extended period.
+
+The significant control variables are education (table 5 and 6) and region (table 6). Education varies positively with outreach to women, as does region. MFIs in Northern Africa have lower outreach to women than an otherwise similar MFI in Sub-Saharan Africa. These results could be due to religious beliefs or practices that discount financial inclusion outcomes for women or a conscious shift to the Islamic model against charging interest on capital [@hassan2018religious]. This observation is despite North Africa being represented only by NGOs in the sample. Our previous findings show that NGOs have higher outreach to women than other legal forms of MFIs. The implication is that cultural and religious inclinations play a more significant role in driving financial inclusion than the operating model of MFIs in North Africa. Education also appears to play a key role in financial inclusion by empowering women to join the formal labour market and equipping women with financial literacy that allows for better financial decision making [@zins2016determinants; @chikalipah2017determines].
+
+These observed relationships hold even when we winsorise the data (see *Appendix 1*). The only exception is the capital to assets ratio and profit margin, which have a significant positive relationship with outreach to women. These results suggest that larger firms are more likely to experience mission drift after conversion. However, even after winsorising the data, NGOs still do better at financing women in line with research from the welfare approach to microfinance [@kodongo2013individual]. To sum this up, MFIs would best achieve the quest to improve outreach to women by targeting NGOs with capital funding, especially with the rise of blended finance, commercial capital for social projects, ceteris paribus. Some other variables in the model are not significant but are worth mentioning. For instance, older firms have lower levels of outreach to women, which could imply that firms lose focus on financial inclusion as they mature and get financially independent. Next, we examine the effects on another measure of the depth of outreach, the average loan balance per borrower.
+
+#### Average Loan Balance per Borrower
+
+Like the per cent of female borrowers, the average loan balance per borrower captures how deep an MFI goes to reach the financially excluded, who typically would demand smaller denominations of loans. Thus, the smaller the average loan balance, the deeper the outreach. The major criticism of the average loan balance per borrower as an indicator of financial inclusion is that a larger average loan balance could result from progressive lending or arise as clients become better off [@abeysekera2014sustainability]. Again, researchers could be wrongly proclaiming mission drift for MFIs operating in countries that have relatively fewer indigent clients [@armendariz2013subsidy]. Notably, the presence of a few vast loans granted to some clients could tilt the average loan balance upwards [@market2014global]. Despite these shortcomings, the metric of average loan size is helpful because it is easily quantifiable, and the relevant data inputs are readily available. [^3].
+
+[^3]: when interpreting these results, note that a smaller average loan balance per borrower indicates a better depth of outreach. Therefore, variables that have a negative coefficient have a positive influence on the depth of outreach.
+
+The key observation in the description of this result is that NGOs consistently offer smaller average loan sizes than other legal forms of MFIs. However, the effect is only significant for credit unions/ cooperatives. Consistent with the outreach to women, the observation would suggest that NGOs reach the financially excluded better than do commercial MFIs. It would then imply that the conversion of MFIs from NGOs to other legal forms is harmful to financial inclusion, as the welfare school argues. In fact, @d2017ngos and @mia2017mission, using a global dataset of MFIs, find that average loan balances go up after transformation, which is consistent with our finding. Accordingly, @peck2001commercialization argue that commercial logic has, over time, displaced the welfare approach in addressing financial exclusion.
+
+Furthermore, older MFIs have a lower average loan balance per borrower relative to newer ones. The relationship could hold as older firms tend to reach out to more financially excluded clients given their stable financial base, operational experience, and linkage to donors who emphasise social performance [@bos2015practice]. However, the larger the MFI's asset base, the higher the average loan balance, meaning that it is older but relatively smaller firms that better focus on their mission. Overall, it would imply that the growth of an MFI's asset size comes at the expense of outreach to the financially excluded [@armendariz2013subsidy].
+
+Moreover, the capital to asset ratio has a positive relationship with the average loan balance, while profit margin relates negatively with the average loan size. For capital, the observation would imply that entry of commercial capital negatively influences the extent of financial inclusion, given that poorer people tend to demand smaller loans [@mersland2010microfinance]. As noted, however, some forms of commercial (dedicated) capital could allow MFIs to reach more financially excluded customers. It appears that the nature of capital injection - pure commercial versus preferential commercial capital may have a bearing on the extent to which an MFI focuses on profit generation relative to social outreach [@d2013unsubsidized].
+
+As noted in the case of female borrowers, profitability is good for financial inclusion. While short-run profitability may hurt financial inclusion, it appears profitability helps extend financial inclusion in the medium to long term [@louis2013financial; @quayes2012depth], which is in line with the win-win school of microfinance [@kodongo2013individual]. Hence, it would be helpful to examine the inter-temporal dynamics between capital and profitability and the breadth and depth of outreach of microfinance institutions in Africa.
+
+The insignificant drivers of average loan balance per borrower include region, operating expense to assets ratio, donations to assets ratio, asset structure, and education. That said, the relationship between operating expense ratio, donations to assets ratio and average loan size is positive, pointing to a negative but insignificant effect of these factors on financial inclusion [@d2017ngos]. For education, the sign is negative, meaning that education has a positive but insignificant impact on financial inclusion, an observation consistent with education's impact on the per cent of female borrowers in section 4.4.1. Asset structure exhibits mixed results. These results here remain robust even after removing extreme values (see *Appendix 1*). The next section examines the breadth of outreach captured by using gross loans to assets ratio.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+## Filtering data for >= 3 years and >= 5 years
+data3 <- my_data %>% group_by(mfiid) %>% filter(n() >= 3)
+
+data5 <- my_data %>% group_by(mfiid) %>% filter(n() >= 5)
+```
+
+```{r, results = "asis", eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+## Coefficients output for the fixed effects models at full, >= 3 years, and >= 5 years of data.
+
+model1 <- modelling(data = my_data, depvar = my_data$percent_of_female_borrowers, model = "within")
+
+model2 <- modelling(data = data3, depvar = data3$percent_of_female_borrowers, model = "within")
+
+model3 <- modelling(data = data5, depvar = data5$percent_of_female_borrowers, model = "within")
+
+model4 <- modelling(data = my_data, depvar = my_data$average_loan_balance_per_borrower, model = "within")
+
+model5 <- modelling(data = data3, depvar = data3$average_loan_balance_per_borrower, model = "within")
+
+model6 <- modelling(data = data5, depvar = data5$average_loan_balance_per_borrower, model = "within")
+
+model7 <- modelling(data = my_data, depvar = my_data$gross_loan_portfolio_to_total_assets, model = "within")
+
+model8 <- modelling(data = data3, depvar = data3$gross_loan_portfolio_to_total_assets, model = "within")
+
+model9 <- modelling(data = data5, depvar = data5$gross_loan_portfolio_to_total_assets, model = "within")
+
+########################################################################
+```
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+inference_m1 <- coeftest(model1, vcov = vcovBK(model1, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m2 <- coeftest(model2, vcov = vcovBK(model2, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m3 <- coeftest(model3, vcov = vcovBK(model3, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m4 <- coeftest(model4, vcov = vcovBK(model4, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m5 <- coeftest(model5, vcov = vcovBK(model5, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m6 <- coeftest(model6, vcov = vcovBK(model6, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m7 <- coeftest(model7, vcov = vcovBK(model7, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m8 <- coeftest(model8, vcov = vcovBK(model8, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m9 <- coeftest(model9, vcov = vcovBK(model9, method = "arellano", type="HC1", cluster = "group"))
+```
+
+\blandscape
+```{r, results = 'asis', echo = FALSE, message = FALSE, warning = FALSE}
+stargazer(model1, model2, model3, model4, model5, 
+          
+          model6, model7, model8, model9, 
+          
+          header = FALSE, type = "latex",
+          
+          title = "Output of Fixed Effects Model of MFI Outreach", 
+          
+font.size = "tiny", omit = c("^year.", "^current."),
+
+se = list(inference_m1[,2], inference_m2[,2], inference_m3[,2], 
+          
+          inference_m4[,2], inference_m5[,2], inference_m6[,2],
+          
+          inference_m7[,2], inference_m8[,2], inference_m9[,2]),
+
+column.labels = c("FemaleClients", "FemaleClients", "FemaleClients", 
+                  
+                  "AverageLoan", "AverageLoan", "AverageLoan", 
+                  
+                  "GrossLoans", "GrossLoans", "GrossLoans"), 
+
+keep.stat = c("n", "rsq", "adj.rsq"),
+
+
+add.lines = list(c("F", "4.230***", "4.210***", "4.130***", "8.200***", 
+                   
+                   "7.980***", "7.840***", "108.395***", "106.966***", 
+                   
+                   "101.779***"), c("DF", "3240", "3210", "2950", "3380", "3340", 
+                                    
+                                    "3030", "3497", "3405", "3056"),
+                 c("Data", "Full", ">=3 Years", ">=5 Years", 
+                   
+                   "Full", ">=3 Years", ">=5 Years", 
+                   
+                   "Full", ">=3 Years", ">=5 Years")),
+
+covariate.labels = c("Age: Young", "Age: Mature", "Operating Expense", 
+                     
+                     "Donations/Assets", "Capital/Assets", "Asset Structure", 
+                     
+                     "Size(Lassets)", "Education", "Profit Margin"), 
+
+dep.var.caption  = "Dependent Variables",
+
+  dep.var.labels   = "Social Performance"
+)
+
+```
+
+\elandscape
+
+
+```{r, results = "asis", eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+## Pooled OLS and random effects using full dataset
+model10 <- modelling(data = my_data, depvar = my_data$percent_of_female_borrowers, model = "random")
+
+model11 <- modelling(data = my_data, depvar = my_data$percent_of_female_borrowers, model = "pooling")
+
+model12 <- modelling(data = my_data, depvar = my_data$average_loan_balance_per_borrower, model = "random")
+
+model13 <- modelling(data = my_data, depvar = my_data$average_loan_balance_per_borrower, model = "pooling")
+
+model14 <- modelling(data = my_data, depvar = my_data$gross_loan_portfolio_to_total_assets, model = "random")
+
+model15 <- modelling(data = my_data, depvar = my_data$gross_loan_portfolio_to_total_assets, model = "pooling")
+############################################################
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+inference_m10 <- coeftest(model10, vcov = vcovBK(model10, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m11 <- coeftest(model11, vcov = vcovBK(model11, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m12 <- coeftest(model12, vcov = vcovBK(model12, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m13 <- coeftest(model13, vcov = vcovBK(model13, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m14 <- coeftest(model14, vcov = vcovBK(model14, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m15 <- coeftest(model15, vcov = vcovBK(model15, method = "arellano", type="HC1", cluster = "group"))
+```
+
+
+\blandscape
+
+```{r, results = 'asis', echo = FALSE, message = FALSE, warning = FALSE}
+stargazer(model10, model11, model12, model13, model14, model15, 
+          
+          header = FALSE, type = "latex",
+          
+          title = "Output of Random Effects and Pooled OLS Models of MFI Outreach", 
+          
+font.size = "tiny", omit = c("^year.", "^Constant"),
+
+se = list(inference_m10[,2], inference_m11[,2], inference_m12[,2], 
+          
+          inference_m13[,2], inference_m14[,2], inference_m15[,2]),
+
+column.labels = c("FemaleClients-Random", "FemaleClients-Pooled", 
+                  
+                  "AverageLoan- Random", "AverageLoan- Pooled", 
+                  
+                  "GrossLoans- Random", "GrossLoans- Pooled"), 
+
+keep.stat = c("n", "rsq", "adj.rsq"),
+
+
+add.lines = list(c("F", "27.3***", "38.1***", "89.4***", "2.63***", 
+                   
+                   "3017***", "71.5***"), 
+                 
+                 c("Data", "Full", "Full", ">=3 Years", 
+                   
+                   ">=3 Years", ">=5 Years", ">=5 Years")),
+
+covariate.labels = c("Legal: Bank", "Legal: NBFI", "Legal: Coop", 
+                     
+                     "Legal: Rural Bank", "Age: Young", "Age: Mature", 
+                     
+                     "Region: SSA", "Operating Expense", 
+                     
+                     "Donations/Assets", "Capital/Assets", "Asset Structure", 
+                     
+                     "Size(Lassets)", "Education", "Profit Margin"), 
+
+dep.var.caption  = "Dependent Variables",
+
+  dep.var.labels   = "Social Performance"
+)
+
+```
+
+\elandscape
+
+
+#### Gross Loans to Assets Ratio
+
+Gross loans capture the breadth of outreach, the number of people reached and the volume of credit that an MFI disburses. While MFIs should enhance their depth of outreach by reaching female borrowers and micro-borrowers, the sheer scale of such lending also matters [@d2013unsubsidized]. In the best-case scenario, we should have an MFI that reaches the most financially excluded borrowers and offers a higher gross volume of loans, meaning that it reaches more of the financially excluded. The gross loans to assets ratio exhibit a stronger relationship with the independent variables, with a coefficient of determination (adjusted R-Squared) of 0.467. The significant variables are MFI legal form, age, operating expenses to assets, donations to assets, capital-asset ratio, asset structure, size, and profit margin.
+
+Although the legal form of an MFI is marginally significant in driving gross loans, NGOs have the greatest gross loans portfolios than all other legal forms except credit unions/ cooperatives and NBFIs. Hence, although NGOs exhibit more depth, it is not at the expense of breadth. Cooperatives have the highest gross loans, which may reflect their closed nature of serving a limited geographic region or people with common interests who opt to pool savings for their use [@mckillop2011credit]. NBFIs, unlike NGOs, have the advantage of having access to commercial equity and other capital, which, as we see later, positively drives the breadth of outreach in terms of gross loans.
+
+As expected, older firms have more gross loans to assets given their long presence in the market, implying a more significant market share. Size is weakly negatively related to gross loans. These results mean that larger firms have weaker intermediation. The operating expenses to assets ratio positively relate to gross loans. MFIs with a higher spending capacity give out more loans, probably due to their greater market share [@gutierrez2007microfinance]. Capital to assets ratio and profit margin also positively relate to gross loans. In this respect, it appears that MFIs would best achieve broader outreach through commercial organizations that aim to maximize profits. Also, to broaden outreach, equity capital plays a positive role, meaning that commercialization could aid the expansion of gross loans to support the win-win approach to microfinance [@kodongo2013individual].
+
+On the other hand, there is an inverse relationship between donations and gross loans to assets. In this case, it appears that donors may not be keen on breadth but rather emphasize depth, which research shows is best done through not-for-profit MFIs like NGOs [@d2017ngos; @bos2015practice]. MFIs that are more dependent on donations are most likely to be small and young and, hence, the low gross loans to assets. Again, asset structure has a significant negative relationship with gross loans. In this case, MFIs that tie a lot of their resources in physical assets have less breadth of outreach, which is a case for the adoption of information technology in place of brick and mortar branches [@d2017aid]. 
+
+A final important aspect of this section is how gross loans to assets relate to measures of depth of outreach. Appendix 6 captures the relationship. While gross loans correlate negatively but weakly with the average loan balance per borrower, there is a substantial positive correlation between gross loans and female borrowers. But examining the scatter plots shows that outliers drive the little correlation between these variables. The positive correlation between per cent of women borrowers and the average loan balance per borrower support the claim that smaller loans indicate deeper outreach [@ayyagari2013financing]. Hence MFIs can pursue both financial inclusion depth and breadth without trade-offs. However, it is not clear at what point the breadth of outreach may negatively affect the depth of outreach, especially in Africa.
+
+```{r, eval = FALSE, echo = FALSE, message = FALSE, warning = FALSE}
+#######################################################
+diff <- my_data %>% select(mfiid, year, currentlegalstatus, 
+                       age, region, 
+                       gross_loan_portfolio_to_total_assets, 
+                       percent_of_female_borrowers, 
+                       average_loan_balance_per_borrower, 
+                             operating_expense_assets, 
+                             donations_assets_ratio, 
+                             capital_asset_ratio, 
+                             asset_structure, lassets, 
+                             education, profit_margin) %>% 
+  
+  mutate(lag_gross_loans = gross_loan_portfolio_to_total_assets - 
+           dplyr::lag(gross_loan_portfolio_to_total_assets), 
+         lag_women = percent_of_female_borrowers - 
+           dplyr::lag(percent_of_female_borrowers), 
+         lag_average_loans = average_loan_balance_per_borrower - dplyr::lag(average_loan_balance_per_borrower), 
+         lag_operating_exp = operating_expense_assets - 
+           dplyr::lag(operating_expense_assets), 
+         lag_donations = donations_assets_ratio - 
+           dplyr::lag(donations_assets_ratio), 
+         lag_capital_asset = capital_asset_ratio - 
+           dplyr::lag(capital_asset_ratio), 
+         lag_asset_str = asset_structure - 
+           dplyr::lag(asset_structure), 
+         lag_lassets = lassets - dplyr::lag(lassets), 
+         lag_education = education - dplyr::lag(education), 
+         lag_profit_margin = profit_margin - dplyr::lag(profit_margin))
+
+############################################################
+ols <- lm(lag_gross_loans ~ lag_operating_exp + 
+            
+            lag_donations + lag_capital_asset + 
+            
+            lag_asset_str + lag_lassets + 
+            
+            lag_education + lag_profit_margin, data = diff)
+
+###########################################################
+summary(ols)
+
+###########################################################
+ols1 <- lm(lag_women ~ lag_operating_exp + 
+            
+            lag_donations + lag_capital_asset + 
+            
+            lag_asset_str + lag_lassets + 
+            
+            lag_education + lag_profit_margin, data = diff)
+
+###########################################################
+summary(ols1)
+
+###########################################################
+ols2 <- lm(lag_average_loans ~ lag_operating_exp + 
+            
+            lag_donations + lag_capital_asset + 
+            
+            lag_asset_str + lag_lassets + 
+            
+            lag_education + lag_profit_margin + factor(year), data = diff)
+
+############################################################
+summary(ols2)
+
+############################################################
+stargazer(ols, ols1, ols2, 
+          
+          type = "html", out = "full_fd.html" , header = FALSE, title = "First Difference 
+          
+          Estimates")
+############################################################
+```
+
+#### Robustness Checks
+
+Our robustness checks encompass three matters. First, the study employs three financial metrics to capture financial inclusion - per cent of women borrowers, average loan balance per borrower, and gross loans to assets ratio. The use of multiple metrics allows for triangulation, given that measuring the extent of financial inclusion is contested with different scholars favouring different metrics. The second aspect relates to outliers which could affect the regression estimates. To control for outliers, we run regressions using winsorized data. Precisely, we remove the top 10% and the bottom 10% of the data and run the random effects, fixed effects and pooled OLS. Outliers can bias results when there are extremely large or small values of variables than the typical observation. Overall, the results remain robust to extreme values. Lastly, we correct the standard errors by presenting panel corrected standard errors (PCSE) to cater to serial correlation and cross-sectional dependence, which is a common issue in panel data (see Appendix 5). Under cross-sectional dependence and serial correlation, the observed standard errors are different from the actual standard errors, thereby overestimating or underestimating the model's precision [@pesaran2021general].  
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Winsorizing the data
+## Winsorizing function
+remove_outliers <- function(x, na.rm = TRUE, ...) {
+  qnt <- quantile(x, probs=c(.10, .90), na.rm = na.rm, ...)
+  H <- 1.5 * IQR(x, na.rm = na.rm)
+  y <- x
+  y[x < (qnt[1] - H)] <- NA
+  y[x > (qnt[2] + H)] <- NA
+  y
+}
+
+#####################################################
+data_wins <- my_data %>% select(operating_expense_assets, 
+                             donations_assets_ratio, 
+                             capital_asset_ratio, 
+                             asset_structure, assets, 
+                             education, profit_margin,
+                             percent_of_female_borrowers,
+                             average_loan_balance_per_borrower,
+                             gross_loan_portfolio_to_total_assets)
+
+####################################################
+data_wins <- sapply(data_wins, remove_outliers) %>% data.frame()
+
+####################################################
+data_wins <- my_data %>% 
+  
+  select(mfiid, year, currentlegalstatus, age, region) %>% 
+  
+  bind_cols(data_wins)
+
+####################################################
+```
+
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+## Run the winsorized regressions
+## Model for coefficients
+model16 <- modelling(data = data_wins, depvar = data_wins$percent_of_female_borrowers, model = "random")
+
+model17 <- modelling(data = data_wins, depvar = data_wins$percent_of_female_borrowers, model = "within")
+
+model18 <- modelling(data = data_wins, depvar = data_wins$percent_of_female_borrowers, model = "pooling")
+
+model19 <- modelling(data = data_wins, depvar = data_wins$average_loan_balance_per_borrower, model = "random")
+
+model20 <- modelling(data = data_wins, depvar = data_wins$average_loan_balance_per_borrower, model = "within")
+
+model21 <- modelling(data = data_wins, depvar = data_wins$average_loan_balance_per_borrower, model = "pooling")
+
+model22 <- modelling(data = data_wins, depvar = data_wins$gross_loan_portfolio_to_total_assets, model = "random")
+
+model23 <- modelling(data = data_wins, depvar = data_wins$gross_loan_portfolio_to_total_assets, model = "within")
+
+model24 <- modelling(data = data_wins, depvar = data_wins$gross_loan_portfolio_to_total_assets, model = "pooling")
+```
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+inference_m16 <- coeftest(model16, vcov = vcovBK(model16, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m17 <- coeftest(model17, vcov = vcovBK(model17, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m18 <- coeftest(model18, vcov = vcovBK(model18, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m19 <- coeftest(model19, vcov = vcovBK(model19, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m20 <- coeftest(model20, vcov = vcovBK(model20, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m21 <- coeftest(model21, vcov = vcovBK(model21, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m22 <- coeftest(model22, vcov = vcovBK(model22, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m23 <- coeftest(model23, vcov = vcovBK(model23, method = "arellano", type="HC1", cluster = "group"))
+
+inference_m24 <- coeftest(model24, vcov = vcovBK(model24, method = "arellano", type="HC1", cluster = "group"))
+```
+
+
+## Conclusion
+
+MFI provides financial services to the financially excluded, including women, rural dwellers, people living in remote locations, and the poor. A paradigm shift from the NGO not-for-profit model of microfinance to the commercial, for-profit model stresses financial sustainability over and above outreach to the financially excluded. In this article, we have examined microfinance institutions' transformation in Africa and its potential effects on financial inclusion. We found that NGOs perform best in measures of financial depth, represented by the per cent of women borrowers and average loan balance per borrower. Surprisingly, NGOs do well in financial breadth, exhibiting higher median gross loans to assets ratio than other legal forms, including commercial banks. These results suggest that transformation could adversely affect financial inclusion in Africa if allowed to occur without appropriate guides and support.
+
+Furthermore, the capital to assets ratio positively drives all aspects of financial inclusion but is only statistically significant for gross loans. Hence, microfinance institutions, including those not NGOs, could fare well in financial inclusion if affordable and dedicated external capital is available. Interestingly, profitability is positively related to gross loans, although MFI does not need to transform. Operating expenses also positively drive depth and breadth of outreach. Therefore, targeted tax breaks could, for instance, allow MFIs to incur costs of reaching the financially excluded clients without a severe dent in profitability. Donations negatively impact the breadth of outreach while education and regional location are only important in terms of depth, that is, the per cent of female borrowers. Asset structure, donations, and size of an MFI negatively relate to gross loans. Therefore, the transformation of MFIs in Africa needs an appropriate framework to mitigate possible mission drift.
+
+
+## Appendices
+
+### Appendix 1: Regression Analysis- Winsorized Data
+
+\blandscape
+\newpage
+
+
+
+```{r, results = 'asis', echo = FALSE, message = FALSE, warning = FALSE}
+stargazer(model16, model17, model18, model19, model20, 
+          
+          model21, model22, model23, model24, 
+          
+          header = FALSE, type = "latex",
+          
+          title = "Regression Analysis Using Winsorized Data", 
+          
+font.size = "tiny", omit = c("^year.", "^Constant"),
+
+se = list(inference_m16[,2], inference_m17[,2], inference_m18[,2], 
+          
+          inference_m19[,2], inference_m20[,2], inference_m21[,2],
+          
+          inference_m22[,2], inference_m23[,2], inference_m24[,2]),
+
+column.labels = c("FemaleClients", "FemaleClients", "FemaleClients", 
+                  
+                  "AverageLoan", "AverageLoan", "AverageLoan", 
+                  
+                  "GrossLoans", "GrossLoans", "GrossLoans"), 
+
+keep.stat = c("n", "rsq", "adj.rsq"),
+
+
+add.lines = list(c("F", "4.230***", "4.210***", "4.130***", "8.200***", 
+                   
+                   "7.980***", "7.840***", "108.395***", "106.966***", 
+                   
+                   "101.779***"), c("Model", "Random", "Fixed", "Pooled", 
+                   
+                   "Random", "Fixed", "Pooled", 
+                   
+                   "Random", "Fixed", "Pooled")),
+
+covariate.labels = c("Legal: Bank", "Legal: NBFI", "Legal: Coop", 
+                     
+                     "Legal: Rural Bank", "Age: Young", "Age: Mature", 
+                     
+                     "Region: SSA", "Operating Expense", 
+                     
+                     "Donations/Assets", "Capital/Assets", "Asset Structure", 
+                     
+                     "Size(Lassets)", "Education", "Profit Margin"), 
+
+dep.var.caption  = "Dependent Variables",
+
+  dep.var.labels   = "Social Performance"
+)
+
+```
+
+\elandscape
+\newpage
+
+
+### Appendix 2: Hausmann Test; Fixed versus Random Effects
+
+In this section, we run the Hausmann test to choose between fixed effects and the random-effects model. Also, we check for the choice between pooled OLS and random-effects models. Finally, we present the output from the regression analysis. Appendix 2 shows the results of the Hausmann test. The test favours the fixed effects model, given that the null hypothesis is the random effects.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+## The Hausmann test
+rbind(
+hausmann_test(data = my_data, depvar = my_data$percent_of_female_borrowers),
+hausmann_test(data = my_data, depvar = my_data$average_loan_balance_per_borrower),
+hausmann_test(data = my_data, depvar = my_data$gross_loan_portfolio_to_total_assets)) %>% 
+  
+  mutate(Dependent_Variable = c("Percent of Female Borrowers", "Average Loan Balance per Borrower", 
+                      
+                      "Gross Loan Portfolio to Total Assets")) %>% 
+  
+  relocate(Dependent_Variable, .before = statistic) %>%  select(-method) %>% 
+  
+  set_names(names(.) %>% str_to_sentence()) %>% 
+  
+  kableExtra::kbl(., caption = "Results of the Hausmann Test for Fixed versus Random Effects", 
+      
+  booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = FALSE, latex_options = "hold_position", 
+                
+                font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction",
+           
+  general_title = "",
+  
+  number = "The test favours the fixed effects model",
+  
+  number_title = "Notes: ")
+##########################################################################
+```
+
+
+### Appendix 3: F-Test; Fixed Effects vs Pooled OLS
+
+The table below shows significant effects, and the test favours the fixed-effects model over the pooled OLS.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+fixed_ols <- function(depvar){
+fixed <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "within", 
+      index = c("mfiid", "year")) 
+  
+pooling <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+          data = my_data, effect = "individual", model = "pooling", 
+      index = c("mfiid", "year"))
+
+pFtest(fixed, pooling)
+}
+
+women <- fixed_ols(my_data$percent_of_female_borrowers)
+average_loan <- fixed_ols(my_data$average_loan_balance_per_borrower)
+gross_loans <- fixed_ols(my_data$gross_loan_portfolio_to_total_assets)
+
+library(tibble)
+tribble(~ Dependent_variable, ~ statistic, ~ Method, ~ Alternative,
+        "Percent of women borrowers", "23.0000***", "F test for individual effects", "Significant effects","Average Loan Balance per Borrower", "1.0000***", "F test for individual effects", "Significant effects", "Gross Loans to Total Assets", "5.0000***", "F test for individual effects", "Significant effects") %>% 
+  
+kableExtra::kbl(., caption = "Results of the F test for individual effects for Fixed Effects versus Pooled OLS", 
+      
+  booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = FALSE, latex_options = "hold_position", 
+                
+                font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction",
+           
+  general_title = "",
+  
+  number = "The test favours the fixed effects model over pooled OLS",
+  
+  number_title = "Notes: ") 
+```
+
+
+### Appendix 4: LM Test; Random Effects vs Pooled OLS
+
+Again, the table below shows the Langrage multiplier test results that favour the random effects model over the pooled OLS.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+random_ols <- function(depvar){
+random <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "random", 
+      index = c("mfiid", "year")) 
+  
+pooling <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+          data = my_data, effect = "individual", model = "pooling", 
+      index = c("mfiid", "year"))
+
+plmtest(pooling)
+}
+
+women_random <- random_ols(my_data$percent_of_female_borrowers)
+average_loan_random <- random_ols(my_data$average_loan_balance_per_borrower)
+gross_loans_random <- random_ols(my_data$gross_loan_portfolio_to_total_assets)
+
+tribble(~ Dependent_variable, ~ statistic, ~ Alternative,
+        "Percent of Women Borrowers", "85.5000***", "Significant effects","Average Loan Balance per Borrower", "2.2400***", "Significant effects", "Gross Loans to Total Assets", "22.3000***", "Significant effects") %>% 
+
+kableExtra::kbl(., caption = "Results of the Langrage Multiplier Test for Random Effects versus Pooled OLS", 
+      
+  booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = FALSE, latex_options = "hold_position", 
+                
+                font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction",
+           
+  general_title = "",
+  
+  number = c("The test favours the fixed effects model over pooled OLS", "Lagrange Multiplier Test - (Honda) for unbalanced panels"),
+  
+  number_title = "Notes: ") 
+
+```
+
+
+### Appendix 5: Cross-Sectional Dependence
+
+The table below shows that there is high cross-sectional dependence in the dataset. For this reason, we run and present the panel corrected standard errors.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+fixed <- function(depvar) {
+  
+  reg <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+  
+  pcdtest(reg, test = "lm")
+  } 
+
+random <- function(depvar){
+  
+  reg <- plm(depvar ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+  
+  pcdtest(reg, test = "lm")
+  }
+
+#########################################
+women_fixed_pcd <- fixed(my_data$percent_of_female_borrowers)
+average_loan_fixed_pcd <- fixed(my_data$average_loan_balance_per_borrower)
+gross_loan_fixed_pcd <- fixed(my_data$gross_loan_portfolio_to_total_assets)
+################################################
+women_random_pcd <- random(my_data$percent_of_female_borrowers)
+average_loan_random_pcd <- random(my_data$average_loan_balance_per_borrower)
+gross_loan_random_pcd <- random(my_data$gross_loan_portfolio_to_total_assets)
+
+############################################################
+## Cross sectional dependence under fixed effects model
+tribble(~ Dependent_variable, ~ Model, ~ Chisq, ~ df,
+        "Percent of women borrowers", "Fixed Effects", "99564***", "53076",
+        "Average loan balance per borrower", "Fixed Effects", "0.0000***", "59759",
+        "Gross loans to total assets", "Fixed Effects", "0.0000***", "68598",
+        "Percent of women borrowers", "Random effects", "99764***", "53076",
+        "Average loan balance per borrower", "Random Effects", "0.0000***", "59759",
+        "Gross loans to total assets", "Random effects", "0.0000***", "68598") %>% 
+
+kableExtra::kbl(., caption = "Results of the PCD Test for Cross-Sectional Dependence", 
+      
+  booktabs = TRUE) %>% 
+  
+  kable_classic(full_width = FALSE, latex_options = "hold_position", 
+                
+                font_size = 9) %>% 
+  
+  footnote(general = "Source: Authors' construction",
+           
+  general_title = "",
+  
+  number = "The test shows the existence of cross-sectional dependence",
+  
+  number_title = "Notes: ") 
+
+```
+
+
+
+\newpage
+
+\blandscape
+
+### Appendix 6: Correlation Matrix for Dependent Variables
+
+```{r, fig.cap = "Correlation Between Gross Loans to Assets, Average Loan Balance per Borrower, and Percent of Female Borrowers", fig.width=8, fig.height=5, echo = FALSE, message = FALSE, warning = FALSE}
+my_data %>% select(gross_loan_portfolio_to_total_assets, 
+                
+                average_loan_balance_per_borrower, percent_of_female_borrowers) %>% 
+  
+                na.omit() %>% data.frame() %>% 
+  
+GGally::ggpairs(columnLabels = c("Gross Loans to Assets", "Average Loan Balance per Borrower", "Percent of Female Borrowers")) + labs(title = "") + theme_bw()
+
+  
+  #corrplot(method = "number", type = "lower", sig.level = 0.05, title = "Correlation Coefficients for Dependent Variables", tl.pos = "ln")
+```
+
+\elandscape
+
+\blandscape
+
+\newpage
+
+### Appendix 7: Residuals Diagnostics- Full Data
+
+```{r, fig.cap = "Normal QQ Plots for the Fixed and Radom Effects Regression Models", fig.width=8, fig.height=4.5, echo = FALSE, message = FALSE, warning = FALSE}
+plm_women_fixed <- plm(percent_of_female_borrowers ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+
+plm_women_random <- plm(percent_of_female_borrowers ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+
+plm_avloan_fixed <- plm(average_loan_balance_per_borrower ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+
+plm_avloan_random <- plm(average_loan_balance_per_borrower ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+
+plm_gross_fixed <- plm(gross_loan_portfolio_to_total_assets ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+
+plm_gross_random <- plm(gross_loan_portfolio_to_total_assets ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = my_data, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+
+
+par(mfrow = c(2,3), title = "QQplots for Fixed Effects Regression Models")
+
+##########################################
+qqnorm(residuals(plm_women_fixed), ylab = 'Residuals', col = "red", 
+       main = "Percent of Women Borrowers - Fixed")
+
+qqline(residuals(plm_women_fixed))
+#########################################
+qqnorm(residuals(plm_avloan_fixed), ylab = 'Residuals', col = "red", 
+       main = "Average Loan balance - Fixed")
+
+qqline(residuals(plm_avloan_fixed))
+#########################################
+qqnorm(residuals(plm_gross_fixed), ylab = 'Residuals', col = "red", 
+       main = "Gross Loans - Fixed")
+
+qqline(residuals(plm_gross_fixed))
+###########################################
+##########################################
+qqnorm(residuals(plm_women_random), ylab = 'Residuals', col = "red", 
+       main = "Percent of Women Borrowers- Random")
+
+qqline(residuals(plm_women_random))
+#########################################
+qqnorm(residuals(plm_avloan_random), ylab = 'Residuals', col = "red", 
+       main = "Average Loan balance- Random")
+
+qqline(residuals(plm_avloan_random))
+#########################################
+qqnorm(residuals(plm_gross_random), ylab = 'Residuals', col = "red", 
+       main = "Gross Loans- Random")
+
+qqline(residuals(plm_gross_fixed))
+```
+
+\elandscape
+
+\blandscape
+
+\newpage
+
+### Appendix 8: Residuals Diagnostics- Winsorised Data
+
+```{r, fig.cap = "Normal QQ Plots for Regressions Using Winsorized Data", fig.width=8, fig.height=4.5, echo = FALSE, message = FALSE, warning = FALSE}
+plm_women_fixed_wins <- plm(percent_of_female_borrowers ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = data_wins, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+
+plm_women_random_wins <- plm(percent_of_female_borrowers ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = data_wins, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+
+plm_avloan_fixed_wins <- plm(average_loan_balance_per_borrower ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = data_wins, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+
+plm_avloan_random_wins <- plm(average_loan_balance_per_borrower ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = data_wins, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+
+plm_gross_fixed_wins <- plm(gross_loan_portfolio_to_total_assets ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = data_wins, effect = "individual", model = "within", 
+      index = c("mfiid", "year"))
+
+plm_gross_random_wins <- plm(gross_loan_portfolio_to_total_assets ~ currentlegalstatus + age + region +
++           operating_expense_assets + 
++           donations_assets_ratio + 
++           capital_asset_ratio +
++           asset_structure + log(assets) + 
++           education + profit_margin + year, 
+               data = data_wins, effect = "individual", model = "random", 
+      index = c("mfiid", "year"))
+
+
+par(mfrow = c(2,3), title = "QQplots for Fixed Effects Regression Models for Winsorised Data")
+
+##########################################
+qqnorm(residuals(plm_women_fixed_wins), ylab = 'Residuals', col = "red", 
+       main = "% Women Borrowers QQ-Plot- Fixed")
+
+qqline(residuals(plm_women_fixed_wins))
+#########################################
+qqnorm(residuals(plm_avloan_fixed_wins), ylab = 'Residuals', col = "red", 
+       main = "Average Loan balance QQ-Plot- Fixed")
+
+qqline(residuals(plm_avloan_fixed_wins))
+#########################################
+qqnorm(residuals(plm_gross_fixed_wins), ylab = 'Residuals', col = "red", 
+       main = "Gross Loans QQ-Plot- Fixed")
+
+qqline(residuals(plm_gross_fixed_wins))
+###########################################
+##########################################
+qqnorm(residuals(plm_women_random_wins), ylab = 'Residuals', col = "red", 
+       main = "% Women Borrowers QQ-Plot- Random")
+
+qqline(residuals(plm_women_random_wins))
+#########################################
+qqnorm(residuals(plm_avloan_random_wins), ylab = 'Residuals', col = "red", 
+       main = "Average Loan balance QQ-Plot- Random")
+
+qqline(residuals(plm_avloan_random_wins))
+#########################################
+qqnorm(residuals(plm_gross_random_wins), ylab = 'Residuals', col = "red", 
+       main = "Gross Loans QQ-Plot- Random")
+
+qqline(residuals(plm_gross_fixed_wins))
+```
+
+\elandscape
+
+\blandscape
+
+\newpage
+
+### Appendix 9: Debt to Equity Ratio by MFI Legal Status
+
+```{r, fig.cap = "Debt to Equity Ratio by MFI Legal Status", fig.width=8, fig.height=4.5, echo = FALSE, message = FALSE, warning = FALSE}
+second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = debt_to_equity_ratio, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Debt to Equity Ratio (Log Scale)", 
+        title = "") +
+  
+second_plotter(data = my_data, x = currentlegalstatus, 
+        z = currentlegalstatus,
+        y = deposits_to_total_assets, 
+        xlabel = "Current Legal Status", 
+        ylabel = "Donations to Assets Ratio (Log Scale)", 
+        title = "")
+```
+
+\elandscape
+
+\blandscape
+
+\newpage
+
+### Appendix 10: Trends in the Percent of Female Borrowers
+
+```{r, fig.cap = "Trends in the Percent of Female Borrowers", fig.width=8, fig.height=4.5, echo = FALSE, message = FALSE, warning = FALSE}
+
+
+(my_data %>% 
+  
+  group_by(year) %>% 
+  
+  summarize(mean_de = mean(debt_to_equity_ratio, na.rm = TRUE), 
+                               
+  median_de = median(debt_to_equity_ratio, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_de), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_de), linetype = "dashed", color = "red") +
+  
+  labs(x = "Year", y = "Debt/Equity Ratio", title = "", 
+       caption = "Authors, computation from MIX data") + 
+  
+  ggthemes::theme_clean() +
+
+
+
+
+## Percent of female borrowers - trends over time
+my_data %>% 
+  
+  group_by(year, currentlegalstatus) %>% 
+  
+  summarize(mean_female = mean(percent_of_female_borrowers, na.rm = TRUE), 
+                               
+  median_female = median(percent_of_female_borrowers, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_female), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_female), linetype = "dashed", color = "red") +
+  
+  labs(x = "Year", y = "Percent of Female Borrowers", title = "") + 
+  
+  ggthemes::theme_clean() + facet_wrap(~currentlegalstatus)) /
+
+
+
+## Average loan Balance per borrower
+(my_data %>% 
+  
+  group_by(year, currentlegalstatus) %>% 
+  
+  summarize(mean_average_loan = mean(average_loan_balance_per_borrower, na.rm = TRUE), 
+                               
+  median_average_loan = median(average_loan_balance_per_borrower, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_average_loan), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_average_loan), linetype = "dashed", color = "red") +
+  
+  labs(x = "Year", y = "Average Loan Balance", title = "T") + 
+  
+  ggthemes::theme_clean() + facet_wrap(~currentlegalstatus) +
+
+
+## Gross loan portfolio to assets 
+my_data %>% 
+  
+  group_by(year, currentlegalstatus) %>% 
+  
+  summarize(mean_gross_loans = mean(gross_loan_portfolio_to_total_assets, na.rm = TRUE), 
+                               
+  median_gross_loans = median(gross_loan_portfolio_to_total_assets, na.rm = TRUE)) %>% 
+  
+  ggplot(mapping = aes(x = year, y = mean_gross_loans), color = "skyblue") + geom_line() +
+  
+  geom_line(mapping = aes(x = year, y = median_gross_loans), linetype = "dashed", color = "red") +
+  
+  labs(x = "Year", y = "Gross Loans to Assets", title = "") + 
+  
+  ggthemes::theme_clean() + facet_wrap(~currentlegalstatus))
+
+```
+
+\elandscape
+
