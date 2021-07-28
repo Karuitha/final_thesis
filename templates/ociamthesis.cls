@@ -286,6 +286,22 @@
 {\vfill\end{alwayssingle}\restoregeometry}
 
 
+% DECLARATION
+%
+% The declaration environment puts a large, bold, centered 
+% "Declaration" label at the top of the page. The declarations
+% themselves appear in a quote environment, i.e. tabbed in at both sides, and
+% on its own page.
+
+\newenvironment{declaration}%
+{   \begin{alwayssingle}\chapter*{Declaration}
+    \thispagestyle{empty}
+	\pagestyle{empty}
+	\setlength{\baselineskip}{\frontmatterbaselineskip}
+}
+{\end{alwayssingle}}
+
+
 %ROMANPAGES
 %
 % The romanpages environment set the page numbering to lowercase roman one

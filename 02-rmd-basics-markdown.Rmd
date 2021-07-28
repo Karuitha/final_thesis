@@ -10,6 +10,16 @@ output:
   bookdown::word_document2: default
 documentclass: book
 bibliography: references.bib
+always_allow_html: true
+header-includes:
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+- \usepackage[default]{sourcesanspro}
+- \usepackage[T1]{fontenc}
+- \usepackage{amsmath}
+- \usepackage{dcolumn}
+- \usepackage{url}
 ---
 
 ```{block type='savequote', quote_author='(ref:cicero-quote)', include=knitr::is_latex_output()}

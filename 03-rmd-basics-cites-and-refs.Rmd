@@ -16,6 +16,8 @@ header-includes:
 - \usepackage[default]{sourcesanspro}
 - \usepackage[T1]{fontenc}
 - \usepackage{amsmath}
+- \usepackage{dcolumn}
+- \usepackage{url}
 ---
 
 # Transformation of Microfinance Institutions in Africa {#cites-and-refs} 
