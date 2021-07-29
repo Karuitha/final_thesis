@@ -98,7 +98,14 @@ theme_set(ggthemes::theme_clean())
 
 \end{center}
 
-> We examine four sources of finance, and their associated financial structure for microfinance institutions (MFIs) in Africa: debt-equity ratio (leverage) and capital to assets ratio (equity), deposits to assets ratio (deposits), and donations to assets ratio (donations). Our analysis shows that at the firm level, size, age, legal status, and profitability drive financing alternatives in line with theory. For example, asset structure varies inversely with leverage. At the country-level, institutional quality (KKM) varies inversely with deposits and donations. Intersstingly, coefficients of financial development and education variables are not significant across all financial structure proxies, going against stylised facts on the macro-level drivers of firms' financing structure. We find that firm-llevel that firm-level factors are more relevant in determining the financing structure of MFIs. 
+> We examine four sources of finance, and their associated financial structure for microfinance institutions (MFIs) in Africa: debt-equity ratio (leverage) and capital to assets ratio (equity), deposits to assets ratio (deposits), and donations to assets ratio (donations). Our analysis shows that at the firm level, size, age, legal status, and profitability drive financing alternatives in line with theory. For example, asset structure varies inversely with leverage. At the country-level, institutional quality (KKM) varies inversely with deposits and donations. Intersstingly, coefficients of financial development and education variables are not significant across all financial structure proxies, going against stylised facts on the macro-level drivers of firms' financing structure. We find that firm-llevel that firm-level factors are more relevant in determining the financing structure of MFIs.
+
+\vspace{10mm}
+
+**Key Words**: Finance, Capital, leverage, Donations, Debt, Deposits, Microfinance, Africa.
+
+\vspace{5mm}
+**JEL Classification**: G210, G230
 
 \newpage
 

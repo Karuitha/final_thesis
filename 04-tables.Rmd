@@ -45,6 +45,16 @@ In immeasurable weariness"
 
 > The shift away from the not-for-profit microfinance institutions (MFIs) model has seen the rise of commercial MFIs in forms like commercial banks, credit unions, and rural banks and the not-for-profit, non-governmental organisations (NGOs). The shift arose partly due to neo-liberalism and the need for MFIs to reach the financially excluded more sustainably than had been the case. Therefore, this article examines how the shift has affected financial inclusion in Africa, utilising data from the Microfinance Information Exchange (MIX). Our results show that the change from the NGO model to the commercial models could negatively affect the depth of financial outreach, especially given that NGOs characteristically have better outreach to women and advance smaller denomination loans on average. Also, NGOs have higher median gross loans than other legal forms of MFIs except for credit unions/ cooperatives, although commercial banks have the highest average gross loans. These results remain robust upon removing outliers and controlling for factors that affect the ability of MFIs to offer financial services to the poor.
 
+\vspace{10mm}
+
+**Key Words**: Microfinance, Transformation, Financial Inclusion, Africa
+
+\vspace{5mm}
+**JEL Classification**: G210, G230
+
+\newpage
+
+
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
 library("pacman")

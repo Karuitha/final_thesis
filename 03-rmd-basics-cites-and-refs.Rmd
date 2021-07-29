@@ -91,7 +91,15 @@ theme_set(ggthemes::theme_clean())
 
 We examine the factors driving non-governmental organisation microfinance institutions to convert to the commercial, profit-oriented model. Using data from the World Bank and the International Monetary Fund (IMF), we ran logit, probit, and multinomial logit models with NGOs as the base outcome. At the firm level, age and size influence transformation, whereas legal tradition, institutional quality, and stock market development are significant factors at the country level. Older firms are less likely to be NGOs, as are MFIs in civil law countries. Larger MFIs and MFIs located in countries with “other” legal traditions are more likely to follow the commercial model. Institutional quality raises the chances of conversion, while stock market capitalisation has a negative relationship with transformation. The models are statistically significant, and the results remain robust to removing outliers and other checks.
 
+\vspace{10mm}
+
+**Key Words**: Microfinance, Transformation, NGO, Commercial, Africa.
+
+\vspace{5mm}
+**JEL Classification**: G210, G230
+
 \newpage
+
 
 ## Background
 The modern micro-finance (MF) industry draws its popularity from the promise of providing appropriate and affordable financial services to the population under-served by mainstream financial intermediaries [@morduch1999microfinance; @morduch2000microfinance]. The motivation for reaching out to the unbanked draws from researchers and development practitioners' view that financial inclusion leads to welfare improvements.  As an example, some scholars associate access to finance with more business start-ups, higher savings rates, improved health, less child mortality, and higher education attainment by the poor, although some scholars downplay these findings [@klapper2015role; @o2017systematic; @shahriar2017lender]. Much of the initial efforts to provide financial services to the unbanked rested on Microfinance. Microfinance refers to either the practice of delivering appropriate and affordable financial facilities to the financially excluded or the providers of such micro and small denomination financial services [@ledgerwood2006transforming]. 

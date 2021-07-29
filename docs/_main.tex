@@ -284,18 +284,19 @@ Microfinance Institutions in Africa}
 
 %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
 \begin{acknowledgements}
- 	This is where you will normally thank your advisor, colleagues, family and friends, as well as funding and institutional support. In our case, we will give our praises to the people who developed the ideas and tools that allow us to push open science a little step forward by writing plain-text, transparent, and reproducible theses in R Markdown.
+ 	While this dissertation bears my name as the author, it is the outcome of many people's direct and indirect efforts. First, much gratitude to my supervisor \href{https://www.wits.ac.za/staff/academic-a-z-listing/o/kaluojahwitsacza/}{\texttt{Professor\ Kalu\ Ojah}} without whose intellectual and material input, it would have been impossible to get this far. From the procurement of data and conferences to painstakingly reading through my work (even when the fonts were tiny), I learned a lot from Professor Ojah. Moreover, I thank my research proposal panellists for providing critical input: Dr Jones Mensah, Professor Chris Malikane, and Dr Diran Soumonni.
 
-  We must be grateful to John Gruber for inventing the original version of Markdown, to John MacFarlane for creating Pandoc (\url{http://pandoc.org}) which converts Markdown to a large number of output formats, and to Yihui Xie for creating \texttt{knitr} which introduced R Markdown as a way of embedding code in Markdown documents, and \texttt{bookdown} which added tools for technical and longer-form writing.
+  Further, much gratitude to the leaders of organizations that have partially funded this research; \texttt{The\ Bradlow\ Foundation}, \href{https://www.bankseta.org.za/}{\texttt{BANKSETA}}, and the \href{https://aercafrica.org}{\texttt{AERC}}. Special thanks to \texttt{Karatina\ University} for granting a four year paid study leave. I also appreciate \texttt{Wits\ University} for support through the PMA award and offering a conducive research environment.
 
-  Special thanks to \href{http://chester.rbind.io}{Chester Ismay}, who created the \texttt{thesisdown} package that helped many a PhD student write their theses in R Markdown. And a very special thanks to John McManigle, whose adaption of Sam Evans' adaptation of Keith Gillow's original maths template for writing an Oxford University DPhil thesis in LaTeX provided the template that I in turn adapted for R Markdown.
+  Many thanks to my family, especially my parents and siblings to whom this work is dedicated (see dedication), for the understanding during the many months I was away. There are also friends and colleagues at Wits University and beyond who provided critical support. Gratitude to Muchiri Githiria, Eddy Ombagi and other residents of \texttt{76\ Long\ Street}. I will never forget that wonderful trip to \texttt{Maputo,\ Mozambique}, and the great moments in Bloemfontein, Brits, Gaborone, Durban, and Mahikeng, plus the nights at the blind PIG and Melville.
 
-  Finally, profuse thanks to JJ Allaire, the founder and CEO of \href{http://rstudio.com}{RStudio}, and Hadley Wickham, the mastermind of the tidyverse without whom we'd all just given up and done data science in Python instead. Thanks for making data science easier, more accessible, and more fun for us all.
+  I also thank the people working for the \href{https://www.r-project.org/foundation/}{\texttt{R} Foundation} for availing of such a beautiful data analysis software without subscription fees. Profuse thanks to ALL the people at \href{http://rstudio.com}{RStudio} and Hadley Wickham, the originator of the Tidyverse, for making data analysis palatable, accessible, and even, at times, fun. These gratitudes should extend to the entire open source community - I have even switched to \href{https://www.linuxfoundation.org/}{\texttt{Linux}}. Finally, I thank \href{https://www.edx.org/}{\texttt{EdX}} for funding a large portion of the \texttt{Professional\ Certificate\ in\ Data\ Science} training that changed my approach and attitude towards data analysis.
 
   \begin{flushright}
-  Ulrik Lyngs \\
-  Linacre College, Oxford \\
-  2 December 2018
+  John King'athia Karuitha \\
+  Graduate School of Business Administration \\
+  University of the Witwatersrand, Johannesburg \\
+  \today
   \end{flushright}
 \end{acknowledgements}
 
@@ -565,6 +566,14 @@ Finally, the efficiency of MFIs is a significant determinant of both the financi
 \end{center}
 
 We examine the factors driving non-governmental organisation microfinance institutions to convert to the commercial, profit-oriented model. Using data from the World Bank and the International Monetary Fund (IMF), we ran logit, probit, and multinomial logit models with NGOs as the base outcome. At the firm level, age and size influence transformation, whereas legal tradition, institutional quality, and stock market development are significant factors at the country level. Older firms are less likely to be NGOs, as are MFIs in civil law countries. Larger MFIs and MFIs located in countries with ``other'' legal traditions are more likely to follow the commercial model. Institutional quality raises the chances of conversion, while stock market capitalisation has a negative relationship with transformation. The models are statistically significant, and the results remain robust to removing outliers and other checks.
+
+\vspace{10mm}
+
+\textbf{Key Words}: Microfinance, Transformation, NGO, Commercial, Africa.
+
+\vspace{5mm}
+
+\textbf{JEL Classification}: G210, G230
 
 \newpage
 
@@ -1652,6 +1661,16 @@ tears-- In immeasurable weariness''
 \begin{quote}
 The shift away from the not-for-profit microfinance institutions (MFIs) model has seen the rise of commercial MFIs in forms like commercial banks, credit unions, and rural banks and the not-for-profit, non-governmental organisations (NGOs). The shift arose partly due to neo-liberalism and the need for MFIs to reach the financially excluded more sustainably than had been the case. Therefore, this article examines how the shift has affected financial inclusion in Africa, utilising data from the Microfinance Information Exchange (MIX). Our results show that the change from the NGO model to the commercial models could negatively affect the depth of financial outreach, especially given that NGOs characteristically have better outreach to women and advance smaller denomination loans on average. Also, NGOs have higher median gross loans than other legal forms of MFIs except for credit unions/ cooperatives, although commercial banks have the highest average gross loans. These results remain robust upon removing outliers and controlling for factors that affect the ability of MFIs to offer financial services to the poor.
 \end{quote}
+
+\vspace{10mm}
+
+\textbf{Key Words}: Microfinance, Transformation, Financial Inclusion, Africa
+
+\vspace{5mm}
+
+\textbf{JEL Classification}: G210, G230
+
+\newpage
 
 \newpage
 
@@ -2950,12 +2969,12 @@ If you have a \textbf{.tex} file with some required front matter from your unive
 \end{center}
 
 \begin{quote}
-We use Data Envelopment Analysis (DEA) to examine the drivers as well as levels of financial efficiency, social efficiency, and socio-financial efficiency of microfinance institutions (MFIs) in Africa for the period 2000-2019. Broadly, our results show a trend of declining financial efficiency but no discernible trend in social and socio-financial efficiency. NGOs have markedly better social efficiency and socio-financial efficiency scores than other legal forms of MFIs. Stock market capitalization to GDP and private credit to GDP, proxies for financial sector development, have a negative relationship with social and socio-financial efficiency. Financial efficiency has an inverse relationship with both size and asset structure of MFIs. These results suggest that commercialization of MFIs does not neccesarily improve their financial sustainability. Our results remain robust after excluding outliers in the analysis. \footnote{1. Graduate School of Business Administration, University of the Witwatersrand, 2nd St Davids Place, Parktown, Johannesburg, South Africa, 2050}. \footnote{Karatina University, School of Business, P.O. Box 1957-10101, Karatina, Kenya}
+We use Data Envelopment Analysis (DEA) to examine the drivers as well as levels of financial efficiency, social efficiency, and socio-financial efficiency of microfinance institutions (MFIs) in Africa for the period 2000-2019. Broadly, our results show a trend of declining financial efficiency but no discernible trend in social and socio-financial efficiency. NGOs have markedly better social efficiency and socio-financial efficiency scores than other legal forms of MFIs. Stock market capitalization to GDP and private credit to GDP, proxies for financial sector development, have a negative relationship with social and socio-financial efficiency. Financial efficiency has an inverse relationship with both size and asset structure of MFIs. These results suggest that commercialization of MFIs does not neccesarily improve their financial sustainability. Our results remain robust after excluding outliers in the analysis.
 \end{quote}
 
 \vspace{10mm}
 
-\textbf{Key Words}: Microfinance, Efficiency, Social, Financial, Performance
+\textbf{Key Words}: Microfinance, Efficiency, Social, Financial, Performance, Africa.
 
 \vspace{5mm}
 
@@ -3752,6 +3771,14 @@ F Statistic (df = 28; 3434) & \multicolumn{1}{c}{8.170$^{***}$} & \multicolumn{1
 \begin{quote}
 We examine four sources of finance, and their associated financial structure for microfinance institutions (MFIs) in Africa: debt-equity ratio (leverage) and capital to assets ratio (equity), deposits to assets ratio (deposits), and donations to assets ratio (donations). Our analysis shows that at the firm level, size, age, legal status, and profitability drive financing alternatives in line with theory. For example, asset structure varies inversely with leverage. At the country-level, institutional quality (KKM) varies inversely with deposits and donations. Intersstingly, coefficients of financial development and education variables are not significant across all financial structure proxies, going against stylised facts on the macro-level drivers of firms' financing structure. We find that firm-llevel that firm-level factors are more relevant in determining the financing structure of MFIs.
 \end{quote}
+
+\vspace{10mm}
+
+\textbf{Key Words}: Finance, Capital, leverage, Donations, Debt, Deposits, Microfinance, Africa.
+
+\vspace{5mm}
+
+\textbf{JEL Classification}: G210, G230
 
 \newpage
 
