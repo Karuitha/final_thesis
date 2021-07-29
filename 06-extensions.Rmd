@@ -773,7 +773,11 @@ envelope <- function(input, output){
 
 \newpage
 
-> **Abstract**
+\begin{center}
+
+\textbf{ABSTRACT}
+
+\end{center}
 
 >We use Data Envelopment Analysis (DEA) to examine the drivers as well as levels of financial efficiency, social efficiency, and socio-financial efficiency of microfinance institutions (MFIs) in Africa for the period 2000-2019. Broadly, our results show a trend of declining financial efficiency but no discernible trend in social and socio-financial efficiency. NGOs have markedly better social efficiency and socio-financial efficiency scores than other legal forms of MFIs. Stock market capitalization to GDP and private credit to GDP, proxies for financial sector development, have a negative relationship with social and socio-financial efficiency. Financial efficiency has an inverse relationship with both size and asset structure of MFIs. These results suggest that commercialization of MFIs does not neccesarily improve their financial sustainability. Our results remain robust after excluding outliers in the analysis. ^[1. Graduate School of Business Administration, University of the Witwatersrand, 2nd St Davids Place, Parktown, Johannesburg, South Africa, 2050]. ^[Karatina University, School of Business, P.O. Box 1957-10101, Karatina, Kenya]
 
