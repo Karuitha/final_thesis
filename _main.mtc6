@@ -1,0 +1,27 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Background}{\reset@font\mtcSfont 70}{section.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}Summary of Results}{\reset@font\mtcSSfont 73}{subsection.3.1.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Theory and Empirical Literature}{\reset@font\mtcSfont 74}{section.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Method}{\reset@font\mtcSfont 77}{section.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Results}{\reset@font\mtcSfont 79}{section.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Exploratory Data Analysis}{\reset@font\mtcSSfont 79}{subsection.3.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.1.1}Data Visualization}{\reset@font\mtcSSSfont 79}{subsubsection.3.4.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.1.2}Trends in Dependent and Independent Variables}{\reset@font\mtcSSSfont 89}{subsubsection.3.4.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.2}Descriptive Statistics: Trends Over 2000-2020}{\reset@font\mtcSSfont 91}{subsection.3.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.3}Summary Statistics}{\reset@font\mtcSSfont 93}{subsection.3.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.4}Regression Analysis}{\reset@font\mtcSSfont 94}{subsection.3.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.4.1}Percent of Women Borrowers}{\reset@font\mtcSSSfont 95}{subsubsection.3.4.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.4.2}Average Loan Balance per Borrower}{\reset@font\mtcSSSfont 97}{subsubsection.3.4.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.4.3}Gross Loans to Assets Ratio}{\reset@font\mtcSSSfont 102}{subsubsection.3.4.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.4.4.4}Robustness Checks}{\reset@font\mtcSSSfont 103}{subsubsection.3.4.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Conclusion}{\reset@font\mtcSfont 104}{section.3.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.6}Appendices}{\reset@font\mtcSfont 105}{section.3.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.1}Appendix 1: Regression Analysis- Winsorized Data}{\reset@font\mtcSSfont 105}{subsection.3.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.2}Appendix 2: Hausmann Test; Fixed versus Random Effects}{\reset@font\mtcSSfont 107}{subsection.3.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.3}Appendix 3: F-Test; Fixed Effects vs Pooled OLS}{\reset@font\mtcSSfont 107}{subsection.3.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.4}Appendix 4: LM Test; Random Effects vs Pooled OLS}{\reset@font\mtcSSfont 107}{subsection.3.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.5}Appendix 5: Cross-Sectional Dependence}{\reset@font\mtcSSfont 108}{subsection.3.6.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.6}Appendix 6: Correlation Matrix for Dependent Variables}{\reset@font\mtcSSfont 109}{subsection.3.6.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.7}Appendix 7: Residuals Diagnostics- Full Data}{\reset@font\mtcSSfont 110}{subsection.3.6.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.8}Appendix 8: Residuals Diagnostics- Winsorised Data}{\reset@font\mtcSSfont 111}{subsection.3.6.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.9}Appendix 9: Debt to Equity Ratio by MFI Legal Status}{\reset@font\mtcSSfont 112}{subsection.3.6.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.10}Appendix 10: Trends in the Percent of Female Borrowers}{\reset@font\mtcSSfont 113}{subsection.3.6.10}}

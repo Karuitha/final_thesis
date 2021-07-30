@@ -20,6 +20,17 @@ header-includes:
 - \usepackage{url}
 ---
 
+```{block type='savequote', quote_author='(ref:edgar-quote)', include=knitr::is_latex_output()}
+“All is changed, save the river and the hill--
+Even they are changed.
+Only the burning sun and the quiet stars are the same.
+And we--we, the memories, stand here in awe,
+Our eyes closed with the weariness of tears--
+In immeasurable weariness."
+```
+(ref:edgar-quote) --- Edgar Lee Masters.
+
+
 # Transformation of Microfinance Institutions in Africa {#cites-and-refs} 
 \chaptermark{Transformation of MFIs in Africa}
 \minitoc <!-- this will include a mini table of contents-->
@@ -102,7 +113,7 @@ We examine the factors driving non-governmental organisation microfinance instit
 
 
 ## Background
-The modern micro-finance (MF) industry draws its popularity from the promise of providing appropriate and affordable financial services to the population under-served by mainstream financial intermediaries [@morduch1999microfinance; @morduch2000microfinance]. The motivation for reaching out to the unbanked draws from researchers and development practitioners' view that financial inclusion leads to welfare improvements.  As an example, some scholars associate access to finance with more business start-ups, higher savings rates, improved health, less child mortality, and higher education attainment by the poor, although some scholars downplay these findings [@klapper2015role; @o2017systematic; @shahriar2017lender]. Much of the initial efforts to provide financial services to the unbanked rested on Microfinance. Microfinance refers to either the practice of delivering appropriate and affordable financial facilities to the financially excluded or the providers of such micro and small denomination financial services [@ledgerwood2006transforming]. 
+The modern micro-finance (MF) industry draws its popularity from the promise of providing appropriate and affordable financial services to the population under-served by mainstream financial intermediaries [@morduch1999microfinance; @morduch2000microfinance]. The motivation for reaching out to the unbanked draws from researchers and development practitioners' view that financial inclusion leads to welfare improvements.  As an example, some scholars associate access to finance with more business start-ups, higher savings rates, improved health, less child mortality, and higher education attainment by the poor, although some scholars downplay these findings [@klapper2015role; @o2017systematic; @shahriar2017lender]. Much of the initial efforts to provide financial services to the unbanked rested on Microfinance. Microfinance refers to either the practice of delivering appropriate and affordable financial facilities to the financially excluded or the providers of such micro and small denomination financial services [@ledgerwood2006transforming] ^[The quote at the beginning of the chapter is from the poem *Edith Conant* by Edgar Lee Masters in @masters2007spoon]. 
 
 Pioneer Microfinance Institutions (MFIs), like Grameen Bank, primarily operated as Non-Governmental Organisations (NGOs), following the welfare approach, where the profitability of the institution played a second role to availing financial services to the poor [@chahine2010social; @d2017ngos].  However, the paradigm shift is towards the financial systems approach where MFIs operate under commercial principles, leading to charges of "financialisation" of poverty [@mader2015financialization], with the relatively higher interest rates charged to the clients equated to a "poverty penalty" [@chen2017microfinance]. Some scholars and practitioners argue that MFIs following the profit-oriented commercial model are subject to "mission drift" though more financially sustainable". Mission drift refers to situations where MFIs lessens their commitment to availing financial services to the financially excluded to pursue profits [@jia2016commercialization; @mia2017mission]. 
 

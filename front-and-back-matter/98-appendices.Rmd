@@ -7,17 +7,69 @@
 
 # The First Appendix
 
-This first appendix includes an R chunk that was hidden in the document (using `echo = FALSE`) to help with readibility:
+In my data analysis, I have relied a great deal on the efforts of the work by the `R foundation` [@R], `R Studio`, and many other contributors to the R project. The listing below shows the packages utilised in my research. 
 
-**In 02-rmd-basics-code.Rmd**
+:::::::::::::: {.columns}
+::: {.column width="40%"}
 
-```{r ref.label='chunk-parts', eval=FALSE, echo = TRUE}
-```
+bookdown[@bookdown],
+broom[@broom],
+caret[@caret],
+car[@car],
+corrplot[@corrplot2021],
+GGally[@ggally],
+ggalt[@ggalt],
+ggeasy[@ggeasy],
+gghalves[@gghalves],
+ggrepel[@ggrepel],
+ggthemes[@ggthemes],
+gmnl[@gmnl],
+gmodels[@gmodels],
+gplots[@gplots], 
+gridExtra[@gridextra],
+gtable[@gtable],
+here[@here],
+janitor[@janitor],
+kableExtra[@kableExtra],
+knitr[@knitr], 
+lme4[@lme4], 
+lmtest[@lmtest].
 
-**And here's another one from the same chapter, i.e. Chapter \@ref(code):**
+:::
+::: {.column width="40%"}
 
-```{r ref.label='oxford-logo-rotated', eval=FALSE, echo = TRUE}
-```
+margins[@margins],
+mice[@mice],
+nnet[@nnet],
+oxforddown[@lyngsOxforddown2019],
+pacman[@pacman], 
+patchwork[@patchwork], 
+pcse[@pcse],
+pglm[@pglm], 
+plm [@plm],
+prettydoc[@prettydoc], 
+pROC[@pROC], 
+psych[@psych], 
+Rchoice[@rchoice], 
+rDEA[@rdea],
+readxl[@readxl],
+rmarkdown[@rmarkdown],
+skimr[@skimr],
+stargazer[@stargazer],
+thesisdown[@thesisdown2021],
+tidymodels[@tidymodels],
+tidyverse[@tidymodels],
+treemapify[@treemap], 
+viridis[@viridis], 
+wesanderson[@wesanderson],
+zoo[@zoo].
+
+:::
+::::::::::::::
+
+
+
+
 
 
 

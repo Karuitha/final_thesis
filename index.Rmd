@@ -12,7 +12,7 @@ university: University of the Witwatersrand, Johannesburg
 university-logo: templates/wits.jpg
 submitted-text: A thesis submitted for the degree of
 degree: Doctor of Philosophy in Finance
-degreedate: August 2021
+degreedate: "`r format(Sys.Date(), '%A, %B %d, %Y')`"
 abstract: |
   `r paste(readLines("front-and-back-matter/_abstract.Rmd"), collapse = '\n  ')`
 declaration: |

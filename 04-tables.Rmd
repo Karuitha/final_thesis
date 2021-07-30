@@ -20,16 +20,11 @@ header-includes:
 - \usepackage{url}
 ---
 
-
-```{block type='savequote', quote_author='(ref:edgar-quote)', include=knitr::is_latex_output()}
-“All is changed, save the river and the hill--
-Even they are changed.
-Only the burning sun and the quiet stars are the same.
-And we--we, the memories, stand here in awe,
-Our eyes closed with the weariness of tears--
-In immeasurable weariness"
+```{block type='savequote', quote_author='(ref:world-bank-quote)', include=knitr::is_latex_output()}
+“No end to poverty without financial inclusion."
 ```
-(ref:edgar-quote) --- Edgar Lee Masters.
+(ref:world-bank-quote) --- The World Bank.
+
 
 # Transformation of Microfinance Institutions and its Effects on Financial Inclusion in Africa 
 \chaptermark{MFI Transformation and Financial Inclusion}
@@ -119,9 +114,9 @@ theme_set(ggthemes::theme_clean())
 
 ## Background
 
-In 1992, PRODEM, a micro-finance institution (MFI) in Bolivia, converted from a non-governmental organisation (NGO) to a commercial bank, BANCOSOL. In fact, in the immediate past three decades, numerous NGO MFIs across the globe have adopted the commercial forms of microfinance (Table 3.1). In this article, we examine how the conversion of MFIs to the commercial model affects financial inclusion in terms of the depth and breadth of outreach to the financially excluded. Depth refers to the extent of the traditional financially excluded clients reached by MFIs. If an MFI serves more financially excluded people like women and the poor, it has deeper outreach.
+In 1992, PRODEM, a micro-finance institution (MFI) in Bolivia, converted from a non-governmental organisation (NGO) to a commercial bank, BANCOSOL. In fact, in the immediate past three decades, numerous NGO MFIs across the globe have adopted the commercial forms of microfinance (Table 3.1). In this article, we examine how the conversion of MFIs to the commercial model affects financial inclusion in terms of the depth and breadth of outreach to the financially excluded. Depth refers to the extent of the traditional financially excluded clients reached by MFIs. If an MFI serves more financially excluded people like women and the poor, it has deeper outreach ^[The quotation at the start of the chapter is available at @financialtimesinclusion.
 
-On the other hand, breadth refers to the sheer number of clients reached regardless of their level of financial exclusion. Thus, an MFI that offers more loans to many people has more breadth of outreach. In other words, we explore how the transformation of MFIs typically drives their average loan balance per borrower, the proportion of women borrowers and gross loans. The former two metrics capture depth while the latter proxies breadth ^[The quote at the beginning of the chapter is from the poem *Edith Conant* by Edgar Lee Masters in @masters2007spoon].
+On the other hand, breadth refers to the sheer number of clients reached regardless of their level of financial exclusion. Thus, an MFI that offers more loans to many people has more breadth of outreach. In other words, we explore how the transformation of MFIs typically drives their average loan balance per borrower, the proportion of women borrowers and gross loans. The former two metrics capture depth while the latter proxies breadth.
 
 The study focuses on Africa, a continent that is the epicentre of financial exclusion despite remarkable economic progress of the last three decades [@beck2014sme; @allen2011african]. Evaluating the effects of transformation by using global metrics is likely to mask regional heterogeneity, given that these effects could manifest differently in varying settings [@d2017ngos; @d2013unsubsidized] [^1].
 

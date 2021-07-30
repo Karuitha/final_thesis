@@ -1,0 +1,36 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Background}{\reset@font\mtcSfont 20}{section.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Related Literature}{\reset@font\mtcSfont 22}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Summary of Results}{\reset@font\mtcSSfont 25}{subsection.2.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Method}{\reset@font\mtcSfont 26}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}The Model, Variables Description and Data Sources}{\reset@font\mtcSSfont 27}{subsection.2.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Data Analysis and Results}{\reset@font\mtcSfont 30}{section.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Exploratory Data Analysis}{\reset@font\mtcSSfont 30}{subsection.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.1.1}Data visualisation}{\reset@font\mtcSSSfont 30}{subsubsection.2.4.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.1.2}Summary Statistics}{\reset@font\mtcSSSfont 35}{subsubsection.2.4.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Results of the Regression Model}{\reset@font\mtcSSfont 37}{subsection.2.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.1}Age}{\reset@font\mtcSSSfont 37}{subsubsection.2.4.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.2}Legal Tradition}{\reset@font\mtcSSSfont 39}{subsubsection.2.4.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.3}Size (Log of Total Assets)}{\reset@font\mtcSSSfont 41}{subsubsection.2.4.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.4}Country Level Governance/ Institutional Quality (KKM)}{\reset@font\mtcSSSfont 41}{subsubsection.2.4.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.5}Private Credit to GDP}{\reset@font\mtcSSSfont 43}{subsubsection.2.4.2.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.6}Stock market capitalisation to GDP}{\reset@font\mtcSSSfont 43}{subsubsection.2.4.2.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.7}GDP Annual Growth Rate}{\reset@font\mtcSSSfont 44}{subsubsection.2.4.2.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.8}Time Effects}{\reset@font\mtcSSSfont 44}{subsubsection.2.4.2.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.2.9}Regional Divide}{\reset@font\mtcSSSfont 45}{subsubsection.2.4.2.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Multinomial Logit Model}{\reset@font\mtcSSfont 47}{subsection.2.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.4}Overall Model Fit}{\reset@font\mtcSSfont 49}{subsection.2.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.4.1}Logit Model}{\reset@font\mtcSSSfont 49}{subsubsection.2.4.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.4.2}Multinomial Logit Model}{\reset@font\mtcSSSfont 54}{subsubsection.2.4.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.5}Regression Diagnostics}{\reset@font\mtcSSfont 55}{subsection.2.4.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.5.1}Extreme values}{\reset@font\mtcSSSfont 55}{subsubsection.2.4.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.5.2}Multicollinearity}{\reset@font\mtcSSSfont 58}{subsubsection.2.4.5.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.4.5.3}Linearity assumptions}{\reset@font\mtcSSSfont 58}{subsubsection.2.4.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.6}Other Robustness Checks}{\reset@font\mtcSSfont 60}{subsection.2.4.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Conclusion}{\reset@font\mtcSfont 60}{section.2.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Appendices}{\reset@font\mtcSfont 62}{section.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.1}Appendix 1: Binary Models (Excl. Cooperatives)}{\reset@font\mtcSSfont 62}{subsection.2.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.2}Appendix 2: Multinomial Logit Model- Full Dataset}{\reset@font\mtcSSfont 63}{subsection.2.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.3}Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives}{\reset@font\mtcSSfont 64}{subsection.2.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.4}Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects}{\reset@font\mtcSSfont 65}{subsection.2.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.5}Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects}{\reset@font\mtcSSfont 66}{subsection.2.6.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.6}Appendix 6: Legal Traditions in Africa}{\reset@font\mtcSSfont 67}{subsection.2.6.6}}
