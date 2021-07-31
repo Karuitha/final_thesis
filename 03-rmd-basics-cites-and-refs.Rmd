@@ -1613,7 +1613,7 @@ legal %>%
   tibble()
 ), caption = "Legal Traditions in Africa", 
 
-format = "latex", booktabs = TRUE)
+format = "latex", booktabs = TRUE, position = "h!")
 ##############################################################################
 ```
 

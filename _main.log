@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  31 JUL 2021 02:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  31 JUL 2021 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1581,7 +1581,21 @@ Package biblatex Info: ... file '_main.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                caseau2020impact
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                esaran2021general
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                sun2021globalization
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1774,7 +1788,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 427.
 [7] [8] [9] [10] [11]
-<_main_files/figure-latex/unnamed-chunk-5-1.pdf, id=1427, 469.755pt x 325.215pt
+<_main_files/figure-latex/unnamed-chunk-5-1.pdf, id=1428, 469.755pt x 325.215pt
 >
 File: _main_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-5-1.pdf>
@@ -1811,7 +1825,7 @@ Overfull \hbox (19.65439pt too wide) in paragraph at lines 683--716
  []
 
 [28] [29] [30] [31]
-<_main_files/figure-latex/unnamed-chunk-14-1.pdf, id=1733, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-14-1.pdf, id=1734, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-14-1.pdf>
@@ -1821,7 +1835,7 @@ on input line 743.
 
 LaTeX Warning: Float too large for page by 36.11847pt on input line 745.
 
-<_main_files/figure-latex/unnamed-chunk-19-1.pdf, id=1734, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-19-1.pdf, id=1735, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-19-1.pdf>
@@ -1831,7 +1845,7 @@ on input line 749.
 
 LaTeX Warning: Float too large for page by 36.11847pt on input line 751.
 
-<_main_files/figure-latex/unnamed-chunk-20-1.pdf, id=1735, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-20-1.pdf, id=1736, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-20-1.pdf>
@@ -1879,7 +1893,7 @@ LaTeX Warning: Float too large for page by 98.90034pt on input line 1060.
 
 
 ] [48] [49] [50] [51]
-<_main_files/figure-latex/unnamed-chunk-35-1.pdf, id=1962, 650.43pt x 323.2075p
+<_main_files/figure-latex/unnamed-chunk-35-1.pdf, id=1963, 650.43pt x 323.2075p
 t>
 File: _main_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-35-1.pdf>
@@ -1890,7 +1904,7 @@ on input line 1150.
 
 
 ] [55] [56]
-<_main_files/figure-latex/unnamed-chunk-40-1.pdf, id=2002, 621.32124pt x 390.45
+<_main_files/figure-latex/unnamed-chunk-40-1.pdf, id=2003, 621.32124pt x 390.45
 876pt>
 File: _main_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-40-1.pdf>
@@ -1901,7 +1915,7 @@ on input line 1269.
 
 
 ]
-<_main_files/figure-latex/unnamed-chunk-42-1.pdf, id=2023, 640.3925pt x 405.515
+<_main_files/figure-latex/unnamed-chunk-42-1.pdf, id=2024, 640.3925pt x 405.515
 pt>
 File: _main_files/figure-latex/unnamed-chunk-42-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-42-1.pdf>
@@ -1948,7 +1962,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [73] [74] [75] [76] [77] [78] [79] [80]
-<_main_files/figure-latex/plots2-1.pdf, id=2251, 640.3925pt x 421.575pt>
+<_main_files/figure-latex/plots2-1.pdf, id=2252, 640.3925pt x 421.575pt>
 File: _main_files/figure-latex/plots2-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/plots2-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/plots2-1.pdf  used on input l
@@ -1961,7 +1975,7 @@ LaTeX Warning: Float too large for page by 24.07349pt on input line 1876.
 
 
 ] [83] [84] [85]
-<_main_files/figure-latex/unnamed-chunk-62-1.pdf, id=2301, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-62-1.pdf, id=2302, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-62-1.pdf>
@@ -1971,7 +1985,7 @@ on input line 1905.
 
 LaTeX Warning: Float too large for page by 36.11847pt on input line 1907.
 
-<_main_files/figure-latex/unnamed-chunk-63-1.pdf, id=2302, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-63-1.pdf, id=2303, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-63-1.pdf>
@@ -1983,7 +1997,7 @@ LaTeX Warning: Float too large for page by 36.11847pt on input line 1915.
 
 [86 <./_main_files/figure-latex/unnamed-chunk-62-1.pdf>] [87 <./_main_files/fig
 ure-latex/unnamed-chunk-63-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-64-1.pdf, id=2338, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-64-1.pdf, id=2339, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-64-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-64-1.pdf>
@@ -1999,7 +2013,7 @@ LaTeX Warning: Float too large for page by 36.11847pt on input line 1926.
 
 
 ] [90]
-<_main_files/figure-latex/unnamed-chunk-66-1.pdf, id=2368, 578.16pt x 325.215pt
+<_main_files/figure-latex/unnamed-chunk-66-1.pdf, id=2369, 578.16pt x 325.215pt
 >
 File: _main_files/figure-latex/unnamed-chunk-66-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-66-1.pdf>
@@ -2009,7 +2023,7 @@ on input line 1952.
 [91
 
  <./_main_files/figure-latex/unnamed-chunk-66-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-67-1.pdf, id=2383, 650.43pt x 433.62pt>
+<_main_files/figure-latex/unnamed-chunk-67-1.pdf, id=2384, 650.43pt x 433.62pt>
 
 File: _main_files/figure-latex/unnamed-chunk-67-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-67-1.pdf>
@@ -2063,7 +2077,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ] [108]
-<_main_files/figure-latex/unnamed-chunk-87-1.pdf, id=2539, 568.1225pt x 331.237
+<_main_files/figure-latex/unnamed-chunk-87-1.pdf, id=2540, 568.1225pt x 331.237
 5pt>
 File: _main_files/figure-latex/unnamed-chunk-87-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-87-1.pdf>
@@ -2073,7 +2087,7 @@ on input line 2408.
 [109
 
  <./_main_files/figure-latex/unnamed-chunk-87-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-88-1.pdf, id=2552, 557.08125pt x 301.12
+<_main_files/figure-latex/unnamed-chunk-88-1.pdf, id=2553, 557.08125pt x 301.12
 5pt>
 File: _main_files/figure-latex/unnamed-chunk-88-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-88-1.pdf>
@@ -2084,7 +2098,7 @@ on input line 2423.
 
 
  <./_main_files/figure-latex/unnamed-chunk-88-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-89-1.pdf, id=2566, 566.115pt x 301.125p
+<_main_files/figure-latex/unnamed-chunk-89-1.pdf, id=2567, 566.115pt x 301.125p
 t>
 File: _main_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-89-1.pdf>
@@ -2095,7 +2109,7 @@ on input line 2438.
 
 
  <./_main_files/figure-latex/unnamed-chunk-89-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-90-1.pdf, id=2580, 578.16pt x 325.215pt
+<_main_files/figure-latex/unnamed-chunk-90-1.pdf, id=2581, 578.16pt x 325.215pt
 >
 File: _main_files/figure-latex/unnamed-chunk-90-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-90-1.pdf>
@@ -2106,7 +2120,7 @@ on input line 2453.
 
 
  <./_main_files/figure-latex/unnamed-chunk-90-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-91-1.pdf, id=2598, 578.16pt x 325.215pt
+<_main_files/figure-latex/unnamed-chunk-91-1.pdf, id=2599, 578.16pt x 325.215pt
 >
 File: _main_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-91-1.pdf>
@@ -2184,7 +2198,7 @@ Package microtype Info: Character `texttrademark ' is missing
 (microtype)             in font `TS1/lmtt/m/it/12'.
 (microtype)             Ignoring protrusion settings for this character.
 [119] [120]
-<figures/sample-content/pdf_embed_example/split/_000000000000001.pdf, id=2700, 
+<figures/sample-content/pdf_embed_example/split/_000000000000001.pdf, id=2701, 
 614.295pt x 794.97pt>
 File: figures/sample-content/pdf_embed_example/split/_000000000000001.pdf Graph
 ic file (type pdf)
@@ -2193,7 +2207,7 @@ Package pdftex.def Info: figures/sample-content/pdf_embed_example/split/_000000
 000000001.pdf  used on input line 2686.
 (pdftex.def)             Requested size: 505.31926pt x 653.9539pt.
 [121 <./figures/sample-content/pdf_embed_example/split/_000000000000001.pdf>]
-<figures/sample-content/pdf_embed_example/split/_000000000000011.pdf, id=2756, 
+<figures/sample-content/pdf_embed_example/split/_000000000000011.pdf, id=2757, 
 614.295pt x 794.97pt>
 File: figures/sample-content/pdf_embed_example/split/_000000000000011.pdf Graph
 ic file (type pdf)
@@ -2243,7 +2257,7 @@ e as well as \T1/lmr/bx/n/12 tem-plates/ociamthesis.cls
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [130]
-<figures/sample-content/alt_frontmatter_example/split/_000001.pdf, id=2872, 597
+<figures/sample-content/alt_frontmatter_example/split/_000001.pdf, id=2873, 597
 .50829pt x 845.0471pt>
 File: figures/sample-content/alt_frontmatter_example/split/_000001.pdf Graphic 
 file (type pdf)
@@ -2251,7 +2265,7 @@ file (type pdf)
 Package pdftex.def Info: figures/sample-content/alt_frontmatter_example/split/_
 000001.pdf  used on input line 3025.
 (pdftex.def)             Requested size: 134.75522pt x 190.57869pt.
-<figures/sample-content/alt_frontmatter_example/split/_000002.pdf, id=2873, 597
+<figures/sample-content/alt_frontmatter_example/split/_000002.pdf, id=2874, 597
 .50829pt x 845.0471pt>
 File: figures/sample-content/alt_frontmatter_example/split/_000002.pdf Graphic 
 file (type pdf)
@@ -2259,7 +2273,7 @@ file (type pdf)
 Package pdftex.def Info: figures/sample-content/alt_frontmatter_example/split/_
 000002.pdf  used on input line 3025.
 (pdftex.def)             Requested size: 134.75522pt x 190.57869pt.
-<figures/sample-content/alt_frontmatter_example/split/_000003.pdf, id=2874, 597
+<figures/sample-content/alt_frontmatter_example/split/_000003.pdf, id=2875, 597
 .50829pt x 845.0471pt>
 File: figures/sample-content/alt_frontmatter_example/split/_000003.pdf Graphic 
 file (type pdf)
@@ -2267,7 +2281,7 @@ file (type pdf)
 Package pdftex.def Info: figures/sample-content/alt_frontmatter_example/split/_
 000003.pdf  used on input line 3025.
 (pdftex.def)             Requested size: 134.75522pt x 190.57869pt.
-<figures/sample-content/alt_frontmatter_example/split/_000004.pdf, id=2875, 597
+<figures/sample-content/alt_frontmatter_example/split/_000004.pdf, id=2876, 597
 .50829pt x 845.0471pt>
 File: figures/sample-content/alt_frontmatter_example/split/_000004.pdf Graphic 
 file (type pdf)
@@ -2275,7 +2289,7 @@ file (type pdf)
 Package pdftex.def Info: figures/sample-content/alt_frontmatter_example/split/_
 000004.pdf  used on input line 3025.
 (pdftex.def)             Requested size: 134.75522pt x 190.57869pt.
-<figures/sample-content/alt_frontmatter_example/split/_000005.pdf, id=2876, 597
+<figures/sample-content/alt_frontmatter_example/split/_000005.pdf, id=2877, 597
 .50829pt x 845.0471pt>
 File: figures/sample-content/alt_frontmatter_example/split/_000005.pdf Graphic 
 file (type pdf)
@@ -2283,7 +2297,7 @@ file (type pdf)
 Package pdftex.def Info: figures/sample-content/alt_frontmatter_example/split/_
 000005.pdf  used on input line 3025.
 (pdftex.def)             Requested size: 134.75522pt x 190.57869pt.
-<figures/sample-content/alt_frontmatter_example/split/_000006.pdf, id=2877, 597
+<figures/sample-content/alt_frontmatter_example/split/_000006.pdf, id=2878, 597
 .50829pt x 845.0471pt>
 File: figures/sample-content/alt_frontmatter_example/split/_000006.pdf Graphic 
 file (type pdf)
@@ -2345,7 +2359,7 @@ Overfull \hbox (19.65439pt too wide) in paragraph at lines 3258--3287
 LaTeX Warning: Float too large for page by 45.08627pt on input line 3287.
 
 [148] [149] [150]
-<_main_files/figure-latex/unnamed-chunk-117-1.pdf, id=3215, 650.43pt x 433.62pt
+<_main_files/figure-latex/unnamed-chunk-117-1.pdf, id=3216, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-117-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-117-1.pdf>
@@ -2364,7 +2378,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 ] [153]
-<_main_files/figure-latex/unnamed-chunk-119-1.pdf, id=3244, 650.43pt x 433.62pt
+<_main_files/figure-latex/unnamed-chunk-119-1.pdf, id=3245, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-119-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-119-1.pdf>
@@ -2378,7 +2392,7 @@ LaTeX Warning: Float too large for page by 36.11847pt on input line 3357.
 
 
 ]
-<_main_files/figure-latex/unnamed-chunk-120-1.pdf, id=3270, 650.43pt x 433.62pt
+<_main_files/figure-latex/unnamed-chunk-120-1.pdf, id=3271, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-120-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-120-1.pdf>
@@ -2392,26 +2406,26 @@ LaTeX Warning: Float too large for page by 36.11847pt on input line 3376.
 
 
 ]
-<_main_files/figure-latex/unnamed-chunk-121-1.pdf, id=3297, 650.43pt x 433.62pt
+<_main_files/figure-latex/unnamed-chunk-121-1.pdf, id=3298, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-121-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-121-1.pdf  used
- on input line 3392.
+ on input line 3393.
 (pdftex.def)             Requested size: 650.4284pt x 433.61894pt.
 
-LaTeX Warning: Float too large for page by 36.11847pt on input line 3394.
+LaTeX Warning: Float too large for page by 36.11847pt on input line 3395.
 
 [158 <./_main_files/figure-latex/unnamed-chunk-121-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-122-1.pdf, id=3317, 650.43pt x 433.62pt
+<_main_files/figure-latex/unnamed-chunk-122-1.pdf, id=3318, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-122-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-122-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-122-1.pdf  used
- on input line 3404.
+ on input line 3405.
 (pdftex.def)             Requested size: 650.4284pt x 433.61894pt.
 
-LaTeX Warning: Float too large for page by 36.11847pt on input line 3406.
+LaTeX Warning: Float too large for page by 36.11847pt on input line 3407.
 
 [159 <./_main_files/figure-latex/unnamed-chunk-122-1.pdf>] [160
 
@@ -2429,395 +2443,395 @@ LaTeX Warning: Float too large for page by 36.11847pt on input line 3406.
 
 ] [169
 
-] [170]
-<_main_files/figure-latex/unnamed-chunk-135-1.pdf, id=3413, 578.16pt x 325.215p
+] [170] [171]
+<_main_files/figure-latex/unnamed-chunk-135-1.pdf, id=3418, 578.16pt x 325.215p
 t>
 File: _main_files/figure-latex/unnamed-chunk-135-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-135-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-135-1.pdf  used
- on input line 3712.
+ on input line 3713.
 (pdftex.def)             Requested size: 578.15858pt x 325.2142pt.
-[171
+[172
 
- <./_main_files/figure-latex/unnamed-chunk-135-1.pdf>] [172
+ <./_main_files/figure-latex/unnamed-chunk-135-1.pdf>] [173
 
 
 ]
-<_main_files/figure-latex/unnamed-chunk-139-1.pdf, id=3436, 553.06625pt x 265.9
+<_main_files/figure-latex/unnamed-chunk-139-1.pdf, id=3441, 553.06625pt x 265.9
 9374pt>
 File: _main_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-139-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-139-1.pdf  used
- on input line 3790.
+ on input line 3791.
 (pdftex.def)             Requested size: 553.0649pt x 265.99309pt.
-[173
+[174
 
 
  <./_main_files/figure-latex/unnamed-chunk-139-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-140-1.pdf, id=3450, 551.05875pt x 265.9
+<_main_files/figure-latex/unnamed-chunk-140-1.pdf, id=3456, 551.05875pt x 265.9
 9374pt>
 File: _main_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-140-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-140-1.pdf  used
- on input line 3804.
+ on input line 3805.
 (pdftex.def)             Requested size: 551.05739pt x 265.99309pt.
-[174 <./_main_files/figure-latex/unnamed-chunk-140-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-141-1.pdf, id=3465, 566.115pt x 266.997
+[175 <./_main_files/figure-latex/unnamed-chunk-140-1.pdf>]
+<_main_files/figure-latex/unnamed-chunk-141-1.pdf, id=3470, 566.115pt x 266.997
 5pt>
 File: _main_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-141-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-141-1.pdf  used
- on input line 3818.
+ on input line 3819.
 (pdftex.def)             Requested size: 566.11362pt x 266.99683pt.
-[175 <./_main_files/figure-latex/unnamed-chunk-141-1.pdf>]pdfTeX warning (ext4)
+[176 <./_main_files/figure-latex/unnamed-chunk-141-1.pdf>]pdfTeX warning (ext4)
 : destination with the same identifier (name{Introduction}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.3828 ...itutions in Africa}\label{Introduction}}
+l.3829 ...itutions in Africa}\label{Introduction}}
                                                   
 Chapter 6.
 \openout3 = `_main.mtc'.
 
 \openout3 = `_main.mtc'.
 
-(./_main.mtc9) [176
+(./_main.mtc9) [177
 
 
-] [177] [178] [179] [180] [181] [182]
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+] [178] [179] [180] [181] [182] [183]
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
 
-Overfull \hbox (3.8709pt too wide) in paragraph at lines 3926--3926
+Overfull \hbox (3.8709pt too wide) in paragraph at lines 3927--3927
 []\T1/lmr/m/n/8 Donations/Assets|  
  []
 
-[183] [184
+[184] [185
 
 
-] [185] [186]
-Overfull \hbox (19.65439pt too wide) in alignment at lines 4020--4020
+] [186] [187]
+Overfull \hbox (19.65439pt too wide) in alignment at lines 4021--4021
  [] 
  []
 
 
-Overfull \hbox (19.65439pt too wide) in alignment at lines 4020--4020
+Overfull \hbox (19.65439pt too wide) in alignment at lines 4021--4021
  [] 
  []
 
 
-Overfull \hbox (19.65439pt too wide) in alignment at lines 4020--4020
+Overfull \hbox (19.65439pt too wide) in alignment at lines 4021--4021
  [] 
  []
 
 
-Overfull \hbox (19.65439pt too wide) in alignment at lines 4020--4020
+Overfull \hbox (19.65439pt too wide) in alignment at lines 4021--4021
  [] 
  []
 
 
-Overfull \hbox (19.65439pt too wide) in alignment at lines 4020--4020
+Overfull \hbox (19.65439pt too wide) in alignment at lines 4021--4021
  [] 
  []
 
-[187] [188] [189]
-Overfull \hbox (27.63966pt too wide) in paragraph at lines 4055--4055
+[188] [189] [190]
+Overfull \hbox (27.63966pt too wide) in paragraph at lines 4056--4056
 []\T1/lmr/m/n/10 (-20) Debt_to_equity_ratio|  
  []
 
 
-Overfull \hbox (16.45609pt too wide) in paragraph at lines 4055--4055
+Overfull \hbox (16.45609pt too wide) in paragraph at lines 4056--4056
 []\T1/lmr/m/n/10 (-20) Capital_asset_ratio|  
  []
 
 
-Overfull \hbox (41.5069pt too wide) in paragraph at lines 4055--4055
+Overfull \hbox (41.5069pt too wide) in paragraph at lines 4056--4056
 []\T1/lmr/m/n/10 (-20) Deposits_to_total_assets|  
  []
 
 
-Overfull \hbox (32.21812pt too wide) in paragraph at lines 4055--4055
+Overfull \hbox (32.21812pt too wide) in paragraph at lines 4056--4056
 []\T1/lmr/m/n/10 (-20) Donations_assets_ratio|  
  []
 
 
-Overfull \hbox (20.7588pt too wide) in paragraph at lines 4055--4055
+Overfull \hbox (20.7588pt too wide) in paragraph at lines 4056--4056
 []\T1/lmr/m/n/10 (-20) Gdp_growth_annual|  
  []
 
-[190]
-<_main_files/figure-latex/unnamed-chunk-157-1.pdf, id=3629, 650.43pt x 433.62pt
+[191]
+<_main_files/figure-latex/unnamed-chunk-157-1.pdf, id=3634, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-157-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-157-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-157-1.pdf  used
- on input line 4063.
+ on input line 4064.
 (pdftex.def)             Requested size: 650.4284pt x 433.61894pt.
 
-LaTeX Warning: Float too large for page by 36.11847pt on input line 4068.
+LaTeX Warning: Float too large for page by 36.11847pt on input line 4069.
 
-[191 <./_main_files/figure-latex/unnamed-chunk-157-1.pdf>] [192
-
-
+[192 <./_main_files/figure-latex/unnamed-chunk-157-1.pdf>] [193
 
 
-] [193]
-<_main_files/figure-latex/unnamed-chunk-158-1.pdf, id=3657, 650.43pt x 433.62pt
+
+
+] [194]
+<_main_files/figure-latex/unnamed-chunk-158-1.pdf, id=3662, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-158-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-158-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-158-1.pdf  used
- on input line 4086.
+ on input line 4087.
 (pdftex.def)             Requested size: 650.4284pt x 433.61894pt.
 
-LaTeX Warning: Float too large for page by 36.11847pt on input line 4091.
+LaTeX Warning: Float too large for page by 36.11847pt on input line 4092.
 
-[194 <./_main_files/figure-latex/unnamed-chunk-158-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-159-1.pdf, id=3676, 650.43pt x 433.62pt
+[195 <./_main_files/figure-latex/unnamed-chunk-158-1.pdf>]
+<_main_files/figure-latex/unnamed-chunk-159-1.pdf, id=3681, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-159-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-159-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-159-1.pdf  used
- on input line 4099.
+ on input line 4100.
 (pdftex.def)             Requested size: 650.4284pt x 433.61894pt.
 
-LaTeX Warning: Float too large for page by 36.11847pt on input line 4104.
+LaTeX Warning: Float too large for page by 36.11847pt on input line 4105.
 
-[195 <./_main_files/figure-latex/unnamed-chunk-159-1.pdf>]
-<_main_files/figure-latex/unnamed-chunk-160-1.pdf, id=3689, 650.43pt x 433.62pt
+[196 <./_main_files/figure-latex/unnamed-chunk-159-1.pdf>]
+<_main_files/figure-latex/unnamed-chunk-160-1.pdf, id=3694, 650.43pt x 433.62pt
 >
 File: _main_files/figure-latex/unnamed-chunk-160-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-160-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-160-1.pdf  used
- on input line 4112.
+ on input line 4113.
 (pdftex.def)             Requested size: 650.4284pt x 433.61894pt.
 
-LaTeX Warning: Float too large for page by 36.11847pt on input line 4117.
+LaTeX Warning: Float too large for page by 36.11847pt on input line 4118.
 
-[196 <./_main_files/figure-latex/unnamed-chunk-160-1.pdf>]
-Overfull \hbox (28.36293pt too wide) in paragraph at lines 4140--4140
+[197 <./_main_files/figure-latex/unnamed-chunk-160-1.pdf>]
+Overfull \hbox (28.36293pt too wide) in paragraph at lines 4141--4141
 []\T1/lmr/m/n/9 asset_structure|  
  []
 
 
-Overfull \hbox (2.21454pt too wide) in paragraph at lines 4140--4140
+Overfull \hbox (2.21454pt too wide) in paragraph at lines 4141--4141
  []\T1/lmr/m/n/9 0.00e+00|
  []
 
 
-Overfull \hbox (3.517pt too wide) in paragraph at lines 4140--4140
+Overfull \hbox (3.517pt too wide) in paragraph at lines 4141--4141
 []\T1/lmr/m/n/9 pcrdbgdp|  
  []
 
 
-Overfull \hbox (2.51868pt too wide) in paragraph at lines 4140--4140
+Overfull \hbox (2.51868pt too wide) in paragraph at lines 4141--4141
 []\T1/lmr/m/n/9 stmktcap|  
  []
 
 
-Overfull \hbox (2.21454pt too wide) in paragraph at lines 4140--4140
+Overfull \hbox (2.21454pt too wide) in paragraph at lines 4141--4141
  []\T1/lmr/m/n/9 0.00e+00|
  []
 
 
-Overfull \hbox (22.54951pt too wide) in paragraph at lines 4140--4140
+Overfull \hbox (22.54951pt too wide) in paragraph at lines 4141--4141
 []\T1/lmr/m/n/9 profit_margin|  
  []
 
 
-Overfull \hbox (1.98329pt too wide) in paragraph at lines 4140--4140
+Overfull \hbox (1.98329pt too wide) in paragraph at lines 4141--4141
  \T1/lmr/m/n/9 3.55e+04|
  []
 
 
-Overfull \hbox (21.33508pt too wide) in paragraph at lines 4126--4141
+Overfull \hbox (21.33508pt too wide) in paragraph at lines 4127--4142
  [][] 
  []
 
-[197
+[198
 
 
 
 
 
 
-] [198] [199] [200
+] [199] [200] [201
 
-] [201
+] [202
 
-] [202] [203] [204
+] [203] [204] [205
 
-] [205
+] [206
 
-] [206] [207] [208
+] [207] [208] [209
 
 ]
-Overfull \hbox (3.6565pt too wide) in paragraph at lines 4469--4469
+Overfull \hbox (3.6565pt too wide) in paragraph at lines 4470--4470
  []\T1/lmr/m/n/9 Donations_assets1|
  []
 
-[209
+[210
 
-] [210] [211]
-Overfull \hbox (7.31065pt too wide) in paragraph at lines 4503--4561
+] [211] [212]
+Overfull \hbox (7.31065pt too wide) in paragraph at lines 4504--4562
  [][] 
  []
 
-[212
+[213
 
-] [213
+] [214
 
-] [214] [215]
-Overfull \hbox (6.69925pt too wide) in paragraph at lines 4618--4618
+] [215] [216]
+Overfull \hbox (6.69925pt too wide) in paragraph at lines 4619--4619
 []\T1/lmr/m/n/9 Deposits/Assets 
  []
 
 
-Overfull \hbox (13.06818pt too wide) in paragraph at lines 4618--4618
+Overfull \hbox (13.06818pt too wide) in paragraph at lines 4619--4619
 []\T1/lmr/m/n/9 Donations/Assets 
  []
 
 
-Overfull \hbox (4.02759pt too wide) in paragraph at lines 4622--4622
+Overfull \hbox (4.02759pt too wide) in paragraph at lines 4623--4623
 |[]\T1/lmr/bx/n/14.4 Appendix 2: Mul-ti-collinear-ity: Vari-ance In-fla-tion Fa
 c-
  []
 
 
-Overfull \hbox (23.44998pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (23.44998pt too wide) in paragraph at lines 4648--4648
  []\T1/lmr/m/n/9 GVIF^(1/(2*Df))|
  []
 
 
-Overfull \hbox (23.44998pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (23.44998pt too wide) in paragraph at lines 4648--4648
  []\T1/lmr/m/n/9 GVIF^(1/(2*Df))|
  []
 
 
-Overfull \hbox (23.68109pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (23.68109pt too wide) in paragraph at lines 4648--4648
 []\T1/lmr/m/n/9 currentlegalstatus|  
  []
 
 
-Overfull \hbox (12.76128pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (12.76128pt too wide) in paragraph at lines 4648--4648
 []\T1/lmr/m/n/9 legal_tradition|  
  []
 
 
-Overfull \hbox (14.99466pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (14.99466pt too wide) in paragraph at lines 4648--4648
 []\T1/lmr/m/n/9 asset_structure|  
  []
 
 
-Overfull \hbox (9.18124pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (9.18124pt too wide) in paragraph at lines 4648--4648
 []\T1/lmr/m/n/9 profit_margin|  
  []
 
-[216] [217
+[217] [218
 
-] [218
+] [219
 
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 4810.
+(hyperref)                be the same. Added a new anchor on input line 4811.
 
-[219
+[220
 
 
-] [220
+] [221
 
 ]
 Appendix A.
 
-Overfull \hbox (35.60947pt too wide) in paragraph at lines 4849--4874
+Overfull \hbox (35.60947pt too wide) in paragraph at lines 4850--4875
 []\T1/lmr/m/n/12 (-20) margins([]Leeper []2021[]), mice([]van Bu-uren and Groot
 huis-Oudshoorn []2011[]), nnet([]Venables
  []
 
 
-Overfull \hbox (23.81015pt too wide) in paragraph at lines 4849--4874
+Overfull \hbox (23.81015pt too wide) in paragraph at lines 4850--4875
 \T1/lmr/m/n/12 (-20) and Bryan []2019[]), rmark-down([]Xie et al. []2020[]), sk
 imr([]Waring et al. []2021[]), stargazer([]Hlavac
  []
 
 
-Overfull \hbox (31.64442pt too wide) in paragraph at lines 4849--4874
+Overfull \hbox (31.64442pt too wide) in paragraph at lines 4850--4875
 []\T1/lmr/m/n/12 (-20) 2018[]), the-sis-down([]Ismay []2021[]), tidy-mod-els([]
 Kuhn and Wick-ham []2020[]), tidy-verse([]Wickham,
  []
 
-[221
+[222
 
-] [222]
+] [223]
 Appendix B.
-[223
+[224
 
 ]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[224
+[225
 
-] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237]
-[238] [239]
+] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238]
+[239] [240]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the _main.maf file.
 \openout3 = `_main.maf'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4893.
-[240]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4893.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4894.
+[241]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4894.
 (./_main.aux (./front-and-back-matter/abbreviations.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4893.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4893.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4894.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4894.
 
 Package rerunfilecheck Info: File `_main.out' has not changed.
-(rerunfilecheck)             Checksum: 01D8754FA5F109F5381A8767AA058500;14511.
+(rerunfilecheck)             Checksum: ED039D9DCA3EA66379D1251557170CB7;14506.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2826,13 +2840,13 @@ Package logreq Info: Writing requests to '_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30127 strings out of 481745
- 528767 string characters out of 5930830
- 1371612 words of memory out of 5000000
- 43140 multiletter control sequences out of 15000+600000
- 684684 words of font info for 228 fonts, out of 8000000 for 9000
+ 30131 strings out of 481745
+ 528801 string characters out of 5930830
+ 1371921 words of memory out of 5000000
+ 43141 multiletter control sequences out of 15000+600000
+ 684721 words of font info for 229 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
- 50i,17n,60p,2166b,3504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,17n,60p,2129b,3504s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
@@ -2867,10 +2881,10 @@ ve/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on _main.pdf (259 pages, 34872712 bytes).
+Output written on _main.pdf (260 pages, 34872827 bytes).
 PDF statistics:
- 4529 PDF objects out of 5155 (max. 8388607)
- 4055 compressed objects within 41 object streams
- 1060 named destinations out of 1200 (max. 500000)
+ 4534 PDF objects out of 5155 (max. 8388607)
+ 4059 compressed objects within 41 object streams
+ 1061 named destinations out of 1200 (max. 500000)
  46145 words of extra memory for PDF output out of 51595 (max. 10000000)
 
