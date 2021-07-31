@@ -5,7 +5,7 @@
 <!-- If you feel it necessary to include an appendix, it goes here. The first appendix should include the commands above. -->
 
 
-# The First Appendix
+# R Packages Utilised in the Research
 
 In my data analysis, I have relied a great deal on the efforts of the work by the `R foundation` [@R], `R Studio`, and many other contributors to the R project. The listing below shows the packages utilised in my research. 
 
@@ -58,7 +58,7 @@ skimr[@skimr],
 stargazer[@stargazer],
 thesisdown[@thesisdown2021],
 tidymodels[@tidymodels],
-tidyverse[@tidymodels],
+tidyverse[@tidyverse],
 treemapify[@treemap], 
 viridis[@viridis], 
 wesanderson[@wesanderson],
@@ -66,11 +66,6 @@ zoo[@zoo].
 
 :::
 ::::::::::::::
-
-
-
-
-
 
 
 # The Second Appendix, for Fun

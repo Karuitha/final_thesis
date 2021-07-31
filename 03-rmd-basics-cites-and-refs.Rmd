@@ -1577,37 +1577,44 @@ stargazer(multinom_full_no_coop_ny, title = "Multinomial Logit Model- Full Data 
 ### Appendix 6: Legal Traditions in Africa
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-legal %>% rename(Country = country, Legal_Tradition = trad) %>% 
+
+knitr::kable(list(
+##############################################################################
+legal %>% 
   
-  mutate(Legal_Tradition = case_when(
-    
-    Legal_Tradition == "civil" ~ "Civil",
-    
-    Legal_Tradition == "common" ~ "Common",
-    
-    TRUE ~ "Others")) %>% 
+  filter(trad == "common") %>% 
   
-  arrange(Legal_Tradition, Country) %>% 
+  select(country) %>% 
   
-  pivot_wider(names_from = "Legal_Tradition", values_from = "Country") %>% 
+  rename(Common_Law = country) %>% 
   
-  kbl(., caption = "Legal Traditions in Africa", 
-      
-      booktabs = TRUE) %>% 
+  tibble(),
+
+##############################################################################
+legal %>% 
   
-  kable_classic(full_width = FALSE, font_size = 8, latex_options = "hold_position") %>% 
+  filter(trad == "civil") %>% 
   
-  column_spec(1:3, width = "20em") %>% 
+  select(country) %>% 
   
-  footnote(general = "Source: Oto-Peralías and Romero-Ávila (2014)",
-           
-           general_title = "",
-           
-           number = c("Other legal traditions include Spanish, Portuguese, Belgian, and Italian", 
-                      
-                      "Ethiopia is a peculiar case of a country in Africa that was not colonised"),
-           
-           number_title = "Note: ")
+  rename(Civil_Law = country) %>% 
+  
+  tibble(),
+
+#############################################################################
+legal %>% 
+  
+  filter(trad == "others") %>% 
+  
+  select(country) %>% 
+  
+  rename(Other_Law = country) %>% 
+  
+  tibble()
+), caption = "Legal Traditions in Africa", 
+
+format = "latex", booktabs = TRUE)
+##############################################################################
 ```
 
 
