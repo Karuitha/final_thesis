@@ -1,27 +1,27 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Front matter}{\reset@font\mtcSfont 119}{section.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.1}Shorten captions shown in the list of figures (PDF)}{\reset@font\mtcSSfont 119}{subsection.4.1.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.2}Shorten captions shown in the list of tables (PDF)}{\reset@font\mtcSSfont 119}{subsection.4.1.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Shorten running header (PDF)}{\reset@font\mtcSfont 120}{section.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Unnumbered chapters}{\reset@font\mtcSfont 120}{section.4.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Beginning chapters with quotes (PDF)}{\reset@font\mtcSfont 120}{section.4.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Highlighting corrections (HTML \& PDF)}{\reset@font\mtcSfont 121}{section.4.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.1}Short, inline corrections}{\reset@font\mtcSSfont 121}{subsection.4.5.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.2}Blocks of added or changed material}{\reset@font\mtcSSfont 122}{subsection.4.5.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.3}Stopping corrections from being highlighted}{\reset@font\mtcSSfont 122}{subsection.4.5.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Apply custom font color and highlighting to text (HTML \& PDF)}{\reset@font\mtcSfont 122}{section.4.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.7}Including another paper in your thesis - embed a PDF document}{\reset@font\mtcSfont 123}{section.4.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.8}Including another paper in your thesis - R Markdown child document}{\reset@font\mtcSfont 127}{section.4.8}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.1}An example paper in another folder}{\reset@font\mtcSSfont 127}{subsection.4.8.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.2}Step 1: Include paper as a child document}{\reset@font\mtcSSfont 128}{subsection.4.8.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.3}Step 2: Make file paths compatible}{\reset@font\mtcSSfont 128}{subsection.4.8.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.8.3.1}Note on HTML output}{\reset@font\mtcSSSfont 129}{subsubsection.4.8.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.4}Step 3: Make sure header levels are correct}{\reset@font\mtcSSfont 129}{subsection.4.8.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.5}Step 4. Make sure figure widths are correct}{\reset@font\mtcSSfont 130}{subsection.4.8.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.9}Customizing referencing}{\reset@font\mtcSfont 131}{section.4.9}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.9.1}Using a .csl file with pandoc instead of biblatex}{\reset@font\mtcSSfont 131}{subsection.4.9.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.9.2}Customizing biblatex and adding chapter bibliographies}{\reset@font\mtcSSfont 131}{subsection.4.9.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.10}Customizing the page headers and footers (PDF)}{\reset@font\mtcSfont 134}{section.4.10}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.11}Diving in to the OxThesis LaTeX template (PDF)}{\reset@font\mtcSfont 135}{section.4.11}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.12}Customising to a different university}{\reset@font\mtcSfont 135}{section.4.12}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.12.1}The minimal route}{\reset@font\mtcSSfont 135}{subsection.4.12.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.12.2}Replacing the entire title page with your required content}{\reset@font\mtcSSfont 135}{subsection.4.12.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Front matter}{\reset@font\mtcSfont 120}{section.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.1}Shorten captions shown in the list of figures (PDF)}{\reset@font\mtcSSfont 120}{subsection.4.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.2}Shorten captions shown in the list of tables (PDF)}{\reset@font\mtcSSfont 120}{subsection.4.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Shorten running header (PDF)}{\reset@font\mtcSfont 121}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Unnumbered chapters}{\reset@font\mtcSfont 121}{section.4.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Beginning chapters with quotes (PDF)}{\reset@font\mtcSfont 121}{section.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Highlighting corrections (HTML \& PDF)}{\reset@font\mtcSfont 122}{section.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.1}Short, inline corrections}{\reset@font\mtcSSfont 122}{subsection.4.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.2}Blocks of added or changed material}{\reset@font\mtcSSfont 123}{subsection.4.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.3}Stopping corrections from being highlighted}{\reset@font\mtcSSfont 123}{subsection.4.5.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Apply custom font color and highlighting to text (HTML \& PDF)}{\reset@font\mtcSfont 123}{section.4.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.7}Including another paper in your thesis - embed a PDF document}{\reset@font\mtcSfont 124}{section.4.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.8}Including another paper in your thesis - R Markdown child document}{\reset@font\mtcSfont 128}{section.4.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.1}An example paper in another folder}{\reset@font\mtcSSfont 128}{subsection.4.8.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.2}Step 1: Include paper as a child document}{\reset@font\mtcSSfont 129}{subsection.4.8.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.3}Step 2: Make file paths compatible}{\reset@font\mtcSSfont 129}{subsection.4.8.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.8.3.1}Note on HTML output}{\reset@font\mtcSSSfont 130}{subsubsection.4.8.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.4}Step 3: Make sure header levels are correct}{\reset@font\mtcSSfont 130}{subsection.4.8.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.8.5}Step 4. Make sure figure widths are correct}{\reset@font\mtcSSfont 131}{subsection.4.8.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.9}Customizing referencing}{\reset@font\mtcSfont 132}{section.4.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.9.1}Using a .csl file with pandoc instead of biblatex}{\reset@font\mtcSSfont 132}{subsection.4.9.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.9.2}Customizing biblatex and adding chapter bibliographies}{\reset@font\mtcSSfont 132}{subsection.4.9.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.10}Customizing the page headers and footers (PDF)}{\reset@font\mtcSfont 135}{section.4.10}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.11}Diving in to the OxThesis LaTeX template (PDF)}{\reset@font\mtcSfont 136}{section.4.11}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.12}Customising to a different university}{\reset@font\mtcSfont 136}{section.4.12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.12.1}The minimal route}{\reset@font\mtcSSfont 136}{subsection.4.12.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.12.2}Replacing the entire title page with your required content}{\reset@font\mtcSSfont 136}{subsection.4.12.2}}
