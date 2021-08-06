@@ -3,12 +3,23 @@
 # options for knitting a single chapter #
 #########################################
 output:
-  #bookdown::html_document2: default
-  #bookdown::word_document2: default
   bookdown::pdf_document2:
     template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
 documentclass: book
 bibliography: references.bib
+always_allow_html: true
+header-includes:
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+- \usepackage[default]{sourcesanspro}
+- \usepackage[T1]{fontenc}
+- \usepackage{amsmath}
+- \usepackage{dcolumn}
+- \usepackage{url}
 ---
 
 ```{block type='savequote', include=knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex', quote_author='(ref:goethe-quote)'}
@@ -22,13 +33,39 @@ what is necessary is only to try to think them again.
 ```
 (ref:goethe-quote) --- Johann Wolfgang von Goethe [@von_goethe_wilhelm_1829]
 
-# Conclusion {-}
-If we don't want Conclusion to have a chapter number next to it, we can add the `{-}` attribute.
+# Conclusion
 
-## More info {-}
-And here's some other random info: 
-the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. 
-Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+This study examined the potential impacts of the transformation of MFIs in Africa. The conversion has seen a substantial number of MFIs that previously operated as NGOs convert to a commercial, profit-seeking model that relies less on donations and state subsidies and more on funding from capital markets. Much of the concerns in the literature has been on the potential for mission drift among the transformed MFIs [@armendariz2011mission; @serrano2014microfinance]. Mission drift occurs when MFIs stresses financial sustainability at the expense of the social goal of offering appropriate and affordable financial services to the financially excluded [@d2017ngos]. There is a lack of consensus on the extent and direction of the effect of transformation of MFIs. Much of the extant research draws from global datasets, which could mask regional heterogeneity. The study examined the levels of financial and social efficiency of MFIs and the factors that determine whether or not an MFI meets financial and social goals. In this regard, much of the literature examines the financial and social outcomes of MFIs separately instead of evaluating them jointly as two sides of the same coin. 
 
-This paragraph, by contrast, *will* be indented as it should because it is not the first one after the 'More info' heading.
-All hail LaTeX. (If you're reading the HTML version, you won't see any indentation - have a look at the PDF version to understand what in the earth this section is babbling on about).
+Moreover, there is little research output on the factors that drive the conversion of MFIs to the commercial model. This research oversight is surprising given that as more MFIs adopt the profit-oriented model, an appropriate policy framework should be in place to support the transformation and address potential side effects of the conversion. Also, few researchers examine the financing model of MFIs, considering that, as hybrid organisations, the mainstream capital structure theory may be deficient as it addresses the financing of commercial firms. 
+
+The study sought answers to the following questions in light of the research gaps highlighted. 
+
+1. Why do some MFIs in Africa transform into the commercial model while others retain the NGO Model?
+2.	To what extent has the institutional transformation of MFIs in Africa affected financial inclusion?
+3.	After transformation, what factors explain the joint level of sustainability and outreach by MFIs in Africa?
+4.	What are the drivers of financial efficiency, social efficiency and socio-financial efficiency of MFIs in Africa?
+5.	What are the factors that influence the choice of financing sources by transformed MFIs in Africa? 
+
+## Highlight of the Results
+
+The first research question examines factors that make MFIs to adopt the commercial, profit-seeking model that gets funding from capital markets instead of reliance on donations and subsidies. The analysis show that at the firm level, age and size influence transformation. Legal tradition, institutional quality, and stock market development are significant factors at the country level. Specifically, larger and older MFIs are less likely to be NGOs. These results suggest that as MFIs mature, they tend to convert to the commercial model either due to pressure from donors or the decision by management to pursue the double bottom line as they get more financially sustainable and as donor support subsides. MFIs in civil law countries are also less likely to be NGOs, while those in countries that follow other legal traditions are more likely to adopt the commercial model. 
+
+Again,  Institutional quality raises the chances of MFI conversion to the commercial model. Institutional quality captures a wide range of governance measures that enhance contract enforcement and property rights. Hence, countries with stronger institutions tend to attract more private investments and hence the higher rate at which MFIs adopt the commercial model. Stock market capitalisation and private credit to GDP have a negative relationship with transformation. The development of capital markets corresponds to better access to financial services, a pre-condition for financial inclusion. Hence, MFIs in countries with well-developed financial markets will likely be competing against established financial intermediaries for the existing market. The competition limits the financial viability of MFIs. Hence, MFIs in these markets will likely remain NGOs that serve small population in the fringes of the market. 
+
+I then examined how the transformation of MFIs in Africa has affected or could potentially affect financial inclusion on the continent. The results show that the change from the NGO model to the commercial models could negatively affect the depth of financial outreach, especially given that NGOs characteristically have better outreach to women and advance smaller denomination loans on average than for-profit MFIs. Also, NGOs have higher median gross loans to assets ratio than other legal forms of MFIs except for credit unions/cooperatives. Overall, the results indicate the potential mission drift, where MFIs that convert to the for-profit model focus more on financial sustainability to the detriment of outreach to the unbanked. 
+
+in Chapter 4, I examined the levels and drivers of financial and social efficiency of MFIs in Africa. In this case, i captured the efficiencies using output oriented data envelopment analysis (DEA). Broadly, our results show a trend of declining financial efficiency by MFIs but no discernible trend in social and socio-financial efficiency. However, NGOs have markedly better social efficiency and socio-financial efficiency scores than other legal forms of MFIs. Surprisingly, only cooperatives and rural banks consistently outperform NGOs financially. The proxies for financial sector development, stock market capitalization to GDP and private credit to GDP,  have a negative relationship with social and socio-financial efficiency. Financial efficiency has an inverse relationship with both the size and asset structure of MFIs. These results suggest that the commercialization of MFIs does not necessarily improve their financial sustainability.
+
+Related to chapter 4, chapter 5 examined the extent to which MFIs in Africa achieve financial and social goals. The chapter also sought to uncover factors that drive the achievement of the dual objectives. The results show that most MFIs in Africa attain the dual objectives, at 35.88% compared to 14.76% that fail in both missions. 23.85% fail socially but succeed financially, and 25.55% succeed socially while failing financially. In total, 61.43% of MFIs attain their social goals. 40.31% fail financially. However, these results vary across the legal status of an MFI. Rural banks and NGOs are more likely to achieve the dual goals than banks, NBFIs and credit unions. Accordingly, the legal status of an MFI is the most significant driver of the extent of the achievement of the dual goals. NGOs have the highest likelihood of achieving both financial and social goals. This result highlights the risk of mission drift should MFIs convert to the for-profit model. Larger MFIs have a higher chance of meeting financial and social goals. Likewise, larger firms are more likely to succeed socially while failing financially, meaning that larger firms emphasise social impact. Age raises the probability that an MFI will fail financially and socially, as does stock market capitalisation to GDP that proxies capital markets development. Lastly, MFIs in countries following civil law and other legal traditions are more likely to meet at least one of the objectives, unlike MFIs in common law countries. 
+
+Finally, in chapter 6, I looked into the factors that drive the adoption of alternative finance sources. In this case I examined four primary sources of finance; leverage, equity, deposits, and donations. The significant determinants of financing at the firm level are size, age, legal status, and profitability consistent with theory. For example, asset structure varies inversely with leverage. At the country level, institutional quality (KKM) varies inversely with deposits and donations. Interestingly, coefficients of financial development are not significant across all financial structure proxies, going against stylised facts on the macro-level drivers of firms’ financing structure. The results suggest that firm-level factors are more relevant in determining the financing structure of MFIs. 
+
+## Policy Implications 
+
+
+## Possible Future Research Directions
+
+
+
+
