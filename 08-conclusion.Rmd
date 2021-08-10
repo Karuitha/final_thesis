@@ -33,7 +33,7 @@ what is necessary is only to try to think them again.
 ```
 (ref:goethe-quote) --- Johann Wolfgang von Goethe [@von_goethe_wilhelm_1829]
 
-# Conclusion
+# Conclusion and Policy Derivatives
 
 This study examined the potential impacts of the transformation of MFIs in Africa. The conversion has seen a substantial number of MFIs that previously operated as NGOs convert to a commercial, profit-seeking model that relies less on donations and state subsidies and more on funding from capital markets. Much of the concerns in the literature has been on the potential for mission drift among the transformed MFIs [@armendariz2011mission; @serrano2014microfinance]. Mission drift occurs when MFIs stresses financial sustainability at the expense of the social goal of offering appropriate and affordable financial services to the financially excluded [@d2017ngos]. There is a lack of consensus on the extent and direction of the effect of transformation of MFIs. Much of the extant research draws from global datasets, which could mask regional heterogeneity. The study examined the levels of financial and social efficiency of MFIs and the factors that determine whether or not an MFI meets financial and social goals. In this regard, much of the literature examines the financial and social outcomes of MFIs separately instead of evaluating them jointly as two sides of the same coin. 
 
@@ -42,10 +42,10 @@ Moreover, there is little research output on the factors that drive the conversi
 The study sought answers to the following questions in light of the research gaps highlighted. 
 
 1. Why do some MFIs in Africa transform into the commercial model while others retain the NGO Model?
-2.	To what extent has the institutional transformation of MFIs in Africa affected financial inclusion?
-3.	After transformation, what factors explain the joint level of sustainability and outreach by MFIs in Africa?
-4.	What are the drivers of financial efficiency, social efficiency and socio-financial efficiency of MFIs in Africa?
-5.	What are the factors that influence the choice of financing sources by transformed MFIs in Africa? 
+2. To what extent has the institutional transformation of MFIs in Africa affected financial inclusion?
+3. After transformation, what factors explain the joint level of sustainability and outreach by MFIs in Africa?
+4. What are the drivers of financial efficiency, social efficiency and socio-financial efficiency of MFIs in Africa?
+5. What are the factors that influence the choice of financing sources by transformed MFIs in Africa? 
 
 ## Highlight of the Results
 
@@ -63,9 +63,27 @@ Finally, in chapter 6, I looked into the factors that drive the adoption of alte
 
 ## Policy Implications 
 
+There are some important policy derivatives from the outcomes of the research. But first, it is important to restate the objectives and outcomes of the research that form the basis of the policy recommendations. The study sought to examine the possible impacts of the transformation of MFIs in Africa on financial inclusion. The transformation aimed at making MFIs less reliant on donor funding and state subsidies by making them financially sustainable. Financially sustainable MFIs would then experience mission expansion instead of mission drift [@mersland2010microfinance]. This logic arose after the cold war and the rise of neo-liberalism that emphasises the financial viability of institutions. I first look at the implications of the research on the financial and social goals of MFIs in Africa, and the implications on financial inclusion.
+
+First, the conversion of MFIs does not appear to improve the financial sustainability of MFIs in Africa. The conversion of MFIs does not help improve their financial sustainability, at least in the short and medium term. Overall, MFIs fare badly financially. However, NGOs have better financial efficiency scores than banks and NBFIs. Only cooperatives and rural banks do better financially than NGOs. With cooperatives more inclined to serving their members more than offering financial services to the unbanked, it appears that the argument for financial sustainability as an enabler of mission expansion does not hold.  
+
+Indeed, the analysis shows that NGOs form the largest proportion of MFIs that are financially viable while maintaining their social focus. This result shows that NGOs are better at balancing social and financial goals more than the converted MFIs. Even where they fail financially, NGOs have the highest proportion of MFIs that succeed socially, meaning that NGOs are more keen on their social mission than on financial goals. The mission of NGOs together with donor support could be the reason they are able to stick to their social mission [@berbegal2019impact].The results show that there is high likelihood of mission drift where MFIs that seek financial sustainability focus less of availing financial services to the financially excluded. These results are an indiction against the coercive pressure from donors and governments for MFIs to be financially viable. 
+
+These results leave two possible policy interventions. First, are there policies that would support the conversion of MFIs from NGOs to the commercial model without causing mission drift? Secondly, among the converted MFIs what kind of support would best allow them to be financially sustainable without losing focus on their social goals? Third, what financing options are best suited to support the dual objectives of microfinance institutions? Fourth, there is a prominent proposition by @morduch1999microfinance and @morduch2000microfinance that advocates for allowing a broad range of MFIs- from those that seek financial sustainability to those that focus on financial exclusion with donor and state support. I examine these points next. 
+
+Chapter 2 established some of the factors that drive the conversion of MFIs to the commercial model. I found that age and size influence the transformation, whereas legal tradition, institutional quality, and stock market development are significant factors at the country level. Larger MFIs and MFIs located in countries with “other” legal traditions are more likely to follow the commercial model. Institutional quality raises the chances of conversion, while stock market capitalisation has a negative relationship with transformation. Among the factors associated with a higher chance that an MFI will achieve both financial goals and social goals are MFI age, size and legal status, country legal tradition, level of capital markets development, and institutional quality. The latter three have a negative relationship with the extent of achieving financial and social goals. 
+
+These results imply that MFIs located in countries with better institutions and by extension better capital markets development are better following the commercial model especially given the low levels of financial exclusion in these countries. Better institutions allow MFIs in these countries to achieve their financial goals even when not meeting their social goals without extensive loss in public welfare. On the contrary, MFIs located in countries with low levels of financial development with low institutional quality would better retain a greater degree of NGO-type MFIs. The substantial levels of financial exclusion in these countries mean that conversion of MFIs will have substantial impact on financial inclusion which goes against the millennium development goals and the African Union Agenda 2063 on financial inclusion for all. It means that for the achievement of financial inclusion goals, some level of donations and state subsidies are necessary especially in countries with large financial inclusion gaps.The neo-liberal approach to the coercive adoption of the commercial mode of MFIs uniformly across all countries, especially in Africa, is inappropriate as @bateman2010doesn notes. 
+
+Also, @morduch1999microfinance and @morduch2000microfinance advocate for the 
+
+A related issue in financing hybrid organisations like MFIs is the rise of impact finance and blended finance. 
 
 ## Possible Future Research Directions
 
+Look at MFIs that succeed financially as well as socially after conversion and see what is peculiar among them. 
+
+longer term examination of financial sustainability vs social performance measures of MFIs. 
 
 
 
