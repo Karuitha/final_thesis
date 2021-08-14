@@ -23,15 +23,11 @@ header-includes:
 ---
 
 ```{block type='savequote', include=knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex', quote_author='(ref:goethe-quote)'}
-Alles Gescheite ist schon gedacht worden.\
-Man muss nur versuchen, es noch einmal zu denken.
-
-All intelligent thoughts have already been thought;\
-what is necessary is only to try to think them again.
+He who chases two rabbits catches neither.
 
 <!-- ending a line with a lonely backslash inserts a linebreak -->
 ```
-(ref:goethe-quote) --- Johann Wolfgang von Goethe [@von_goethe_wilhelm_1829]
+(ref:goethe-quote) --- Confucius [@caseau2020impact]
 
 # Conclusion and Policy Derivatives
 
@@ -75,9 +71,15 @@ Chapter 2 established some of the factors that drive the conversion of MFIs to t
 
 These results imply that MFIs located in countries with better institutions and by extension better capital markets development are better following the commercial model especially given the low levels of financial exclusion in these countries. Better institutions allow MFIs in these countries to achieve their financial goals even when not meeting their social goals without extensive loss in public welfare. On the contrary, MFIs located in countries with low levels of financial development with low institutional quality would better retain a greater degree of NGO-type MFIs. The substantial levels of financial exclusion in these countries mean that conversion of MFIs will have substantial impact on financial inclusion which goes against the millennium development goals and the African Union Agenda 2063 on financial inclusion for all. It means that for the achievement of financial inclusion goals, some level of donations and state subsidies are necessary especially in countries with large financial inclusion gaps.The neo-liberal approach to the coercive adoption of the commercial mode of MFIs uniformly across all countries, especially in Africa, is inappropriate as @bateman2010doesn notes. 
 
-Also, @morduch1999microfinance and @morduch2000microfinance advocate for the 
+Also, @morduch1999microfinance and @morduch2000microfinance argue that the microfinance industry should allow for a wide range of MFIs. In this model, the NGO-type MFIs could still rely on donations and subsidies and reach out to the poorest section of the population that is shunned by the mainstream financial system. Then, as these customers get better off, they could join the mainstream financial system. This models implies that the customers of MFIs could be segmented and served on the basis of need. This model will then allow for the coexistence of different types of MFIs- profit seeking versus NGO type - instead of prioritizing some types of MFIs over others. To extend this argument, the model of microfinance should also be different depending on the differing situations between countries. As noted, countries with very low levels of financial inclusion due follow levels of capital markets development should allow and support more NGO-type MFIs, relative to countries with relatively lower levels of financial exclusion. 
 
-A related issue in financing hybrid organisations like MFIs is the rise of impact finance and blended finance. 
+A related issue in financing hybrid organisations like MFIs is the rise of impact finance and blended finance. Impact investing relates to the use of corporate principles to generate environmental, social and governance (ESG) gains over and above financial goals. The defining features of impact investing are as follows. 
+
+- Intentionality of impact,
+
+- Expectation of financial returns, and
+
+- Measurable impact along non-financial dimensions—notably, social, environmental, or governance (or two or three of these) dimensions [@caseau2020impact]. 
 
 ## Possible Future Research Directions
 
