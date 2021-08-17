@@ -85,6 +85,7 @@ library("zoo")
 
 #########################################
 options(digits = 3)
+options(scipen=999)
 options(knitr.kable.NA = "-")
 theme_set(ggthemes::theme_clean())
 #########################################
