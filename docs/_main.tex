@@ -56,56 +56,6 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
  
 % UL 1 Dec 2018, fix to include code in shaded environments
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-
-%UL set white space before and after code blocks
-\renewenvironment{Shaded}
-{
-  \vspace{10pt}%
-  \begin{snugshade}%
-}{%
-  \end{snugshade}%
-  \vspace{8pt}%
-}
 
 %%%CSL
 %%%%
@@ -2535,559 +2485,6 @@ Gross loans to total assets & Random effects & 0.0000*** & 68598\\
 
 \end{landscape}
 
-\begin{savequote}
-There is grandeur in this view of life, with its several powers, having
-been originally breathed into a few forms or into one; and that, whilst
-this planet has gone cycling on according to the fixed law of gravity,
-from so simple a beginning endless forms most beautiful and most
-wonderful have been, and are being, evolved.
-\qauthor{--- Charles Darwin \autocite{Darwin1859}}\end{savequote}
-
-
-
-\hypertarget{customisations-and-extensions}{%
-\chapter{Customisations and extensions}\label{customisations-and-extensions}}
-
-\minitoc 
-
-\noindent This chapter describes a number of additional tips and tricks as well as possible customizations to the \texttt{oxforddown} thesis.
-
-\hypertarget{front-matter}{%
-\section{Front matter}\label{front-matter}}
-
-\hypertarget{shorten-captions-shown-in-the-list-of-figures-pdf}{%
-\subsection{Shorten captions shown in the list of figures (PDF)}\label{shorten-captions-shown-in-the-list-of-figures-pdf}}
-
-You might want your list of figures (which follows the table of contents) to have shorter (or just different) figure descriptions than the actual figure captions.
-
-Do this using the chunk option \texttt{fig.scap} (`short caption'), for example \texttt{\{r\ captain-image,\ fig.cap="A\ very\ long\ and\ descriptive\ (and\ potentially\ boring)\ caption\ that\ doesn\textquotesingle{}t\ fit\ in\ the\ list\ of\ figures,\ but\ helps\ the\ reader\ understand\ what\ the\ figure\ communicates.",\ fig.scap="A\ concise\ description\ for\ the\ list\ of\ figures"}
-
-\hypertarget{shorten-captions-shown-in-the-list-of-tables-pdf}{%
-\subsection{Shorten captions shown in the list of tables (PDF)}\label{shorten-captions-shown-in-the-list-of-tables-pdf}}
-
-You might want your list of tables (which follows the list of figures in your thesis front matter) to have shorter (or just different) table descriptions than the actual table captions.
-
-If you are using \texttt{knitr::kable} to generate a table, you can do this with the argument \texttt{caption.short}, e.g.:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(mtcars,}
-              \AttributeTok{caption =} \StringTok{"A very long and descriptive (and potentially}
-\StringTok{              boring) caption that doesn\textquotesingle{}t fit in the list of figures,}
-\StringTok{              but helps the reader understand what the figure }
-\StringTok{              communicates."}\NormalTok{,}
-              \AttributeTok{caption.short =} \StringTok{"A concise description for the list of tables"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{shorten-running-header-pdf}{%
-\section{Shorten running header (PDF)}\label{shorten-running-header-pdf}}
-
-You might want a chapter's running header (i.e.~the header showing the title of the current chapter at the top of page) to be shorter (or just different) to the actual chapter title.
-
-Do this by adding the latex command \texttt{\textbackslash{}chaptermark\{My\ shorter\ version\}} after your chapter title.
-
-For example, chapter \ref{cites-and-refs}`s running header is simply 'Cites and cross-refs', because it begins like this:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\# Citations, cross{-}references, and collaboration \{\#cites{-}and{-}refs\} }
-\NormalTok{\textbackslash{}chaptermark\{Cites and cross{-}refs\}}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{unnumbered-chapters}{%
-\section{Unnumbered chapters}\label{unnumbered-chapters}}
-
-To make chapters unnumbered (normally only relevant to the Introduction and/or the Conclusion), follow the chapter header with \texttt{\{-\}}, e.g.~\texttt{\#\ Introduction\ \{-\}}.
-
-When you do this, you must also follow the heading with these two latex commands:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\textbackslash{}adjustmtc}
-\FunctionTok{\textbackslash{}markboth}\NormalTok{\{The Name of Your Unnumbered Chapter\}\{\}}
-\end{Highlighting}
-\end{Shaded}
-
-Otherwise the chapter's mini table of contents and the running header will show the previous chapter.
-
-\hypertarget{beginning-chapters-with-quotes-pdf}{%
-\section{Beginning chapters with quotes (PDF)}\label{beginning-chapters-with-quotes-pdf}}
-
-The OxThesis LaTeX template lets you inject some wittiness into your thesis by including a block of type \texttt{savequote} at the beginning of chapters.
-To do this, use the syntax \texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{block\ type=\textquotesingle{}savequote\textquotesingle{}\}}.\footnote{For more on custom block types, see the relevant section in \href{https://bookdown.org/yihui/bookdown/custom-blocks.html}{\emph{Authoring Books with R Markdown}}.}
-
-Add the reference for the quote with the chunk option \texttt{quote\_author="my\ author\ name"}.
-You will also want to add the chunk option \texttt{include=knitr::is\_latex\_output()} so that quotes are only included in PDF output.
-
-It's not possible to use markdown syntax inside chunk options, so if you want to e.g.~italicise a book name in the reference use a \href{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html\#text-references}{`text reference'}: Create a named piece of text with `(ref:label-name) My text', then point to this in the chunk option with \texttt{quote\_author=\textquotesingle{}(ref:label-name)\textquotesingle{}}.
-
-\hypertarget{highlighting-corrections-html-pdf}{%
-\section{Highlighting corrections (HTML \& PDF)}\label{highlighting-corrections-html-pdf}}
-
-For when it comes time to do corrections, you may want to highlight changes made when you submit a post-viva, corrected copy to your examiners so they can quickly verify you've completed the task.
-You can do so like this:
-
-\hypertarget{short-inline-corrections}{%
-\subsection{Short, inline corrections}\label{short-inline-corrections}}
-
-Highlight \textbf{short, inline corrections} by doing \texttt{{[}like\ this{]}\{.correction\}} --- the text between the square brackets will then be highlighted in blue in the output.
-
-Note that pandoc might get confused by citations and cross-references inside inline corrections.
-In particular, it might get confused by \texttt{"{[}what\ @Shea2014\ said{]}\{.correction\}"} which becomes \autocite[what][ said]{Shea2014}\{.correction\}
-In such cases, you can use LaTeX syntax directly.
-The correction highlighting uses the \href{https://ctan.org/pkg/soul}{soul} package, so you can do like this:
-
-\begin{itemize}
-\tightlist
-\item
-  If using biblatex for references, use \texttt{"\textbackslash{}hl\{what\ \textbackslash{}textcite\{Shea2014\}\ said\}}
-\item
-  If using natbib for references, use \texttt{"\textbackslash{}hl\{what\ \textbackslash{}cite\{Shea2014\}\ said\}}
-\end{itemize}
-
-Using raw LaTeX has the drawback of corrections then not showing up in HTML output at all, but you might only care about correction highlighting in the PDF for your examiners anyway!
-
-\hypertarget{blocks-of-added-or-changed-material}{%
-\subsection{Blocks of added or changed material}\label{blocks-of-added-or-changed-material}}
-
-Highlight entire \textbf{blocks of added or changed material} by putting them in a block of type \texttt{correction}, using the syntax \texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{block\ type=\textquotesingle{}correction\textquotesingle{}\}}.\footnote{In the \textbf{.tex} file for PDF output, this will put the content between \texttt{\textbackslash{}begin\{correction\}} and \texttt{\textbackslash{}end\{correction\}}; in gitbook output it will be put between \texttt{\textless{}div\ class="correction"\textgreater{}} and \texttt{\textless{}/div\textgreater{}}.}
-Like so:
-
-\begin{correction}
-For larger chunks, like this paragraph or indeed entire figures, you can
-use the \texttt{correction} block type. This environment
-\textbf{highlights paragraph-sized and larger blocks} with the same blue
-colour.
-\end{correction}
-
-\emph{Note that correction blocks cannot be included in word output.}
-
-\hypertarget{stopping-corrections-from-being-highlighted}{%
-\subsection{Stopping corrections from being highlighted}\label{stopping-corrections-from-being-highlighted}}
-
-To turn off correction highlighting, go to the YAML header of \textbf{index.Rmd}, then:
-
-\begin{itemize}
-\tightlist
-\item
-  PDF output: set \texttt{corrections:\ false}\\
-\item
-  HTML output: remove or comment out \texttt{-\ templates/corrections.css}
-\end{itemize}
-
-\hypertarget{apply-custom-font-color-and-highlighting-to-text-html-pdf}{%
-\section{Apply custom font color and highlighting to text (HTML \& PDF)}\label{apply-custom-font-color-and-highlighting-to-text-html-pdf}}
-
-The lua filter that adds the functionality to highlight corrections adds two more tricks:
-you can apply your own choice of colour to highlight text, or change the font color.
-The syntax is as follows:
-
-\begin{quote}
-Here's \texttt{{[}some\ text\ in\ pink\ highlighting{]}\{highlight="pink"\}}\\
-Becomes: Here's \sethlcolor{pink}\hl{some text in pink highlighting}\sethlcolor{correctioncolor}.
-\end{quote}
-
-\begin{quote}
-\texttt{{[}Here\textquotesingle{}s\ some\ text\ with\ blue\ font{]}\{color="blue"\}}\strut \\
-Becomes: \textcolor{blue}{Here's some text with blue font}
-\end{quote}
-
-\begin{quote}
-Finally --- never, ever actually do this -- \texttt{{[}here\textquotesingle{}s\ some\ text\ with\ black\ highlighting\ and\ yellow\ font{]}\{highlight="black"\ color="yellow"\}}\\
-Becomes: \textcolor{yellow}{\sethlcolor{black}\hl{here's some text with black highlighting and yellow font}\sethlcolor{correctioncolor}}
-\end{quote}
-
-The file \textbf{scripts\_and\_filters/colour\_and\_highlight.lua} implements this, if you want to fiddle around with it.
-It works with both PDF and HTML output.
-
-\hypertarget{embed-pdf}{%
-\section{Including another paper in your thesis - embed a PDF document}\label{embed-pdf}}
-
-You may want to embed existing PDF documents into the thesis, for example if your department allows a `portfolio' style thesis and you need to include an existing typeset publication as a chapter.
-
-In gitbook output, you can simply use \texttt{knitr::include\_graphics} and it should include a scrollable (and downloadable) PDF.
-You will probably want to set the chunk options \texttt{out.width=\textquotesingle{}100\%\textquotesingle{}} and \texttt{out.height=\textquotesingle{}1000px\textquotesingle{}}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figures/sample{-}content/pdf\_embed\_example/Lyngs2020\_FB.pdf"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-In LaTeX output, however, this approach can cause odd behaviour.
-Therefore, when you build your thesis to PDF, split the PDF into an alphanumerically sorted sequence of \textbf{single-page} PDF files (you can do this automatically with the package \texttt{pdftools}). You can then use the appropriate LaTeX command to insert them, as shown below (for brevity, in the \texttt{oxforddown} PDF sample content we're only including two pages).
-\emph{Note that the chunk option \texttt{results=\textquotesingle{}asis\textquotesingle{}} must be set.}
-You may also want to remove margins from the PDF files, which you can do with Adobe Acrobat (paid version) and likely other software.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# install.packages(pdftools)}
-\CommentTok{\# split PDF into pages stored in}
-\NormalTok{    figures}\SpecialCharTok{/}\NormalTok{sample}\SpecialCharTok{{-}}\NormalTok{content}\SpecialCharTok{/}\NormalTok{pdf\_embed\_example}\SpecialCharTok{/}\NormalTok{split}\SpecialCharTok{/}
-\CommentTok{\#}
-\NormalTok{    pdftools}\SpecialCharTok{::}\FunctionTok{pdf\_split}\NormalTok{(}\StringTok{"figures/sample{-}content/pdf\_embed\_example/Lyngs2020\_FB.pdf"}\NormalTok{,}
-\CommentTok{\# output = "figures/sample{-}content/pdf\_embed\_example/split/")}
-
-\CommentTok{\# grab the pages}
-\NormalTok{pages }\OtherTok{\textless{}{-}} \FunctionTok{list.files}\NormalTok{(}\StringTok{"figures/sample{-}content/pdf\_embed\_example/split"}\NormalTok{,}
-    \AttributeTok{full.names =} \ConstantTok{TRUE}\NormalTok{)}
-
-\CommentTok{\# set how wide you want the inserted PDFs to be:}
-\CommentTok{\# 1.0 is 100 per cent of the oxforddown PDF page width;}
-\CommentTok{\# you may want to make it a bit bigger}
-\NormalTok{pdf\_width }\OtherTok{\textless{}{-}} \FloatTok{1.2}
-
-\CommentTok{\# for each PDF page, insert it nicely and}
-\CommentTok{\# end with a page break}
-\FunctionTok{cat}\NormalTok{(stringr}\SpecialCharTok{::}\FunctionTok{str\_c}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{newpage }\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{begin\{center\}}
-\StringTok{    }\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{makebox[}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{linewidth][c]\{}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{includegraphics[width="}\NormalTok{, pdf\_width,}
-    \StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{linewidth]\{"}\NormalTok{, pages, }\StringTok{"\}\} }\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{end\{center\}"}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/sample-content/pdf_embed_example/split/_000000000000001.pdf}} \end{center} \newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/sample-content/pdf_embed_example/split/_000000000000011.pdf}} \end{center}
-
-\hypertarget{embed-rmd}{%
-\section{Including another paper in your thesis - R Markdown child document}\label{embed-rmd}}
-
-Sometimes you want to include another paper you are currently writing as a chapter in your thesis.
-Above \ref{embed-pdf}, we described the simplest way to do this: include the other paper as a pdf.
-However, in some cases you instead want to include the R Markdown source from this paper, and have it compiled within your thesis.
-This is a little bit more tricky, because you need to keep careful track of your file paths, but it is possible by \href{https://bookdown.org/yihui/rmarkdown-cookbook/child-document.html}{including the paper as a child document}.
-There are four main steps:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Include the paper as a child document
-\item
-  Make file paths compatible with knitting the article on its own, as well as when it's include in your thesis
-\item
-  Make header levels correct
-\item
-  Make figure widths correct
-\end{enumerate}
-
-\hypertarget{an-example-paper-in-another-folder}{%
-\subsection{An example paper in another folder}\label{an-example-paper-in-another-folder}}
-
-Take this simple example (files for this are in \href{https://github.com/ulyngs/oxforddown-external-article}{this GitHub repository}):
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{|{-}{-}paper\_to\_include}
-\NormalTok{|  |{-}{-}my\_paper.Rmd}
-\NormalTok{|  |{-}{-}data}
-\NormalTok{|  |  |{-}{-}cat\_salt.csv}
-\NormalTok{|  |{-}{-}figures}
-\NormalTok{|  |  |{-}{-}cat.jpg}
-\NormalTok{|}
-\NormalTok{|{-}{-}thesis}
-\end{Highlighting}
-\end{Shaded}
-
-As the chart suggests, you have another folder, \textbf{paper\_to\_include/} living in the same containing folder as your thesis folder.
-In the \textbf{paper\_to\_include} folder, the file \textbf{my\_paper.Rmd} is where you write the paper.
-In \textbf{my\_paper.Rmd}, you read in a CSV file found in the subfolder \textbf{data/cats.csv}, and also an image from the subfolder \textbf{figures/cat.jpg}.
-
-\hypertarget{step-1-include-paper-as-a-child-document}{%
-\subsection{Step 1: Include paper as a child document}\label{step-1-include-paper-as-a-child-document}}
-
-In your thesis folder, create an Rmd file for the chapter where you want to include another paper.
-Add one or more code chunks that include R Markdown files from that paper as child documents:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\# Including an external chapter }
-
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r child = "../paper\_to\_include/my\_paper.Rmd"\}}
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{step-2-make-file-paths-compatible}{%
-\subsection{Step 2: Make file paths compatible}\label{step-2-make-file-paths-compatible}}
-
-Use \href{https://rmarkdown.rstudio.com/lesson-6.html}{parameters} to adjust the file path of images based on values you set in the YAML header of an R Markdown file.
-In \textbf{my\_paper.Rmd}, create a parameter called \texttt{other\_path} and set it to an empty string:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{{-}{-}{-}}
-\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"A fabulous article in a different folder"}
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
-\PreprocessorTok{{-}{-}{-}}
-\end{Highlighting}
-\end{Shaded}
-
-In \textbf{my\_paper.Rmd}, put this at the start of the filepath when you read in data or include images:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(tidyverse)}
-\FunctionTok{library}\NormalTok{(knitr)}
-
-\NormalTok{cat\_data }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{str\_c}\NormalTok{(params}\SpecialCharTok{$}\NormalTok{other\_path, }\StringTok{"data/cats.csv"}\NormalTok{))}
-\FunctionTok{include\_graphics}\NormalTok{(}\FunctionTok{str\_c}\NormalTok{(params}\SpecialCharTok{$}\NormalTok{other\_path, }\StringTok{"figures/cat.jpg"}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-Finally, in your thesis folder's \textbf{index.Rmd} file, also create the parameter \texttt{other\_path}.
-But here, set it to where the \textbf{paper\_to\_include/} folder is relative to your thesis folder:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{"../paper\_to\_include/"}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{note-on-html-output}{%
-\subsubsection{Note on HTML output}\label{note-on-html-output}}
-
-Note that if you want to host an HTML version on your thesis online, you will need to include graphics in the content that you host online - the internet obviously won't be able to see filepaths that are just referring to stuff in another folder on your computer!
-
-\hypertarget{step-3-make-sure-header-levels-are-correct}{%
-\subsection{Step 3: Make sure header levels are correct}\label{step-3-make-sure-header-levels-are-correct}}
-
-Unless the paper you want to include is also written as a book, your header levels are probably going to be off.
-That is, the level 1 headers (\# Some header) you use for main sections in the other paper turns into chaper titles when included in your thesis.
-
-To avoid this, first \emph{increment all heading levels by one in \textbf{paper\_to\_include/my\_paper.Rmd}} (\# Some header -\textgreater{} \#\# Some header).
-Then in \textbf{paper\_to\_include/} create a \href{https://bookdown.org/yihui/rmarkdown-cookbook/lua-filters.html\#lua-filters}{lua filter} that decrements header levels by one: Create a text file, save it as \textbf{reduce\_header\_level.lua}, and give it the content below.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{function}\NormalTok{ Header}\OperatorTok{(}\NormalTok{el}\OperatorTok{)}
-  \ControlFlowTok{if} \OperatorTok{(}\NormalTok{el}\OperatorTok{.}\NormalTok{level }\OperatorTok{\textless{}=} \DecValTok{1}\OperatorTok{)} \ControlFlowTok{then}
-    \FunctionTok{error}\OperatorTok{(}\StringTok{"I don\textquotesingle{}t know how to decrease the level of h1"}\OperatorTok{)}
-  \ControlFlowTok{end}
-\NormalTok{  el}\OperatorTok{.}\NormalTok{level }\OperatorTok{=}\NormalTok{ el}\OperatorTok{.}\NormalTok{level }\OperatorTok{{-}} \DecValTok{1}
-  \ControlFlowTok{return}\NormalTok{ el}
-\KeywordTok{end}
-\end{Highlighting}
-\end{Shaded}
-
-In the YAML header of \textbf{paper\_to\_include/my\_paper.Rmd}, use this filter:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{{-}{-}{-}}
-\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"A fabulous article in a different folder"}
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
-\FunctionTok{output}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{pdf\_document}\KeywordTok{:}\AttributeTok{ }
-\AttributeTok{    }\FunctionTok{pandoc\_args}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\StringTok{"{-}{-}lua{-}filter=reduce\_header\_level.lua"}\KeywordTok{]}
-\PreprocessorTok{{-}{-}{-}}
-\end{Highlighting}
-\end{Shaded}
-
-Now, your header levels will be correct both when you knit the paper on its own and when its included in your thesis.
-
-\hypertarget{step-4.-make-sure-figure-widths-are-correct}{%
-\subsection{Step 4. Make sure figure widths are correct}\label{step-4.-make-sure-figure-widths-are-correct}}
-
-It might be that your figure widths when knitting your paper on its own, and when including it in your thesis, need to be different.
-You can again use parameters to set figure widths.
-
-Imagine you want figure width to be 80\% of the page width when knitting your paper on its own, but 100\% in your thesis.
-In \textbf{paper\_to\_include/my\_paper.Rmd}, first add a parameter we could call \texttt{out\_width} and set it to the string ``80\%'':
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{{-}{-}{-}}
-\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"A fabulous article in a different folder"}
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
-\AttributeTok{  }\FunctionTok{out\_width}\KeywordTok{:}\AttributeTok{ }\StringTok{"80\%"}
-\FunctionTok{output}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{pdf\_document}\KeywordTok{:}\AttributeTok{ }
-\AttributeTok{    }\FunctionTok{pandoc\_args}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\StringTok{"{-}{-}lua{-}filter=reduce\_header\_level.lua"}\KeywordTok{]}
-\PreprocessorTok{{-}{-}{-}}
-\end{Highlighting}
-\end{Shaded}
-
-Then, make sure use that parameter to set the output width when you include figures in \textbf{paper\_to\_include/my\_paper.Rmd}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r, out.width=params$out\_width, fig.cap="A very funny cat"\}}
-\InformationTok{include\_graphics(str\_c(params$other\_path, "figures/cat.jpg"))}
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
-\end{Highlighting}
-\end{Shaded}
-
-Finally, create the parameter \texttt{out\_width} in your thesis' \textbf{index.Rmd} file:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{"../paper\_to\_include/"}
-\AttributeTok{  }\FunctionTok{out\_width}\KeywordTok{:}\AttributeTok{ }\StringTok{"80\%"}
-\end{Highlighting}
-\end{Shaded}
-
-Now, the output width of your figure will be 80\% when knitting your paper on its own, and 100\% when knitting it as child document of your thesis.
-
-\hypertarget{customizing-referencing}{%
-\section{Customizing referencing}\label{customizing-referencing}}
-
-\hypertarget{using-a-.csl-file-with-pandoc-instead-of-biblatex}{%
-\subsection{Using a .csl file with pandoc instead of biblatex}\label{using-a-.csl-file-with-pandoc-instead-of-biblatex}}
-
-The \texttt{oxforddown} package uses biblatex in LaTeX for referencing.
-It is also possible to use pandoc for referencing by providing a .csl file in the YAML header of \textbf{index.Rmd} (likely requiring commenting out the biblatex code in \textbf{templates/template.tex}).
-This may be helpful for those who have a .csl file describing the referencing format for a particular journal.
-However, note that this approach does not support chapter bibliographies (see Section \ref{biblatex-custom}).
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{csl}\KeywordTok{:}\AttributeTok{ ecology.csl}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{biblatex-custom}{%
-\subsection{Customizing biblatex and adding chapter bibliographies}\label{biblatex-custom}}
-
-This section provides one example of customizing biblatex. Much of this code was combined from searches on Stack Exchange and other sources (e.g.~\href{https://tex.stackexchange.com/questions/10682/suppress-in-biblatex}{here}).
-
-In \textbf{templates/template.tex}, one can replace the existing biblatex calls with the following to achieve referencing that looks like this:
-
-(Charmantier and Gienapp 2014)
-
-Charmantier, A. and P. Gienapp (2014). Climate change and timing of avian breeding and migration: evolutionary versus plastic changes. Evolutionary Applications 7(1):15--28. doi: 10.1111/eva.12126.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{\textbackslash{}usepackage}\NormalTok{[backend=biber,}
-\NormalTok{    bibencoding=utf8,}
-\NormalTok{    refsection=chapter, }\CommentTok{\% referencing by chapter}
-\NormalTok{    style=authoryear, }
-\NormalTok{    firstinits=true,}
-\NormalTok{    isbn=false,}
-\NormalTok{    doi=true,}
-\NormalTok{    url=false,}
-\NormalTok{    eprint=false,}
-\NormalTok{    related=false,}
-\NormalTok{    dashed=false,}
-\NormalTok{    clearlang=true,}
-\NormalTok{    maxcitenames=2,}
-\NormalTok{    mincitenames=1,}
-\NormalTok{    maxbibnames=10,}
-\NormalTok{    abbreviate=false,}
-\NormalTok{    minbibnames=3,}
-\NormalTok{    uniquelist=minyear,}
-\NormalTok{    sortcites=true,}
-\NormalTok{    date=year}
-\NormalTok{]\{}\ExtensionTok{biblatex}\NormalTok{\}}
-\FunctionTok{\textbackslash{}AtEveryBibitem}\NormalTok{\{}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}clearlist}\NormalTok{\{language\}}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}clearfield}\NormalTok{\{note\}}
-\NormalTok{\}}
-
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{\{titlecase\}\{}\FunctionTok{\textbackslash{}MakeTitleCase}\NormalTok{\{\#1\}\}}
-
-\FunctionTok{\textbackslash{}newrobustcmd}\NormalTok{\{}\FunctionTok{\textbackslash{}MakeTitleCase}\NormalTok{\}[1]\{}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}ifthenelse}\NormalTok{\{}\FunctionTok{\textbackslash{}ifcurrentfield}\NormalTok{\{booktitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{booksubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{maintitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{mainsubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{journaltitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{journalsubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{issuetitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{issuesubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{book\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvbook\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{bookinbook\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{booklet\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{suppbook\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{collection\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvcollection\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{suppcollection\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{manual\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{periodical\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{suppperiodical\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{proceedings\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvproceedings\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{reference\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvreference\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{report\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{thesis\}\}}
-\NormalTok{    \{\#1\}}
-\NormalTok{    \{}\FunctionTok{\textbackslash{}MakeSentenceCase}\NormalTok{\{\#1\}\}\}}
-    
-\CommentTok{\% \textbackslash{}renewbibmacro\{in:\}\{\}}
-\CommentTok{\% suppress "in" for articles}
-\CommentTok{\% }
-\FunctionTok{\textbackslash{}renewbibmacro}\NormalTok{\{in:\}\{}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}ifentrytype}\NormalTok{\{article\}\{\}\{}\FunctionTok{\textbackslash{}printtext}\NormalTok{\{}\FunctionTok{\textbackslash{}bibstring}\NormalTok{\{in\}}\FunctionTok{\textbackslash{}intitlepunct}\NormalTok{\}\}\}}
-\CommentTok{\%{-}{-} no "quotes" around titles of chapters/article titles}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article, inbook, incollection, inproceedings, misc, thesis, unpublished]}
-\NormalTok{\{title\}\{\#1\}}
-\CommentTok{\%{-}{-} no punctuation after volume}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article]}
-\NormalTok{\{volume\}\{\{\#1\}\}}
-\CommentTok{\%{-}{-} puts number/issue between brackets}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article, inbook, incollection, inproceedings, misc, thesis, unpublished]}
-\NormalTok{\{number\}\{}\FunctionTok{\textbackslash{}mkbibparens}\NormalTok{\{\#1\}\} }
-\CommentTok{\%{-}{-} and then for articles directly the pages w/o any "pages" or "pp." }
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article]}
-\NormalTok{\{pages\}\{\#1\}}
-\CommentTok{\%{-}{-} for some types replace "pages" by "p."}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[inproceedings, incollection, inbook]}
-\NormalTok{\{pages\}\{p. \#1\}}
-\CommentTok{\%{-}{-} format 16(4):224{-}{-}225 for articles}
-\FunctionTok{\textbackslash{}renewbibmacro*}\NormalTok{\{volume+number+eid\}\{}
-  \FunctionTok{\textbackslash{}printfield}\NormalTok{\{volume\}}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}printfield}\NormalTok{\{number\}}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}printunit}\NormalTok{\{}\FunctionTok{\textbackslash{}addcolon}\NormalTok{\}}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-If you would like chapter bibliographies, in addition insert the following code at the end of each chapter, and comment out the entire REFERENCES section at the end of template.tex.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\textbackslash{}printbibliography}\NormalTok{[segment=}\FunctionTok{\textbackslash{}therefsection}\NormalTok{,heading=subbibliography]}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{customizing-the-page-headers-and-footers-pdf}{%
-\section{Customizing the page headers and footers (PDF)}\label{customizing-the-page-headers-and-footers-pdf}}
-
-This can now be done directly in \textbf{index.Rmd}'s YAML header.
-If you are a LaTeX expert and need further customisation that what's currently provided, you can tweak the relevant sections of \textbf{templates/template.tex} - the relevant code is beneath the line that begins \texttt{\textbackslash{}usepackage\{fancyhdr\}}.
-
-\hypertarget{diving-in-to-the-oxthesis-latex-template-pdf}{%
-\section{Diving in to the OxThesis LaTeX template (PDF)}\label{diving-in-to-the-oxthesis-latex-template-pdf}}
-
-For LaTeX minded people, you can read through \textbf{templates/template.tex} to see which additional customisation options are available as well as \textbf{templates/ociamthesis.cls} which supplies the base class.
-For example, \textbf{template.tex} provides an option for master's degree submissions, which changes identifying information to candidate number and includes a word count.
-At the time of writing, you must set this directly in \textbf{template.tex} rather than from the YAML header in \textbf{index.Rmd}.
-
-\hypertarget{customising-to-a-different-university}{%
-\section{Customising to a different university}\label{customising-to-a-different-university}}
-
-\hypertarget{the-minimal-route}{%
-\subsection{The minimal route}\label{the-minimal-route}}
-
-If the front matter in the OxThesis LaTeX template is suitable to your university, customising \texttt{oxforddown} to your needs could be as simple as putting the name of your institution and the path to your university's logo in \textbf{index.Rmd}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{university}\KeywordTok{:}\AttributeTok{ University of You}
-\FunctionTok{university{-}logo}\KeywordTok{:}\AttributeTok{ figures/your{-}logo{-}here.pdf}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{replacing-the-entire-title-page-with-your-required-content}{%
-\subsection{Replacing the entire title page with your required content}\label{replacing-the-entire-title-page-with-your-required-content}}
-
-If you have a \textbf{.tex} file with some required front matter from your university that you want to replace the OxThesis template's title page altogether, you can provide a filepath to this file in \textbf{index.Rmd}.
-\texttt{oxforddown}'s sample content includes and example of this --- if you use the YAML below, your front matter will look like this:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{alternative{-}title{-}page}\KeywordTok{:}\AttributeTok{ front{-}and{-}back{-}matter/alt{-}title{-}page{-}example.tex}
-\end{Highlighting}
-\end{Shaded}
-
-\noindent
-\fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000001.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000002.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000003.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000004.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000005.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000006.pdf}}
-
 \hypertarget{Introduction}{%
 \chapter{Efficiency of Microfinance Institutions in Africa}\label{Introduction}}
 
@@ -3206,7 +2603,7 @@ Further, assume that,
 
 Where \(Y_{it}\) represents the dependent variable, which takes efficiency scores derived from the data envelopment analysis (DEA) model. We compute three measures of efficiency that take turns as the dependent variables: social efficiency, financial efficiency, and socio-financial efficiency. Section 5.4.3 describes in detail the DEA model.
 
-\(X_{it}\), on the other hand, represents the set of independent variables as described in Table 5.2 below. Further, \(c_{i}\) captures the aggregate effects of the unobserved, time-invariant explanatory variables for \(Y_{it}\) . Further, assume that \(e_{it}\) has zero mean conditional on \(X_{it}\). In the case where \(C_{i}\) and \(X_{it}\) are correlated, then \(C_{t}\) is a fixed effect; otherwise, it is a random effect. Note that the existence of fixed effects implies the presence of endogeneity. For random effects, on the other hand, endogeneity is not a concern. However, the random-effects model affects the computation of standard errors \autocite{roberts2013endogeneity}.
+\(X_{it}\), on the other hand, represents the set of independent variables as described in Table 4.2 below. Further, \(c_{i}\) captures the aggregate effects of the unobserved, time-invariant explanatory variables for \(Y_{it}\) . Further, assume that \(e_{it}\) has zero mean conditional on \(X_{it}\). In the case where \(C_{i}\) and \(X_{it}\) are correlated, then \(C_{t}\) is a fixed effect; otherwise, it is a random effect. Note that the existence of fixed effects implies the presence of endogeneity. For random effects, on the other hand, endogeneity is not a concern. However, the random-effects model affects the computation of standard errors \autocite{roberts2013endogeneity}.
 
 \hypertarget{data-data-sources-and-description-of-variables.}{%
 \subsection{Data, Data Sources and Description of Variables.}\label{data-data-sources-and-description-of-variables.}}
@@ -3280,11 +2677,11 @@ OSS 1 has an advantage over OSS 2, which only shows the extent to which an MFI c
 OSS2 = \frac{Operating Revenue}{Operating Expenses}
 \end{equation}
 
-Table 5.1 presents summary statistics for the DEA input and output variables.
+Table 4.1 presents summary statistics for the DEA input and output variables.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-115}Summary Statistics: Inputs and Outputs for the DEA Model}
+\caption{\label{tab:unnamed-chunk-109}Summary Statistics: Inputs and Outputs for the DEA Model}
 \centering
 \fontsize{10}{12}\selectfont
 \begin{tabular}[t]{lrrrrrrr}
@@ -3306,11 +2703,11 @@ Before running the DEA analysis, we start by transforming the inputs and outputs
 \hypertarget{independent-variables}{%
 \subsection{Independent Variables}\label{independent-variables}}
 
-Table 5.2 presents a summary of the independent variables applied in the study \footnote{See \textcite{jensen1976theory}, \textcite{titman1988determinants}, \textcite{ledgerwood1998microfinance}, \textcite{kyereboah2007determinants}, \textcite{kraay2010worldwide}, \textcite{allen2014african}, \textcite{kurshev2015firm}, \textcite{bayai2016financing}, \textcite{schnyder2018twenty}, \textcite{kimmel2018financial}, \textcite{ito2018quantity}, \textcite{market2018global}}.
+Table 4.2 presents a summary of the independent variables applied in the study \footnote{See \textcite{jensen1976theory}, \textcite{titman1988determinants}, \textcite{ledgerwood1998microfinance}, \textcite{kyereboah2007determinants}, \textcite{kraay2010worldwide}, \textcite{allen2014african}, \textcite{kurshev2015firm}, \textcite{bayai2016financing}, \textcite{schnyder2018twenty}, \textcite{kimmel2018financial}, \textcite{ito2018quantity}, \textcite{market2018global}}.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-116}Description of Independent Variables}
+\caption{\label{tab:unnamed-chunk-110}Description of Independent Variables}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X}
@@ -3350,8 +2747,8 @@ Variable\_Description\\
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-117-1.pdf}
-\caption{\label{fig:unnamed-chunk-117}Correlation Matrix for DEA Inputs and Outputs}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-111-1.pdf}
+\caption{\label{fig:unnamed-chunk-111}Correlation Matrix for DEA Inputs and Outputs}
 \end{figure}
 
 \end{landscape}
@@ -3367,7 +2764,7 @@ Recall, we examine the indicators of financial and social performance by MFIs in
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Table 5.3 presents the descriptive statistics for the DEA-based efficiency scores. We visualise the data and describe the scope of financial and social performance, followed by a discussion of the DEA efficiency scores.
+  Table 4.3 presents the descriptive statistics for the DEA-based efficiency scores. We visualise the data and describe the scope of financial and social performance, followed by a discussion of the DEA efficiency scores.
 \item
   We discuss the levels of efficiency by MFI types based on the DEA scores.
 \item
@@ -3392,7 +2789,7 @@ Figure 5.5, panel B shows the trends in median financial efficiency scores of MF
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-118}Summary Statistics for Efficiency Scores}
+\caption{\label{tab:unnamed-chunk-112}Summary Statistics for Efficiency Scores}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabular}[t]{lrrrrrrr}
@@ -3412,8 +2809,8 @@ Social-Financial Efficiency & 0.795 & 0.123 & 0.500 & 0.715 & 0.777 & 0.894 & 1\
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-119-1.pdf}
-\caption{\label{fig:unnamed-chunk-119}Financial Efficiency Scores for MFIs in Africa}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-113-1.pdf}
+\caption{\label{fig:unnamed-chunk-113}Financial Efficiency Scores for MFIs in Africa}
 \end{figure}
 
 \end{landscape}
@@ -3431,8 +2828,8 @@ An important observation is that younger MFIs have a higher level of social perf
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-120-1.pdf}
-\caption{\label{fig:unnamed-chunk-120}Social Efficiency Scores for MFIs in Africa}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-114-1.pdf}
+\caption{\label{fig:unnamed-chunk-114}Social Efficiency Scores for MFIs in Africa}
 \end{figure}
 
 \end{landscape}
@@ -3450,8 +2847,8 @@ In Figure 5.4, panels B and D, we plot the median socio-financial efficiency of 
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-121-1.pdf}
-\caption{\label{fig:unnamed-chunk-121}Financial and Social Efficiency Scores for MFIs in Africa}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-115-1.pdf}
+\caption{\label{fig:unnamed-chunk-115}Financial and Social Efficiency Scores for MFIs in Africa}
 \end{figure}
 
 \end{landscape}
@@ -3462,8 +2859,8 @@ In Figure 5.4, panels B and D, we plot the median socio-financial efficiency of 
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-122-1.pdf}
-\caption{\label{fig:unnamed-chunk-122}Trends in Financial and Social Efficiency Scores}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-116-1.pdf}
+\caption{\label{fig:unnamed-chunk-116}Trends in Financial and Social Efficiency Scores}
 \end{figure}
 
 \end{landscape}
@@ -3471,11 +2868,11 @@ In Figure 5.4, panels B and D, we plot the median socio-financial efficiency of 
 \hypertarget{the-independent-variables}{%
 \subsection{The Independent Variables}\label{the-independent-variables}}
 
-Table 5.4 shows summary statistics for the independent variables that we employ in the regression models. Profit margin has the highest variability due to a few extreme minimum observations. To proxy the size of an MFI, we take the logarithm of assets. We use all the other independent variables without transformation.
+Table 4.4 shows summary statistics for the independent variables that we employ in the regression models. Profit margin has the highest variability due to a few extreme minimum observations. To proxy the size of an MFI, we take the logarithm of assets. We use all the other independent variables without transformation.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-123}Summary Statistics: Independent Variables for Regression Model}
+\caption{\label{tab:unnamed-chunk-117}Summary Statistics: Independent Variables for Regression Model}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabular}[t]{lrrrrrrr}
@@ -3507,13 +2904,13 @@ In this section, we regress each of the DEA efficiency scores against the indepe
 \hypertarget{financial-efficiency-of-mfis}{%
 \subsection{Financial Efficiency of MFIs}\label{financial-efficiency-of-mfis}}
 
-Table 5.5 shows the results of the regression analysis with financial efficiency as the dependent variable. The significant drivers of financial efficiency are asset structure, MFI size proxied by the logarithm of total assets, and stock market capitalisation to GDP. Current legal status has a weak relationship with financial efficiency. The regression analysis shows that commercial banks and rural banks have significantly better financial efficiency, which goes against the visualisation in Figure 5.2. The extreme values in the financial performance of banks and rural banks could explain this contradiction. Considering this, NGOs do better financially than all the legal forms of MFIs except cooperatives.
+Table 4.5 shows the results of the regression analysis with financial efficiency as the dependent variable. The significant drivers of financial efficiency are asset structure, MFI size proxied by the logarithm of total assets, and stock market capitalisation to GDP. Current legal status has a weak relationship with financial efficiency. The regression analysis shows that commercial banks and rural banks have significantly better financial efficiency, which goes against the visualisation in Figure 5.2. The extreme values in the financial performance of banks and rural banks could explain this contradiction. Considering this, NGOs do better financially than all the legal forms of MFIs except cooperatives.
 
 These results go against the stated objectives of MFI commercialisation. The commercial model of microfinance aims at increasing the financial sustainability of MFIs, which would allow for their sustainability without reliance on donations and subsidies \autocite{d2017ngos}. Again, financial sustainability by MFIs would lead to mission expansion by using profits to reach the financially excluded. However, the data shows that this is not the case. Overall, the financial performance of MFIs is poor \autocite{mersland2010microfinance}. Also, the commercial MFIs do not outperform NGOs in financial performance in the sample dataset. It then seems like commercialisation does not necessarily translate into financial sustainability. And given the relatively good financial performance by NGOs that do not explicitly prioritise profitability, it appears that the win-win school has the upper hand. MFIs can balance financial and social goals while retaining the NGO model that focuses on social goals.
 
 The asset structure of MFIs has an inverse relationship with financial efficiency. As noted earlier, asset structure or asset tangibility is the ratio of non-current assets to total assets of an MFI. The results then imply that investment in physical infrastructure harms financial sustainability \autocite{iman2018mobile,demirguc2018global}. The results are consistent with the empirical literature in microfinance because serving the financially excluded is expensive and may not yield economies of scale to offset the investment in physical infrastructure by MFIs \autocite{quayes2019probability}. The advent of Fintech allows MFIs to reach out to the financially excluded without high expenditures in brick and mortar branches and other physical assets \autocite{iman2018mobile}. However, given that most financially excluded people also suffer from financial illiteracy, MFIs still must deploy field workers or mobile banking units in targeted areas \autocite{allen2014african}. Hence, there is an opportunity for research into how Fintech affects the investment in physical infrastructure, profitability and outreach of MFIs in Africa.
 
-The size of an MFI is also negatively related to the financial efficiency of MFIs in Africa. Large, older MFIs have lower financial efficiency scores relative to smaller, younger ones, which could arise due to dis-economies of scale. Also, larger, older MFIs may not emphasise financial sustainability, given they receive relatively more donations. If donors emphasise outreach vis-a-vis financial sustainability, this could explain the lower levels of financial performance by older MFIs \autocite{d2013unsubsidized}. The ratio of stock market capitalisation to GDP has a weak positive relationship with financial efficiency, implying that MFIs operating in countries with better functioning capital markets exhibit better financial performance. Lower incidence of financial exclusion in countries with well developed capital markets could explain the relationship \autocite{allen2014african}. The ratio of private credit to GDP is insignificant. The remaining variables, age and institutional quality, have no significant relationship with financial efficiency. However, as we saw earlier in Table 5.2, younger MFIs have marginally higher financial performance, which is not important in the regression.
+The size of an MFI is also negatively related to the financial efficiency of MFIs in Africa. Large, older MFIs have lower financial efficiency scores relative to smaller, younger ones, which could arise due to dis-economies of scale. Also, larger, older MFIs may not emphasise financial sustainability, given they receive relatively more donations. If donors emphasise outreach vis-a-vis financial sustainability, this could explain the lower levels of financial performance by older MFIs \autocite{d2013unsubsidized}. The ratio of stock market capitalisation to GDP has a weak positive relationship with financial efficiency, implying that MFIs operating in countries with better functioning capital markets exhibit better financial performance. Lower incidence of financial exclusion in countries with well developed capital markets could explain the relationship \autocite{allen2014african}. The ratio of private credit to GDP is insignificant. The remaining variables, age and institutional quality, have no significant relationship with financial efficiency. However, as we saw earlier in Table 4.2, younger MFIs have marginally higher financial performance, which is not important in the regression.
 
 \newpage
 
@@ -3584,7 +2981,7 @@ F Statistic & \multicolumn{1}{c}{11.600$^{***}$ (df = 28; 3862)} & \multicolumn{
 \hypertarget{drivers-of-social-efficiency-of-mfis}{%
 \subsection{Drivers of Social Efficiency of MFIs}\label{drivers-of-social-efficiency-of-mfis}}
 
-Unlike financial performance, the legal form of an MFI is the dominant driver of social performance (see Table 5.6). Consistent with Figure 5.3, NGOs have significantly higher social performance levels than all the other legal forms of MFI. The concern by the welfare school of microfinance is that the levels of outreach by NGOs to the financially excluded could be affected by focusing on financial sustainability. However, as the previous section shows, NGOs do not fare badly in financial efficiency than other legal forms of MFI. It means, therefore, that NGOs could aim at a degree of financial efficiency while still maintaining their social goals. As \textcite{mersland2019social} note, the mission statements of MFIs have a significant relationship with the performance of these MFIs. Given that NGOs have the stated mission of reaching the unbanked, they are better positioned to achieve these social goals. If NGOs are to give financial goals as much weight as social goals, there is likely to be a trade-off, more so where fund providers put pressure on management to make financial returns.
+Unlike financial performance, the legal form of an MFI is the dominant driver of social performance (see Table 4.6). Consistent with Figure 5.3, NGOs have significantly higher social performance levels than all the other legal forms of MFI. The concern by the welfare school of microfinance is that the levels of outreach by NGOs to the financially excluded could be affected by focusing on financial sustainability. However, as the previous section shows, NGOs do not fare badly in financial efficiency than other legal forms of MFI. It means, therefore, that NGOs could aim at a degree of financial efficiency while still maintaining their social goals. As \textcite{mersland2019social} note, the mission statements of MFIs have a significant relationship with the performance of these MFIs. Given that NGOs have the stated mission of reaching the unbanked, they are better positioned to achieve these social goals. If NGOs are to give financial goals as much weight as social goals, there is likely to be a trade-off, more so where fund providers put pressure on management to make financial returns.
 
 The results are consistent with the data visualisations. Credit unions have the objective of serving subscribed members within a designated geographic location or a common professional background. It is not their mission to explicitly target social performance \autocite{mathuva2017achieving}. The contestation here is between NGOs and the other commercial entities, excluding credit unions. The results illustrate that MFIs that exclusively target social performance tend to achieve more socially. Hence the place of the social mission of an MFI is central to achieving social objectives, a view that is in line with findings by \textcite{berbegal2019impact}.
 
@@ -3595,7 +2992,7 @@ Institutional quality (KKM) has a mixed but insignificant relationship with the 
 \hypertarget{socio-financial-efficiency-of-mfis}{%
 \subsection{Socio-Financial Efficiency of MFIs}\label{socio-financial-efficiency-of-mfis}}
 
-In this regression model, we examine joint social and financial efficiency (socio-financial efficiency) drivers. Specifically, we seek to uncover how well MFIs convert their inputs into financial (operational self-sufficiency) and social goals (percentage of female borrowers and average loan balance per borrower). The results in Table 5.7 show that, like social efficiency, the statistically significant drivers of socio-financial efficiency are legal status and the ratio of stock market capitalisation to GDP. Specifically, the regression analysis shows that NGOs have higher socio-financial efficiency scores than the other legal forms of MFIs, confirming the results of the exploratory data analysis. These results suggest that transformed MFIs do not achieve the attained benefits of commercialisation, that is, increased financial sustainability, which allows for greater outreach to the financially excluded (mission expansion) \autocite{mersland2010microfinance}. Instead, it is NGOs that are capable of balancing financial and social goals. Like in social pursuits, socio-financial efficiency has a negative relationship with stock market capitalisation to GDP, highlighting the importance of financial sector development in enabling financial inclusion \autocite{allen2013resolving}.
+In this regression model, we examine joint social and financial efficiency (socio-financial efficiency) drivers. Specifically, we seek to uncover how well MFIs convert their inputs into financial (operational self-sufficiency) and social goals (percentage of female borrowers and average loan balance per borrower). The results in Table 4.7 show that, like social efficiency, the statistically significant drivers of socio-financial efficiency are legal status and the ratio of stock market capitalisation to GDP. Specifically, the regression analysis shows that NGOs have higher socio-financial efficiency scores than the other legal forms of MFIs, confirming the results of the exploratory data analysis. These results suggest that transformed MFIs do not achieve the attained benefits of commercialisation, that is, increased financial sustainability, which allows for greater outreach to the financially excluded (mission expansion) \autocite{mersland2010microfinance}. Instead, it is NGOs that are capable of balancing financial and social goals. Like in social pursuits, socio-financial efficiency has a negative relationship with stock market capitalisation to GDP, highlighting the importance of financial sector development in enabling financial inclusion \autocite{allen2013resolving}.
 
 \begin{landscape}
 
@@ -3730,9 +3127,9 @@ F Statistic & \multicolumn{1}{c}{5.290$^{***}$ (df = 28; 3862)} & \multicolumn{1
 \hypertarget{robustness-tests}{%
 \subsection{Robustness Tests}\label{robustness-tests}}
 
-We first run the fixed and random effects models for the entire dataset for robustness, with the results reported in tables 5.5, 5.6 and 5.7. Secondly, we check for outliers by winsorising the data. To do this, we drop the top 10\% and bottom 10\% observations of the independent variables and rerun the fixed and random effects regressions. The results are in Appendix 3 (Table 5.9). The results correspond to those in Tables 5.5 to 5.7 except for the magnitude of the regression coefficients.
+We first run the fixed and random effects models for the entire dataset for robustness, with the results reported in tables 5.5, 5.6 and 5.7. Secondly, we check for outliers by winsorising the data. To do this, we drop the top 10\% and bottom 10\% observations of the independent variables and rerun the fixed and random effects regressions. The results are in Appendix 3 (Table 4.9). The results correspond to those in Tables 5.5 to 5.7 except for the magnitude of the regression coefficients.
 
-Given the panel structure of data, there is a possibility of cross-sectional dependence and serial correlation. We correct the standard errors -- presenting the panel corrected standard errors to deal with these problems. Appendix 4-6 contain plots examining the normality of residuals for the regression outputs in Table 5.5. The results show slight deviations from normality, which may not be an issue given the large sample size.
+Given the panel structure of data, there is a possibility of cross-sectional dependence and serial correlation. We correct the standard errors -- presenting the panel corrected standard errors to deal with these problems. Appendix 4-6 contain plots examining the normality of residuals for the regression outputs in Table 4.5. The results show slight deviations from normality, which may not be an issue given the large sample size.
 
 \hypertarget{conclusion-2}{%
 \section{Conclusion}\label{conclusion-2}}
@@ -3749,7 +3146,7 @@ This study examined the levels and drivers of financial efficiency, social effic
 
 \begin{table}[!h]
 
-\caption{\label{tab:unnamed-chunk-134}Results of the Hausmann Tests}
+\caption{\label{tab:unnamed-chunk-128}Results of the Hausmann Tests}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
@@ -3770,8 +3167,8 @@ Statistic & P.value & Parameter & Method & Alternative\\
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-135-1.pdf}
-\caption{\label{fig:unnamed-chunk-135}Financial Sustainability and Social Performance Metrics for MFIs in Africa}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-129-1.pdf}
+\caption{\label{fig:unnamed-chunk-129}Financial Sustainability and Social Performance Metrics for MFIs in Africa}
 \end{figure}
 
 \end{landscape}
@@ -3848,11 +3245,11 @@ F Statistic (df = 28; 3434) & \multicolumn{1}{c}{8.170$^{***}$} & \multicolumn{1
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-139-1} 
+{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-133-1} 
 
 }
 
-\caption{residual QQ-plots for Fixed and Random Effects Regression Models}\label{fig:unnamed-chunk-139}
+\caption{residual QQ-plots for Fixed and Random Effects Regression Models}\label{fig:unnamed-chunk-133}
 \end{figure}
 
 \newpage
@@ -3862,11 +3259,11 @@ F Statistic (df = 28; 3434) & \multicolumn{1}{c}{8.170$^{***}$} & \multicolumn{1
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-140-1} 
+{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-134-1} 
 
 }
 
-\caption{residual QQ-plots for Fixed and Random Effects Regression Models}\label{fig:unnamed-chunk-140}
+\caption{residual QQ-plots for Fixed and Random Effects Regression Models}\label{fig:unnamed-chunk-134}
 \end{figure}
 
 \newpage
@@ -3876,14 +3273,816 @@ F Statistic (df = 28; 3434) & \multicolumn{1}{c}{8.170$^{***}$} & \multicolumn{1
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-141-1} 
+{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-135-1} 
 
 }
 
-\caption{residual QQ-plots for Fixed and Random Effects Regression Models}\label{fig:unnamed-chunk-141}
+\caption{residual QQ-plots for Fixed and Random Effects Regression Models}\label{fig:unnamed-chunk-135}
 \end{figure}
 
 \end{landscape}
+
+\hypertarget{the-double-bottom-line-goal-of-microfinance-institutions-in-africa}{%
+\chapter{The Double Bottom Line Goal of Microfinance Institutions in Africa}\label{the-double-bottom-line-goal-of-microfinance-institutions-in-africa}}
+
+\minitoc 
+\chaptermark{Achievement of Dual Objectives by MFIs}
+
+\newpage
+
+\begin{center}
+
+\textbf{ABSTRACT}
+
+\end{center}
+
+\begin{quote}
+This article uses data from the World Bank to examine how microfinance institutions (MFIs) in Africa fare in pursuing the double bottom line - meeting financial and social objectives. It also looks into the factors associated with the capacity of MFIs to achieve the double bottom line. We capture social performance using the per cent of female borrowers while operational self-sufficiency proxies financial performance. The results show that most MFIs in Africa attain the dual objectives, at 35.88\% compared to the 14.76\% who fail in both missions. Interestingly, rural banks and NGOs are more likely to achieve the dual goals than banks, NBFIs and credit unions. Age, size, capital markets development, institutional quality, legal tradition, and legal status are the significant determinants of how MFIs fare in the effort to attain joint financial and social objectives. The results remain robust after removing outliers.
+\end{quote}
+
+vspace\{10mm\}
+
+\textbf{Key Words}: Microfinance, Efficiency, Social, Financial, Performance, Africa.
+
+\vspace{5mm}
+
+\textbf{JEL Classification}: G210, G230
+
+\newpage
+
+\hypertarget{background-2}{%
+\section{Background}\label{background-2}}
+
+Microfinance Institutions (MFIs) set out to reach out to the financially excluded people with little emphasis on making profits in the early stages. However, the rise of neoliberalism has seen an increasing number of MFIs also pursuing a financial returns goal. The argument is that financially sustainable MFIs could better serve the financially excluded without over-reliance on volatile donor funds and uncertain state subsidies \autocite{garmaise2013cheap,d2017aid,armendariz2013subsidy,d2013unsubsidized}. Consequently, most modern MFIs globally are hybrid firms that have a dual objective of reaching out to the financially excluded while striving for financial sustainability \autocite{d2017ngos}. Like most hybrid firms, MFIs face a challenge in striking a balance between the pursuit of profit and the outreach to the poor, their chief social mission \autocite{jia2016commercialization,d2013unsubsidized}. When the financial goals of an MFI come at the expense of social goals, the MFI is said to have experienced mission drift \autocite{mersland2010microfinance}.
+
+While some researchers posit that it is possible to profitably offer financial services to the poor, financially excluded individuals \autocite{kodongo2013individual}, others hold the opposite view \autocite{mersland2010microfinance}. The opponents argue that offering financial services to indigent clients is a high cost, high-risk business owing to the high costs of administering small loans that affer no economies of scale \autocite{ledgerwood2006transforming}. Similarly, the poor, more so in Africa, lack collateral, are often located in remote geographic areas, lack financial literacy, and engage in informal economic activity, making it hard to track finances to assess their creditworthiness. It is against this background that most initial MFIs like the Grameen Bank in Bangladesh ran on the welfare model, emphasising outreach to the poor even at the expense of profitability. MFIs following the welfare approach had substantial backing in donor funds and state subsidies \autocite{armendariz2013subsidy}.
+
+As noted, the rise of neo-liberalism after the cold war led to a paradigm shift towards financial sustainability \autocite{bateman2010doesn}. The transition has accompanied a reduction in the level of donations and subsidies, compelling many MFIs to also strive for financial sustainability \autocite{d2017ngos}. The shift has forced MFIs to pursue a double bottom line, that is, achieve social goals while ensuring financial viability \autocite{ramus2017}. The trend has been the conversion of NGO, welfare MFIs, to the commercial, profit-oriented microfinance model. As noted, many researchers hold differing viewpoints regarding the suitability of MFIs pursuing the dual objectives. Some researchers argue that seeking profits is detrimental to the social mandate of reaching the unbanked due to the possibility of ``mission drift'', where MFIs seek profits to the detriment of their social mandate. If MFIs drift from their mission, then they risk the legitimacy that affords them a favourable legal framework from the state and earns them goodwill from stakeholders \autocite{market2018global}. Other researchers believe that financial sustainability makes MFIs better serve the excluded. \textcite{mersland2010microfinance} conducted some empirical analysis and concluded that the pursuit of profits by MFIs leads to a lower level of outreach, referred to as ``mission drift''. On the contrary, other researchers claim that financially sustainable MFIs reach more financially excluded people, a phenomenon dubbed ``mission expansion'' \autocite{mersland2010microfinance}.
+
+In this article, we pursue two issues. First, we explore the levels of combined financial and social performance of MFIs in Africa. Secondly, we examine the factors behind the level of joint financial and social performance of MFIs in Africa. We capture financial performance using the operational self-sufficiency, OSS \footnote{\(OSS = \frac{operating revenue}{expenses on funding, loan loss provisions, and operations}\) \autocite{market2018global}}, while the per cent of female borrowers proxies social performance. The literature shows that the majority of the financially excluded are women and rural dwellers in Africa \footnote{We did not include MIX data on lending to rural dwellers as it had a large proportion of missing values.}. Specifically, the study takes MFIs with an OSS of at least one to be financially sustainable. Likewise, MFIs that have at least 50\% of female borrowers have succeeded socially in reaching out to the financially excluded. Following \textcite{chattopadhyay2017applicability}, we develop a matrix to capture the extent to which MFIs achieve the dual objectives as shown in Table 6.1 below.
+
+The article contributes to the existing literature in two main ways. First, the research work documents the extent of financial and social performance of MFIs in Africa, and thus contributes to the debate on mission drift versus mission expansion. Secondly and critically, while much research examines the consequences of the transformation of MFIs \autocite{fernando2004micro,hishigsuren2006transformation,d2017ngos,ramus2017}, few delve into the factors that drive the success or failure in the dual missions of MFIs as this paper does. Instead, much of the currently available research examines the effects of MFI transformation on financial sustainability and social missions with each outcome examined in isolation. The other strand examines trade-offs between the financial and social performance of MFIs without delving into the drivers of the extent of the trade-offs. Hence, this research contributes to the existing literature by examining the determinants of the achievement of twin objectives.
+
+While much of the research has dwelt on the trade-offs or synergies between the two schools, little of it investigates why some MFIs would differ in achieving the dual objectives. \textcite{quayes2019probability} is the closest research to our contribution. In their study, they examine the probability of an MFI achieving financial sustainability. The presumption is that financial sustainability is a proxy for social outreach, meaning that the researchers lean towards microfinance's financial systems approach. The researchers conclude that the probability of financial sustainability positively affects depth of outreach, breadth of outreach, and outreach to women. The researchers do not examine the financial and social objectives together as we do in this study.
+
+The classification in Table 6.1 shows four categories of MFIs based on achieving both financial and social goals. In class 1, the MFIs have failed both socially and financially. These are MFIs with a share of women borrowers lower than 50\% of the total borrowers and a operational self-sufficiency (OSS) less than unity. MFIs in this class risk losing legitimacy, fail to attract donations, subsidies, and being loss-making ultimately collapse. There is little literature that examines situations where MFIs fail in the twin objectives reflecting the expectations that an MFI should at least exhibit positive social influence even if it does not fare well financially.
+
+In class 2, the MFIs succeed socially in reaching the unbanked but fail in financial sustainability. The welfare approach (NGO-Model) subscribes to this approach \autocite{kodongo2013individual}. Although some NGOs do turn profits, this class of MFIs is a prime candidate for donations and subsidies and illustrates, as welfarists do, that financial sustainability of MFIs is not compatible with social goals. However, better financial management could allow this class of MFIs to improve their financial sustainability without trading off social goals. The financial sustainability school argues that it is possible to push these MFIs to financial sustainability without losing sight of their social mandate.
+
+In category three, the MFIs succeed financially but fail in the social mission. This category contains MFIs that are subject to mission drift, confirming the welfare school's view on the incompatibility between profitability and social outreach \autocite{mersland2010microfinance,mia2017mission}. The MFIs in this category risk their legitimacy but could survive as they operate a commercial model like mainstream commercial banks. Most cooperatives, NBFIs, and commercial banks in our dataset fall into this category, calling into question the viability of the coexistence of the profit-oriented approach to microfinance and the need to reach out to the financially excluded. NGOs form a small proportion of this group showing their relevance in microfinance. Finally, some MFIs succeed both financially and socially, which is desirable. This category points to MFIs from which mission expansion could arise. This class presents an ideal scenario for the win-win approach to microfinance that argues for the possibility of pursuing both objectives. This class also serves the financial sustainability school well, although its viability is controversial.
+
+This current study fits within the agency theory. The entry of private capital into microfinance is bound to raise a conflict between providing appropriate and affordable financial services to the financially excluded and pursuing profits \autocite{miller2011angel}.While equity and debt-holders may favour financial inclusion, maximising returns on their investments comes first, unless blended finance is the financing model in use. Blended finance allows MFIs to use private capital to do social good without an overemphasis on profitability. Even where agency conflicts adversely affect the provision of financial services to the poor, it is hard for MFIs to keep off the financial sustainability push. The institutional theory sheds light here, where the institutional environment has a greater influence on the adoption of institutional structures than market pressures. In this respect, pressures from donor agencies may still cause more MFIs to convert to the commercial model even where evidence shows that the conversion may be detrimental to the social goal of availing financial services to the financially excluded.
+
+There exist MFIs that serve different segments of society. For instance, cooperatives serve a limited geographic range, targeting people with a common bond like employment. Rural banks also serve limited geographic areas in remote rural locations. MFIs registered as commercial banks and NBFIs serve relatively better off, but still poor people not served by mainstream financial intermediaries. Consequently, some researchers argument that we should allow a broad range of MFIs to exist to serve different market segments appears valid \autocites[by][]{morduch1999microfinance,morduch2000microfinance}. Supporting this point, \textcite{morduch2019challenges} argue that if there were no market failures in the credit market that leaves out a segment of the population unbanked, NGOs would not exist as commercial banks because other MFIs would already have filled the gap. It follows, therefore, that the call to do away with NGOs does not augur well for the financially excluded. These viewpoints call to question the validity and relevance of the debate on the pros and cons of microfinance institutions' transformation across the globe. What is critical, it seems to us, is to evaluate factors relevant for MFIs to achieve their financial and social goals as a basis for crafting policy support. Moreover, the management of MFIs would better adjust their strategies when aware of the issues that hinder or facilitate the achievement of the twin objectives.
+
+The rest of the research proceeds as follows. In the next section, we summarise the study results followed by a description of the econometric model. We then discuss the results of the regression in detail and then conclude the report.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-136}Classification Matrix: Joint Financial and Social Performance of MFIs}
+\centering
+\begin{tabular}[t]{llll}
+\toprule
+  &   & Achieves\_Financial\_Goals? & Achieves\_Financial\_Goals?\\
+\midrule
+ &  & YES & NO\\
+Achieves\_Social\_Goals? & YES & Class 4 (SS) & Class 2 (FS)\\
+Achieves\_Social\_Goals? & NO & Class 3 (SF) & Class 1 (FF)\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Adapted from Chattopadhyay, Manojit, and Subrata Kumar Mitra (2017)}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}\textit{Note}}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}\textsuperscript{1} In labelling the classes, we start with financial sustainability followed by social performance.}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}\textsuperscript{2} The letters F and S stand for Fails (F) and Succeeds (S), respectively.}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}\textsuperscript{3} For instance, FS means the MFI fails (F) financially but succeeds (S) socially.}\\
+\end{tabular}
+\end{table}
+
+\hypertarget{summary-of-results-3}{%
+\section{Summary of Results}\label{summary-of-results-3}}
+
+Overall, MFIs in Africa achieve both outreach (social goals) and financial goals more than they fail in both objectives at 35.88\% and 14.76\%, respectively. 25.55\% of MFIs succeed financially but fail socially by not reaching out adequately to the financially excluded. This result is indicative of mission drift. Another 23.80\% fail financially but fare well in their social mandate of reaching the financially excluded. Broken down further, 48.59\% of NGOs and 52.17\% of rural banks attain both financial and social goals, as against 7.34\% and 0.72\%, respectively, that fail in both. The proportions of banks, NBFIs, and credit unions that succeed financially and socially are 45.72\%, 36.87\%, and 17.73\%. Those that fail in both objectives are 6.3\%, 13.51\%, and 27.61\%, respectively. NGOs have the lowest proportion of MFIs that experience mission drift by meeting financial goals while failing socially at 7.66\%. On the other hand, credit unions have the second-highest mission drift at 40.43\%, after rural banks at 43.48\%.
+
+The regression results show that the significant factors in determining the extent of achieving both objectives are age, size, capital markets development, institutional quality, legal tradition, and legal status. Specifically, mature MFIs are less prone to mission drift given they are more likely to fail both financially and socially than succeed in one objective while failing in the other. Larger MFIs, on the other hand, are more likely to succeed financially and fail socially than they are to fail in both objectives. Similarly, large MFIs are more likely to succeed in both goals than to fail. The results are indicative of larger MFIs being more prone to mission drift. A higher level of capital markets development and governance corresponds to a higher chance of failing in both objectives, probably due to low demand for microfinance in countries with well developed mainstream financial systems.
+
+Similarly, MFIs in legal traditions other than common law are more likely to fail in both objectives. The result probably connotes weak legal and infrastructural support that suppresses the development of mainstream and alternative financial systems like microfinance. Finally, the legal status outcome shows that NGOs are less likely to succeed financially while failing socially. However, NGOs are more likely than other legal forms to fail socially while succeeding financially and succeeding in both objectives. The results show that commercial forms of MFIs are more prone to mission drift.
+
+\hypertarget{the-model}{%
+\section{The Model}\label{the-model}}
+
+The article uses the multinomial logit model, given that our dependent variable is discrete and error terms may not be normally distributed \autocite{cramer2002origins}. In the model, NGOs take a zero code, with commercial banks, NBFIs, credit unions, and Rural Banks coded one, two, three, and four, respectively. The following section lays out and describes the models, variables, and data sources.
+
+\hypertarget{the-model-variables-description-and-data-sources-1}{%
+\subsection{The Model, Variables Description and Data Sources}\label{the-model-variables-description-and-data-sources-1}}
+
+We run a multinomial logit model on a panel dataset of 705 MFIs in Africa. The multinomial logit model is an extension of the logit model, and hence we start by describing the logit model. Assuming the error term \(\epsilon\) follows a logistic distribution \autocite{czepiel2002maximum}, we have:
+
+\begin{equation}
+y_{it} = log(\frac{p_{it}}{(1-p_{it})} ) = \alpha + x_{it} + \varepsilon_{it}
+\end{equation}
+
+where,
+
+\begin{equation}
+p_{it}  =  \frac{1}{1 +  e^{- z_{it} } } 
+\end{equation}
+
+and
+
+\begin{equation}
+1 + p_{it}  =  \frac{1}{1 +  e^{z_{it} } }
+\end{equation}
+
+for \(z_{it} = f(x_{it})\)
+
+In the model, \(y_{it}\) is the current legal status of the MFI, the dependent variable, that is, the dependent variable is a dummy with NGOs, the base outcome (coded zero), and other legal traditions take a code of one. The symbol \(x_{it}\) represents a vector of independent variables: age, size, capital market development, legal tradition, GDP growth rate, and institutional quality. Additionally, we include year dummies to cater for the trends towards commercialisation.
+
+The multinomial logit model extends the binary logit model to more than two unordered levels (discrete choices). The data at hand meets the requirements for running a multinomial logit model as the dependent variable (the legal status of each MFI) has one outcome for each case. Also, the independent variables do not predict the dependent variable perfectly \autocite{petrucci2009primer}. Suppose we have a dependent variable \(y\) consisting of \(K\) choices for \(K \geqslant 2\). Further, let the independent variables be \(x_1, x_2,………. x_n\), then we can specify the multinomial logit model as follows.
+
+\begin{equation}
+log(\frac{prob(k/X)}{prob(K/X)}) =   \beta_{0}^{k}  x_{0}  + \beta_{1}^{k}  x_{1} +  \cdots + \beta_{p}^{k}  x_{p}
+\end{equation}
+
+for \(k = 1 \cdots K-1\)
+
+\(y\) is the dependent variable, in this case, one of NGO, commercial bank, NBFI, credit union or rural bank.
+
+\(x\) is a vector of independent variables.
+
+If \(K>2\), then we have a multinomial logit with \(K-1\) set of equations. Where \(K=2\), the model is the binary logit model denoted in equation one (1) where we have one equation. Note that in this case, we have arbitrarily assigned the last category (K) as the reference. Any other group can serve as a reference and hence not be part of the equations set.
+
+One of the significant drawbacks of the multinomial logit is the violation of the assumption of the independence of irrelevant alternatives (IIA). \textcite{cheng2007testing} ) illustrate this assumption using the blue bus-red bus example. If the choice between car transport and a red bus, and given that the probability of choosing a bus is \(0.8\), and \(0.2\) for a car, then the bus's odds over car transport is 4. Suppose we introduce a third alternative, the blue bus. If the probabilities of choosing a red bus, blue bus, and car transport are \(0.6\), \(0.25\), \(0.15\), respectively, the assumption holds since the odds of selecting a red bus over a car are still \(4\). If the odds are different from \(4\), then the model violates the IIA, and the multinomial model is not fit for the data. In our case, we plausibly see the assumption holding because the legal status of an individual MFI is independent of the legal status of other MFIs. Table 6.2 (next page) describes the variables in detail.
+
+\hypertarget{variables-description-and-data-sources}{%
+\subsection{Variables Description and Data Sources}\label{variables-description-and-data-sources}}
+
+The dependent variable is a dummy with four levels that capture how well MFIs achieve financial and social objectives. The firm-level independent variables are the legal status, age and size of the MFIs. The legal tradition, institutional quality, private credit to GDP, stock market to GDP, and GDP growth rates capture country-level macro-factors.
+
+As illustrated in Table 6.1, we construct the dependent variable using the combination of the percentage of women borrowers and operational self-sufficiency (OSS). Lending to women proxies the social performance of MFIs, with success being where an MFI has women clients comprising 50\% or more of the total borrowers. An OSS of at least one indicates a financially sustainable MFI. We then generate four categories starting from MFIs that succeed in both financial and social metrics on one extreme and those that fail in both on the other. In between are MFIs that succeed in one of the metrics but fail in the other. Apart from the proposition by \textcite{chattopadhyay2017applicability}, little research has applied this approach to examine the joint financial and social efficiency of MFIs.
+
+As noted, some legal forms of MFIs restrict the capacity of MFIs to emphasise financial or social goals. NGOs are an extreme case where donors and stakeholders expect that they are more socially oriented. Their degree of social orientation is the source of legitimacy and justifies continued donor and state support. In Africa, rural banks serve a niche market that is most prone to financial exclusion and hence are expected to focus on social performance over and above financial performance. On the other hand, cooperatives are member-oriented and may not have room to improve their social outlook unless by recruiting more diverse group members. In countries and areas where people suffer financial exclusion, joining a cooperative is out of the question given their low-income status, which leads to their financial exclusion in the first place \autocite{demirguc2018global}. The exception is farmers cooperatives that pool together smallholder farmers to gain scale economies in the procurement of inputs and sale of produce \autocite{porter1987economic}. Commercial banks and NBFIs tend to have more external capital, and agency conflicts may arise between managers who want to optimise financial and social objectives and providers of funds who may chiefly focus on financial returns. An exceptional case is that of blended finance, where providers of funds do so knowing that achieving social goals is equally critical.
+
+The age and size of an MFI go together in explaining the firm-level factors that drive the achievement of the twin objectives. Mature MFIs tend to be larger (see Figure 6.1). Following the institutional theory, large, mature MFIs are less likely to succumb to donors and other stakeholders' pressures to attain financial sustainability \autocite{d2017aid}. Alternatively, larger and more sTable 6.MFIs have more resources to afford to offer the poor financial services even as donations subside \autocite{d2013unsubsidized}. As \textcite{mersland2010microfinance} argue, such MFIs could offer financial services to the relatively well-off at market rates, allowing them to cross-subsidize services to the financially excluded. In such a scenario, \textcite{mersland2010microfinance} argue that the conversion of MFIs to the commercial model is likely to lead to ``mission expansion'' as opposed to ``mission drift''.
+
+The country-level factors address the macro-environment. For example, researchers associate the legal tradition with the financial system's development \autocite{schnyder2018twenty}. Common law and civil law traditions dominate in Africa, with the former exhibiting a higher financial development levels \autocite{la2013law}. People in countries with higher quality of institutional development are more likely to access the mainstream financial system \autocite{allen2013resolving,allen2014african} and demand fewer microfinance services. Likewise, countries with better institutional quality have better developed financial system, which lowers the demand for microfinance. The country's level of financial development reflects in the private credit to GDP and stock markets capitalization to GDP. Better developed financial markets imply higher access and use of financial services and lower financial exclusion chances. The result is a lower demand for microfinance resulting in poor financial and social performance by MFIs \autocite{allen2013resolving,allen2014african}.
+
+Finally, the GDP growth rate reflects the health of the economy. With more output, people are likely to have higher incomes over time, making them demand financial services like savings and credit to smooth consumption, for example \autocite{ahlin2011does,buera2021macroeconomics}. As described in Table 6.2, the data comes from the World Bank. The firms level data is from the MIX market. The country-level data is from three chief sources: the World Development Indicators (WDI), the Worldwide Governance Indicators (WGI), and the Global Financial Development Database (GFDD). Table 6.2 shows a description of the variables employed in the study.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-141}Description of Variables}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X}
+\toprule
+Variable\_Description\\
+\midrule
+1. Current Legal Status: This is the dependent variable. For logit and probit models, we create a dummy with the MFIs following the NGO Model getting a code of zero, and one in the case of non-bank financial institutions (NBFIs), rural banks, and credit unions/ cooperatives. We assign codes of zero to four for the multinomial logit model for NGOs, Banks, NBFIs, Cooperatives and Rural Banks, respectively. The data are available from the Microfinance Information Exchange, MIX (See source on note 1).\\
+\\
+2.  Age: The period in which the MFI has been in operation. MFIs fall into one of three groups: new (1-4 years), young (4-8 years), and mature (over 8 years). The data are available from MIX.\\
+\\
+3. Legal Tradition (Legal): The indicator is a dummy variable with common law countries coded 0, civil law countries 1, and 2 otherwise as per the classification by Oto-Peralías and Romero-Ávila (2014).\\
+\addlinespace
+\\
+4. Size (Log of Total Assets): We proxy the size of MFI with the natural logarithm of total assets, again using MIX data.\\
+\\
+5. Governance/ Institutional Quality (KKM): We take the first principal component of the WGI developed by Daniel Kaufmann, Aart Kraay and Massimo Mastruzzi (KKM) available on the World Bank's Worldwide Governance Indicators, WGI (See source on note 3).\\
+\\
+\addlinespace
+6. Private Credit to GDP: We capture the total amount of credit advanced to the private sector by financial intermediaries as a proxy for capital markets development concerning the banking sector following Ito and Kawai (2018). The data source is the Global Financial Development Database (GFDD) of the World Bank (See note 4).\\
+\\
+7. Stock market capitalisation to GDP: We capture the  extent of stock market development using the ratio of stock market capitalisation to GDP to proxy how firms can raise equity capital. Although Africa's equity markets are thin, some relatively large stock markets like South Africa, Kenya, and Ghana exist. The data are from the GFDD.\\
+\\
+8. GDP annual growth rate (GDP): This is the year on year growth in output adjusted for inflation and sourced from the World Development Indicators (WDI) (See note 2).\\
+\addlinespace
+\\
+\bottomrule
+\multicolumn{1}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}Authors' construction from the literature}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textit{Notes}}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{1} MIX Database on www.themix.org and https://datacatalog.worldbank.org/dataset/mix-market}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{2} WDI on https://databank.worldbank.org/source/world-development-indicators.}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{3} WGI/ KKM on https://databank.worldbank.org/source/worldwide-governance-indicators.}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{4} GFDD on https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database}\\
+\end{tabu}
+\end{table}
+
+\hypertarget{results-2}{%
+\section{Results}\label{results-2}}
+
+In this section, we explore and describe the data, followed by a discussion of the output from the regression analysis.
+
+\hypertarget{exploratory-data-analysis-and-data-visualization}{%
+\subsection{Exploratory Data Analysis and Data Visualization}\label{exploratory-data-analysis-and-data-visualization}}
+
+\hypertarget{summary-statistics-2}{%
+\subsubsection{Summary Statistics}\label{summary-statistics-2}}
+
+Figure 6.1, Figure 6.2, and Tables 3 and 4 show a breakdown of the extent to which MFIs in Africa meet the dual financial and social objectives. Figure 6.1 shows that most MFIs in the sample achieve both financial goals with only a small proportion failing in both mandates. A marginally higher proportion of MFIs succeed financially while failing socially than those that fail financially while succeeding socially. The result could indicate that mission drift is not as widespread and that there is an even chance that an MFI will experience mission drift or not. The result goes against the welfare model of microfinance \autocite{d2017ngos}. However, a clearer picture emerges when we break down the outcome by the legal status of MFIs in Figure 6.2.
+
+Panel A and B of Figure 6.2 show the counts, while panel C and D show the proportions of MFIs and the extent they meet the twin objectives. Tables 3 and 4 show the respective proportions. We base the discussion on Figure 6.1 panel C and Table 6.4. The results in Panel C show that cooperatives with the lowest proportion of MFIs succeeding financially and socially at 17.7\%. Besides, they have the second lowest proportion (after rural banks with 43.5\%) of failing socially and succeeding financially at 40.4\%. By contrast, they have the lowest highest chance (after rural banks with 3.6\%) of failing financially and succeeding socially at 14.2\%. Notably, cooperatives have the highest chance of failing to meet both objectives at 27.6\%. The results illustrate the nature of cooperatives as geographically limited entities whose sole focus is on members who can make savings to qualify for loans \autocite{porter1987economic}. Not many financially excluded individuals may join cooperatives due to limited incomes and information and their situation in remote geographical locations.
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-142-1} 
+
+}
+
+\caption{Financial and Social Performance of MFIs in Africa}\label{fig:unnamed-chunk-142}
+\end{figure}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-143}Joint Financial and Social Performance by Legal Status of MFIs in       
+               Africa (row-wise)}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & NGO & Bank & NBFI & Coop & Rural Bank\\
+\midrule
+FF & 0.1331 & 0.0552 & 0.2521 & 0.5581 & 0.0014\\
+SF & 0.0802 & 0.1571 & 0.2414 & 0.4722 & 0.0491\\
+FS & 0.4095 & 0.0923 & 0.3155 & 0.1784 & 0.0044\\
+SS & 0.3625 & 0.1649 & 0.2832 & 0.1474 & 0.0420\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Note}}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{1} The horizontal (row) values add up to 100\%}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{2} We start with financial sustainability followed by social performance}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{3} For instance, FS means the MFI fails (F) financially but succeeds (S) socially.}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{4} The letters F and S stand for Fail and Succeeds, respectively}\\
+\end{tabu}
+\end{table}
+
+We turn to NBFIs. NBFIs have the third-highest proportion, after NGOs and commercial banks, of MFIs that meet the twin objectives at 36.9\%. However, they have the second-highest chance, after NGOs of failing financially while succeeding socially. Similarly, after NGOs, NBFIs have the second-lowest chance of succeeding financially while failing socially at 27.2\%. NBFIs also have the second highest chance after cooperatives of failing to meet the twin objectives at 13.5\%. Also, NBFIs have the second-lowest proportion of MFIs that succeed financially while failing socially at 22.4\%. In this respect, NBFIs show some degree of social orientation. NBFIs appear to strike a balance between the extremes of failing in both objectives versus succeeding in both objectives.
+
+NGOs have the second-highest instance of succeeding financially and socially at 48.6\% in the sample data, after rural banks. NGOs also have the highest proportion of MFIs that fail financially while succeeding socially (36.41\%). Again, NGOs have the lowest chance of succeeding financially while failing socially at 36.4\%. NGOs have the third-lowest instance (7.3\%) of failing both financially and socially after commercial banks (6.3\%) and rural banks (0.7\%). The results for NGOs illustrate their leaning towards the welfare school of prioritizing outreach over profitability. These results appear to confirm the welfare school's concerns that the explicit pursuit of profits is incompatible with the extension of financial services to the financially excluded \autocite{d2017ngos}.
+
+Commercial banks come second after NGOs in the proportion of MFIs that succeed financially and socially at 45.7\%. However, commercial banks have the lowest chance of failing financially while succeeding socially after rural banks and cooperatives. After rural banks and cooperatives, banks are the third least likely to succeed financially while failing to meet their social objectives. Besides, commercial banks have the second-lowest instance of failing to meet both goals. Lastly, though the sample of rural banks is small, they show the highest likelihood of succeeding financially and socially and failing to achieve the twin objectives. Rural banks have the least instance of succeeding financially while failing socially, and have no instance of failing to meet both objectives. Given that rural banks specifically target the financially excluded in rural areas, it is rare that they would fail in their social mandate. However, the number of rural banks in the sample data was small and hence the results in Table 6.3.
+
+The observations in the visualisation appear to validate the concerns by the welfare school of microfinance that, indeed, pursuing a financial return is incompatible with outreach to the financially excluded. Except for NBFIs that seem evenly spread between the different classes, the other commercial MFIs, that is, banks, cooperatives, and rural banks, are biased against social outreach. NGOs show a high degree of social orientation, are at the top when it comes to achieving the twin objectives, and come last in the class of MFIs that succeed financially and fail socially. We shall revisit this issue in the regression analysis. Finally, for profit-oriented MFIs like commercial banks, financial performance is a prerequisite for achieving social objectives. The result could be due to the lower proportion of donations and subsidies that for-profit MFIs receive \autocite{d2013unsubsidized}, which forces them to focus on financial sustainability. Only after they achieve some degree of financial sustainability do they turn their attention to achieving social goals. We visualise the data in the next section.
+
+\hypertarget{data-visualization-1}{%
+\subsubsection{Data visualization}\label{data-visualization-1}}
+
+Figure 6.3 shows the correlation between the independent numeric variables. The highest correlation is between private credit to GDP and stock market capitalisation to GDP at 0.321. Institutional quality and private credit to GDP follow at -0.265. Overall the correlation between independent variables is not high to raise multicollinearity concerns (See Table 6.14 on variance inflation factors, VIF). Further, Figure 6.4 shows that smaller MFIs tend to fail financially while the bigger ones succeed. Socially, the smallest MFIs tend to succeed, while larger ones exhibit mixed results. Overall, larger MFIs show greater evidence of mission drift. Panel B shows that MFIs in countries with the robust institutional quality and higher incomes tend to fail socially, unlike their counterparts in countries with lower institutional quality. As noted, higher institutional quality lowers the demand for microfinance as many people have access to the mainstream financial system \autocite{allen2014african,allen2013resolving}. However, MFIs in countries with the poorest institutional quality tend to fail financially, while those in jurisdictions with the highest institutional quality succeed. The result suggests the high costs of serving financially excluded markets, making it hard to turn a financial return. ITherefore, it is important to examine the circumstances in individual countries before prescribing or discouraging the conversion of MFIs. In relatively well off countries, the transformation of MFIs could be feasible. In impoverished countries where financial exclusion is high, the conversion may fail as MFIs cannot make enough to sustain the extension of financial services to the many financially excluded people.
+
+As with institutional quality, MFIs in countries with high private credit to GDP imply better banking sector development and wealth, and have a higher chance of failing socially. With financial inclusion, there is low demand for microfinance in these countries \autocite{huang2010political}. The opposite is true for MFIs in countries with low private sector credit to GDP. The link between the financial performance of MFIs and private credit shows mixed results, with MFIs in countries with the highest and lowest private credit tending to fail financially. Stock market development shows a trend that is opposite of private credit to GDP, with MFIs in countries with high levels of stock market development tending to succeed socially. The link between the financial performance of MFIs and stock market development is also mixed. The results may indicate the weak linkage between the stock markets and the financially excluded financial needs at the base of the income pyramid. Overall, the visualizations show that independent variables may be relevant in explaining the degree of joint financial and social performance of MFIs in Africa.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-145}Joint Financial and Social Performance by Legal Status of MFIs in Africa (Columnwise)}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & NGO & Bank & NBFI & Coop & Rural Bank\\
+\midrule
+FF & 0.0734 & 0.0630 & 0.1351 & 0.2761 & 0.0072\\
+SF & 0.0766 & 0.3102 & 0.2238 & 0.4043 & 0.4348\\
+FS & 0.3641 & 0.1696 & 0.2724 & 0.1423 & 0.0362\\
+SS & 0.4859 & 0.4572 & 0.3687 & 0.1773 & 0.5217\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Note}}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{1} The vertical (column) values add up to 100\%}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{2} We start with financial sustainability followed by social performance}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{3} For instance, FS means the MFI fails (F) financially but succeeds (S) socially.}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{4} The letters F and S stand for Fail and Succeeds, respectively}\\
+\end{tabu}
+\end{table}
+
+\newpage
+\begin{landscape}
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-146-1} 
+
+}
+
+\caption{Financial and Social Performance of MFIs in Africa}\label{fig:unnamed-chunk-146}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-151-1} 
+
+}
+
+\caption{Correlation between Independent Variables}\label{fig:unnamed-chunk-151}
+\end{figure}
+
+\end{landscape}
+
+\begin{landscape}
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-152-1} 
+
+}
+
+\caption{Financial and Social Performance of MFIs by Size, Governance and Capital Mrkets Development}\label{fig:unnamed-chunk-152}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-153}Summary statistics for continous numeric variables}
+\centering
+\fontsize{9}{11}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+Variable & Mean & SD & Min & Q1 & Median & Q3 & Max\\
+\midrule
+percent\_of\_female\_borrowers & 0.5689 & 0.2366 & 0.0000 & 0.4206 & 0.5500 & 0.7478 & 1.000\\
+operational\_self\_sufficiency & 1.0883 & 0.8642 & -1.3085 & 0.8376 & 1.0534 & 1.2358 & 31.964\\
+assets & 14.9461 & 2.2619 & 0.6931 & 13.5399 & 14.8577 & 16.4162 & 22.979\\
+kkm & 0.0026 & 2.0064 & -5.2332 & -1.3041 & -0.1137 & 1.6279 & 7.369\\
+pcrdbgdp & 2.7194 & 0.6852 & 0.2981 & 2.3864 & 2.7584 & 3.0522 & 6.881\\
+\addlinespace
+stmktcap & 1.1410 & 1.4732 & 0.0000 & 0.0000 & 0.0000 & 2.4280 & 5.797\\
+gdp\_growth\_annual & 5.3105 & 3.5905 & -46.0821 & 4.0000 & 5.4205 & 6.7233 & 33.629\\
+donations & 88664.2095 & 315362.3616 & 1.0000 & 1.0000 & 3339.0000 & 60967.5000 & 10422018.000\\
+donations\_assets\_ratio & 0.0435 & 0.1472 & -0.0033 & 0.0000 & 0.0008 & 0.0189 & 2.598\\
+\bottomrule
+\multicolumn{8}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{8}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabu}
+\end{table}
+
+\end{landscape}
+
+\hypertarget{results-of-the-regression-model-1}{%
+\subsection{Results of the Regression Model}\label{results-of-the-regression-model-1}}
+
+The results of the regression model are in Tables 8 through 10. Given that we have an unbalanced dataset, we run the regressions separately for the entire data (Table 6.8), for MFIs with three or more years of data (Table 6.9), and those with 5 or more years of data (Table 6.10). Overall, the significant drivers of achieving the dual objectives are age, size, stock market capitalization to GDP, private credit to GDP, institutional quality, legal tradition, and MFI legal status. The GDP growth rate is not a significant driver of the extent which MFIs meet both financial and social objectives. The latter two regressions form a robustness check. We discuss each of the variables basing them on Table 6.8 but referring to Tables 9 and 10 for comparison.
+
+\hypertarget{age-1}{%
+\subsubsection{Age}\label{age-1}}
+
+\noindent Age is a categorical variable. New MFIs (that have existed for 0 - 4 years) are the base outcome. The results show that relative to new MFIs, young MFIs (4 -8 years) are less likely to succeed financially and fail socially than failing in both objectives. Put another way; young MFIs are more likely to experience both financial and social failure than they are to succeed financially and fail socially relative to new MFIs. Similarly, compared to new MFIs, young MFIs are less likely to fail financially and succeed in meeting their social goals than failing to meet the twin objectives. However, young MFIs are more likely than new MFIs to meet their financial and social goals than to fail in the dual mission. The results imply that young MFIs are more prone to financial and social failure than new MFIs. In other words, compared to new MFIs, young MFIs are more likely to fail to achieve both financial and social goals than they are to achieve social goals and to fail financially and vice versa, and succeeding both financially and socially. However, these relationships are not significant. Age is important given that newer MFIs have fewer resources and hence more reliant on donations which are also uncertain \autocite{armendariz2013subsidy,d2013unsubsidized}. Also, newer smaller firms have difficulties accessing finance \autocite{beck2008finance}. Thus, age makes newer MFIs more prone to financial and social failure and more prone to mission drift than established MFIs \autocite{d2017ngos}.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-154}MFI Age and Achievement of Dual Objectives}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & FF & SF & FS & SS\\
+\midrule
+New & 0.1450 & 0.2400 & 0.3125 & 0.3025\\
+Young & 0.1445 & 0.2217 & 0.2812 & 0.3525\\
+Mature & 0.1501 & 0.2764 & 0.1857 & 0.3878\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabu}
+\end{table}
+
+On the other hand, the results show that relative to new MFIs, mature MFIs are significantly less likely to succeed financially and fail socially than fail to meet the dual objectives. Similarly, mature MFIs are considerably less likely than new MFIs to fail financially while meeting their social goals than they are to meet both their goals. Both these results are significant. Also, the regression results show that relative to new MFIs, mature MFIs are less likely to meet the dual objectives than they are to fail in their twin mission. The latter result is not significant. These results illustrate that mature MFIs are more prone to failing in their twin mission than new MFIs. The results imply that as MFIs mature, they are less prone to mission drift. The observation holds, given that in the regression, older MFIs are more likely to fail to achieve both financial and social objectives than succeed in one and fail in the other or succeed in both financial and social goals, compared to new MFIs.
+
+Indeed, Table 6.6 shows a higher proportion of mature MFIs fail to attain both objectives compared to new and young MFIs. although the difference is marginal. Likewise, a higher proportion of mature MFIs tend to succeed financially while failing socially, although, in the regression, the result is not significant. Financial success coupled with social failure implies mission drift and is detrimental to financial inclusion. Hence, these results suggest that mature MFIs are more prone to mission drift when they convert to the commercial model. Lastly, although the result is not significant in the regression, the Table 6.shows that mature MFIs that succeed financially also tend to succeed socially than do younger MFIs. \footnote{Note that the interpretation of Table 6.6 differs from the interpretation of the regression. The regression examines the relative likelihood. For instance, how likely are mature MFIs, as compared to new MFIs, to succeed in both objectives than fail in both objectives. The Table 6.gives absolute values.}
+
+As noted, the results imply that mature MFIs are less prone to mission drift where success in one dimension (say, financial) accompanies failure in the other dimension (say social), and vice versa. However, when mature MFIs succeed financially, they also tend to fare equally well socially. The result could suggest that mature MFIs have a more extensive asset base to draw from, making them able to reach out to the financially excluded with less dependence on donations and subsidies. The larger asset base also means that larger MFIs have established their presence through marketing campaigns and technology such that they have a more extensive client base in diverse geographic locations \autocite{jia2016commercialization}. In this case, it is much easier for mature MFIs to attain their social goals, given their greater market share that would allow them to operate even in remote areas with or without donors and state support. Newer MFIs on the other hand, have to legitimize their activities by ensuring that they meet their social goals. Hence, even though mature MFIs receive more donations on aggregate, the relative share of donations is lower than that of newer MFIs.
+
+\hypertarget{size}{%
+\subsubsection{Size}\label{size}}
+
+As noted, age and size move together. Mature MFIs have more assets on average than younger MFIs. The regression output shows that larger MFIs are significantly more likely to succeed financially while failing socially than they are to fail in both objectives. Specifically, suppose the asset base (the proxy for size) of an MFI rises by one unit. In that case, the MFI is 1.241102 times more likely to fall into the group that succeeds financially and fails socially than to be in the group that fails to meet the dual objectives.
+
+On the contrary, larger MFIs are marginally less likely to fail in meeting their financial goals while succeeding socially. Again, a unit increase in size results in 0.9685066 likelihood of falling into the group of MFIs that fail financially while succeeding socially. With the odds almost equal to one, it appears size is not as crucial in determining whether an MFI fails financially and succeeds socially. Indeed, this outcome is not statistically significant. However, larger MFIs are significantly more likely to meet their dual goals than to fail in both. In this case, a unit increase in MFI size corresponds to 1.192438 odds of achieving both objectives relative to failing in both goals \footnote{We exponentiate the coefficients to get the odds. Odds greater than one indicate greater likelihood. Odds less than one indicate less likelihood, while one indicates equal likelihood.}.
+
+The results highlight that size is a critical ingredient in determining whether or not MFIs meet their dual objectives. Larger MFIs have a greater likelihood of achieving both objectives and meeting their financial goals while failing socially. This means that while the size of an MFI is a crucial factor in meeting social goals, it is a factor of greater importance in meeting financial objectives. The results also imply that larger MFIs that meet their financial objectives are in a better position to also meet their social goals. Hence, meeting financial goals is a prerequisite for meeting social goals for larger MFIs relative to smaller, younger MFIs. Larger MFIs use their asset base to generate financial resources that they use to expand outreach to the financially excluded, consistent with the ``mission expansion'' view \autocite{mersland2010microfinance}. For relatively small MFIs, donations and subsidies form a higher proportion of assets and hence are not as reliant on making financial returns to fund their operations.
+
+\hypertarget{capital-markets-development}{%
+\subsubsection{Capital markets development}\label{capital-markets-development}}
+
+This section covers both the stock market development and the debt market development. The regression shows that across all classes, MFIs located in countries with better stock market development are less likely to meet the dual objectives than failing in both goals. Going by the coefficients, a unit increase in stock market capitalisation results in 0.8633 times as likely to meet the twin objectives than to fail in both. Similarly, MFIs located in these countries are less likely to meet their financial goals and fail socially. In this case, a unit increase in stock market development corresponds with a 0.8573 odds of being in the category of MFIs that succeed financially while failing socially than in the class that fails to meet both objectives. Likewise, higher stock market development connotes a higher probability of an MFI succeeding financially while failing in their social mandate than failing in both goals. Here, a unit increase in stock market capitalisation corresponds to 0.8228 odds.
+
+Debt market development, whose proxy is the ratio of private credit to GDP follows a similar pattern. A higher level of debt market development corresponds to higher odds of succeeding financially while failing socially instead of failing in both objectives. The result is not significant, though. However, a higher level of debt market development lowers the odds of an MFI failing financially and succeeding socially. Also, higher debt market development reduces the odds of an MFI succeeding in both objectives versus failing in both. The corresponding odds are 0.7757 and 0.8633, respectively.
+
+Indeed in countries where stock markets are well-developed, the mainstream financial system, including the debt market, is also likely well established, meaning that people can easily access finance. Research shows that a well developed debt market is a precursor to developing a stock market \autocite{nguyen2012determinants,tsaurai2018determinants}. Under these conditions, the demand for microfinance is low, meaning that it is hard for MFIs to realise their objectives. The few MFIs that exist in these conditions are more likely to serve a small, underprivileged class, meaning that the possibility of achieving their financial goals are minimal. They, however, almost always meet their social goals.
+
+\hypertarget{governance-institutional-quality-kkm}{%
+\subsubsection{Governance/ Institutional quality (KKM)}\label{governance-institutional-quality-kkm}}
+
+Institutional quality goes together with better financial sector development \autocite{allen2014african}. The regressions results show that a unit increase in institutional quality corresponds with higher odds of succeeding financially while failing socially. The odds are 1.1219. With odds of 0.9231, when institutional quality goes up by a unit, there is a lower chance of an MFI failing financially and succeeding socially than failing in both goals. These two results are statistically significant. Finally, a unit increase in institutional quality lowers the chances of an MFI meeting both objectives compared to failing in both objectives with odd of 1.0305. The result is, however, insignificant. As is the case for financial sector development, the populace in countries with better quality institutions is more likely to have access to the mainstream financial system, making social goals harder for MFIs given the low demand for microfinance \autocite{butkiewicz2006institutional}. Given a low demand for microfinance, it is also harder for MFIs to succeed financially.
+
+\hypertarget{legal-tradition-1}{%
+\subsubsection{Legal Tradition}\label{legal-tradition-1}}
+
+The common law legal tradition is the base outcome for this variable. The results show that, relative to MFIs in common law countries, MFIs in civil law countries are less likely to succeed financially while failing socially than fail in both objectives. The odds are 0.2753. Similarly, MFIs in civil law countries are less likely than MFIs in common law countries to fail financially while succeeding socially than they are to fail in both objectives with an odds of 0.386. Also, MFIs operating in civil law countries are less likely than those in common law countries to succeed in both objectives than to fail in both objectives. The odds are 0.2982. The odds are strikingly low, showing the high likelihood of MFIs in civil law countries to fail in both financial and social goals compared to those in common law countries.
+
+For MFIs in other legal traditions (neither common law nor civil law), the results are similar to those for civil law countries. The odds are lower (at 0.3679) that an MFI in a country with other legal traditions, compared to common law countries, will succeed financially and fail socially instead of failing in both objectives. The odds for failing financially while succeeding socially and succeeding in both goals are 0.5337 and 0.3946, respectively. Table 6.7 confirms that indeed, MFIs in civil law countries and other legal traditions are more likely to fail to meet both objectives than those in common law countries. Also, MFIs in common law countries have the highest instance of succeeding socially. Civil law and other legal tradition countries have a lower capital markets development level than common law countries \autocite{schnyder2018twenty,kaidi2019financial}.
+
+Consequently, we would expect that MFIs find it easier to meet social goals in civil law countries. These results could point to poor reception of financial services in these countries \autocite{la2013law}. Additionally, lack of a supportive legal framework, inadequate financial and physical infrastructure could also make it difficult for MFIs to meet their social mandate even when the demand for microfinance is potentially high.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-155}Legal Traditions and Achievement of Dual Objectives}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & FF & SF & FS & SS\\
+\midrule
+Common & 0.0671 & 0.2270 & 0.2589 & 0.4470\\
+Civil & 0.2131 & 0.2731 & 0.2147 & 0.2991\\
+Other & 0.1761 & 0.2756 & 0.2415 & 0.3068\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabu}
+\end{table}
+
+\hypertarget{mfi-legal-status}{%
+\subsubsection{MFI legal status}\label{mfi-legal-status}}
+
+For legal status, the NGO model is the base outcome. Compared to NGOs, commercial banks are more likely to succeed financially while failing socially than they are to fail in both objectives. The results show that microfinance's commercial banking model is likely to put profits before outreach to the financially excluded. Similarly, commercial banks are less likely than NGOs to fail financially while succeeding socially than failing in both objectives. The result may highlight that for commercial banks to succeed socially, they have to be financially self-sustainable, without which they tend to fail in both objectives. Likewise, relative to NGOs, commercial banks are less likely to achieve both financial and social goals than fail in both goals. Again this shows the importance of financial success in determining the attainment of social objectives by commercial banks compared to NGOs.
+
+The other MFI legal forms, that is, NBFIs, cooperatives, and rural banks show a pattern similar to that of commercial banks. Overall, the results confirm the results of exploratory data analysis that show that NGOs are less prone to social failure than the commercial forms of MFIs \autocite{jia2016commercialization,mia2017mission}. The result confirms the welfare school's concerns that the transformation of MFIs is likely to cause mission drift \autocite{d2017ngos}. Also, it implies that for commercial MFIs to prioritize social goals, they should first realize financial success which may be hard to come by unless with some form of support from the state and donors, at least in the initial stages of transformation.
+
+\newpage
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model- Full Data} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & SF & FS & SS \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$0.039 & $-$0.095 & 0.060 \\ 
+  & (0.152) & (0.151) & (0.148) \\ 
+  & & & \\ 
+ ageMature & $-$0.233$^{*}$ & $-$0.483$^{***}$ & $-$0.191 \\ 
+  & (0.138) & (0.141) & (0.136) \\ 
+  & & & \\ 
+ assets & 0.216$^{***}$ & $-$0.032 & 0.176$^{***}$ \\ 
+  & (0.028) & (0.029) & (0.028) \\ 
+  & & & \\ 
+ stmktcap & $-$0.195$^{***}$ & $-$0.154$^{***}$ & $-$0.147$^{***}$ \\ 
+  & (0.054) & (0.054) & (0.050) \\ 
+  & & & \\ 
+ pcrdbgdp & 0.060 & $-$0.254$^{***}$ & $-$0.147 \\ 
+  & (0.091) & (0.096) & (0.091) \\ 
+  & & & \\ 
+ kkm & 0.115$^{***}$ & $-$0.080$^{***}$ & 0.030 \\ 
+  & (0.029) & (0.030) & (0.028) \\ 
+  & & & \\ 
+ gdp\_growth\_annual & 0.026 & $-$0.019 & $-$0.006 \\ 
+  & (0.016) & (0.015) & (0.015) \\ 
+  & & & \\ 
+ legal\_traditionCivil & $-$1.290$^{***}$ & $-$0.952$^{***}$ & $-$1.207$^{***}$ \\ 
+  & (0.200) & (0.194) & (0.184) \\ 
+  & & & \\ 
+ legal\_traditionOther & $-$1.005$^{***}$ & $-$0.628$^{***}$ & $-$0.930$^{***}$ \\ 
+  & (0.182) & (0.181) & (0.172) \\ 
+  & & & \\ 
+ currentlegalstatusBank & 0.605$^{**}$ & $-$0.843$^{***}$ & $-$0.671$^{***}$ \\ 
+  & (0.253) & (0.247) & (0.232) \\ 
+  & & & \\ 
+ currentlegalstatusNBFI & 0.002 & $-$1.035$^{***}$ & $-$1.241$^{***}$ \\ 
+  & (0.188) & (0.165) & (0.159) \\ 
+  & & & \\ 
+ currentlegalstatusCoop & 0.508$^{***}$ & $-$2.288$^{***}$ & $-$2.155$^{***}$ \\ 
+  & (0.173) & (0.159) & (0.151) \\ 
+  & & & \\ 
+ currentlegalstatusRural Bank & 3.638$^{***}$ & $-$0.826 & 1.702$^{*}$ \\ 
+  & (1.024) & (1.106) & (1.017) \\ 
+  & & & \\ 
+ Constant & 1.853$^{***}$ & 8.566$^{***}$ & 4.337$^{***}$ \\ 
+  & (0.552) & (0.504) & (0.512) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes \\ 
+Data & Full & Full & Full \\ 
+Akaike Inf. Crit. & 11,446.000 & 11,446.000 & 11,446.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model- At Least 3 Years of Data} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & SF & FS & SS \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & 0.061 & $-$0.163 & 0.132 \\ 
+  & (0.168) & (0.161) & (0.160) \\ 
+  & & & \\ 
+ ageMature & $-$0.105 & $-$0.553$^{***}$ & $-$0.136 \\ 
+  & (0.154) & (0.152) & (0.149) \\ 
+  & & & \\ 
+ assets & 0.232$^{***}$ & $-$0.046 & 0.172$^{***}$ \\ 
+  & (0.031) & (0.031) & (0.030) \\ 
+  & & & \\ 
+ stmktcap & $-$0.161$^{***}$ & $-$0.172$^{***}$ & $-$0.154$^{***}$ \\ 
+  & (0.057) & (0.057) & (0.053) \\ 
+  & & & \\ 
+ pcrdbgdp & 0.036 & $-$0.225$^{**}$ & $-$0.126 \\ 
+  & (0.095) & (0.100) & (0.095) \\ 
+  & & & \\ 
+ kkm & 0.110$^{***}$ & $-$0.101$^{***}$ & 0.021 \\ 
+  & (0.031) & (0.032) & (0.030) \\ 
+  & & & \\ 
+ gdp\_growth\_annual & 0.031$^{*}$ & $-$0.020 & $-$0.005 \\ 
+  & (0.017) & (0.016) & (0.015) \\ 
+  & & & \\ 
+ legal\_traditionCivil & $-$1.153$^{***}$ & $-$0.930$^{***}$ & $-$1.190$^{***}$ \\ 
+  & (0.211) & (0.203) & (0.192) \\ 
+  & & & \\ 
+ legal\_traditionOther & $-$0.892$^{***}$ & $-$0.654$^{***}$ & $-$0.937$^{***}$ \\ 
+  & (0.193) & (0.191) & (0.181) \\ 
+  & & & \\ 
+ currentlegalstatusBank & 0.622$^{**}$ & $-$0.873$^{***}$ & $-$0.665$^{***}$ \\ 
+  & (0.260) & (0.255) & (0.238) \\ 
+  & & & \\ 
+ currentlegalstatusNBFI & 0.044 & $-$0.952$^{***}$ & $-$1.244$^{***}$ \\ 
+  & (0.193) & (0.170) & (0.165) \\ 
+  & & & \\ 
+ currentlegalstatusCoop & 0.397$^{**}$ & $-$2.177$^{***}$ & $-$2.047$^{***}$ \\ 
+  & (0.179) & (0.166) & (0.156) \\ 
+  & & & \\ 
+ currentlegalstatusRural Bank & 20.220$^{***}$ & 15.030$^{***}$ & 18.120$^{***}$ \\ 
+  & (0.276) & (0.484) & (0.267) \\ 
+  & & & \\ 
+ Constant & 3.146$^{***}$ & 10.410$^{***}$ & 5.944$^{***}$ \\ 
+  & (0.581) & (0.535) & (0.536) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes \\ 
+Data & At Least 3 Years & At Least 3 Years & At Least 3 Years \\ 
+Akaike Inf. Crit. & 10,438.000 & 10,438.000 & 10,438.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model, at Least 5 Years of Data} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & SF & FS & SS \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & 0.720$^{***}$ & 0.043 & 0.642$^{***}$ \\ 
+  & (0.216) & (0.188) & (0.193) \\ 
+  & & & \\ 
+ ageMature & 0.475$^{**}$ & $-$0.367$^{**}$ & 0.243 \\ 
+  & (0.198) & (0.173) & (0.177) \\ 
+  & & & \\ 
+ assets & 0.352$^{***}$ & $-$0.135$^{***}$ & 0.254$^{***}$ \\ 
+  & (0.040) & (0.042) & (0.038) \\ 
+  & & & \\ 
+ stmktcap & $-$0.170$^{**}$ & $-$0.219$^{***}$ & $-$0.185$^{***}$ \\ 
+  & (0.068) & (0.067) & (0.062) \\ 
+  & & & \\ 
+ pcrdbgdp & $-$0.029 & $-$0.132 & $-$0.152 \\ 
+  & (0.104) & (0.107) & (0.102) \\ 
+  & & & \\ 
+ kkm & 0.061$^{*}$ & $-$0.159$^{***}$ & $-$0.049 \\ 
+  & (0.036) & (0.036) & (0.034) \\ 
+  & & & \\ 
+ gdp\_growth\_annual & 0.018 & $-$0.009 & $-$0.004 \\ 
+  & (0.018) & (0.018) & (0.017) \\ 
+  & & & \\ 
+ legal\_traditionCivil & $-$0.963$^{***}$ & $-$0.915$^{***}$ & $-$1.136$^{***}$ \\ 
+  & (0.234) & (0.222) & (0.210) \\ 
+  & & & \\ 
+ legal\_traditionOther & $-$0.574$^{**}$ & $-$0.873$^{***}$ & $-$0.755$^{***}$ \\ 
+  & (0.226) & (0.223) & (0.208) \\ 
+  & & & \\ 
+ currentlegalstatusBank & $-$0.008 & $-$0.536$^{*}$ & $-$1.101$^{***}$ \\ 
+  & (0.289) & (0.283) & (0.263) \\ 
+  & & & \\ 
+ currentlegalstatusNBFI & $-$0.020 & $-$0.817$^{***}$ & $-$1.356$^{***}$ \\ 
+  & (0.208) & (0.184) & (0.178) \\ 
+  & & & \\ 
+ currentlegalstatusCoop & 0.241 & $-$2.058$^{***}$ & $-$1.959$^{***}$ \\ 
+  & (0.199) & (0.187) & (0.175) \\ 
+  & & & \\ 
+ currentlegalstatusRural Bank & 20.350$^{***}$ & $-$4.881$^{***}$ & 17.790$^{***}$ \\ 
+  & (0.171) & (0.000) & (0.171) \\ 
+  & & & \\ 
+ Constant & 0.856 & 10.880$^{***}$ & 4.188$^{***}$ \\ 
+  & (0.698) & (0.672) & (0.645) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes \\ 
+Data & >at Least 5 Years & at Least 5 Years & at Least 5 Years \\ 
+Akaike Inf. Crit. & 8,252.000 & 8,252.000 & 8,252.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{overall-model-fit-confusion-matrix}{%
+\subsection{Overall Model Fit: Confusion Matrix}\label{overall-model-fit-confusion-matrix}}
+
+This section uses the regression model in Table 6.8 to generate a confusion matrix that shows how well the model predicts that an MFI will fall into one of the four financial vis-a-vis social performance classes. The results are in Table 6.11 and Table 6.12. In Table 6.11, while the model has low accuracy and sensitivity, it has a substantial specificity of about 80\%. The results mean that the model can accurately predict that an MFI will not fall into a given category given that it does not fall into that category. However, the model is not significantly more accurate than guessing the most likely outcome. In this case, an MFI succeeds financially and socially, with an accuracy of 46.9\% against a no-information rate of 52.9\%. Table 6.12 shows that, for instance, the model accurately predicts that 141 MFIs would fail in attaining both financial and social goals. However, 706 fail to meet both objectives \footnote{This Figure 6.is the sum of the first row.}. This presents a poor prediction accuracy of 19.97\%. However, the model does well to predict MFIs that succeed in both objectives, getting it right 1202 instances. In this case, the overall accuracy is high at 70\%. The second (SF) and third categories (FS) accuracy are 41\% and 34.8\%, respectively. The model quickly picks out MFIs that succeed in both objectives better than it does the other categories.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-160}Confusion Matrix and Statistics for the Multinomial Logit Model}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & FF & SF & FS & FF\\
+\midrule
+Accuracy & 0.4690 & 0.469 & 0.4690 & 0.469\\
+NoInformationRate & 0.5290 & 0.529 & 0.5290 & 0.529\\
+Kappa & 0.2430 & 0.243 & 0.2430 & 0.243\\
+sensitivity & 0.4040 & 0.466 & 0.4859 & 0.475\\
+specificity & 0.8725 & 0.806 & 0.8130 & 0.772\\
+\addlinespace
+PosPredValue & 0.1997 & 0.414 & 0.3480 & 0.700\\
+NegPredValue & 0.9490 & 0.837 & 0.8850 & 0.566\\
+Prevalence & 0.0730 & 0.227 & 0.1704 & 0.529\\
+DetectionRate & 0.0295 & 0.106 & 0.0828 & 0.251\\
+DetectionPrevalence & 0.1476 & 0.256 & 0.2380 & 0.359\\
+\addlinespace
+BalancedAccuracy & 0.6383 & 0.636 & 0.6494 & 0.623\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Notes: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}\textsuperscript{1} Accuracy > NoInformationRate is significant at 1\% confidence level, p = 0.0000}\\
+\end{tabu}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-161}Confusion Matrix Table for the Multinomial Logit Model}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & FF & SF & FS & SS\\
+\midrule
+FF & 141 & 242 & 99 & 224\\
+SF & 90 & 506 & 77 & 549\\
+FS & 63 & 122 & 396 & 557\\
+SS & 55 & 216 & 243 & 1202\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction}\\
+\end{tabu}
+\end{table}
+
+\hypertarget{regression-diagnostics-1}{%
+\subsection{Regression Diagnostics}\label{regression-diagnostics-1}}
+
+In this section, we do robustness checks on the regression for extreme values, multicollinearity and linearity. Note that we base the checks on the model in Table 6.8 that utilize the entire dataset.
+
+\hypertarget{extreme-values-1}{%
+\subsubsection{Extreme Values}\label{extreme-values-1}}
+
+In the regression model, we winsorize the data by removing the top and bottom 10\% and re-run the analysis. The results of the regression are in Table 6.13 below. Extreme values do not affect the results do not change except for the expected changes in the coefficients.
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model, Winsorized Data} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & SF & FS & SS \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$0.047 & $-$0.113 & 0.044 \\ 
+  & (0.157) & (0.157) & (0.154) \\ 
+  & & & \\ 
+ ageMature & $-$0.285$^{**}$ & $-$0.377$^{**}$ & $-$0.111 \\ 
+  & (0.143) & (0.148) & (0.142) \\ 
+  & & & \\ 
+ assets & 0.245$^{***}$ & $-$0.076$^{**}$ & 0.176$^{***}$ \\ 
+  & (0.030) & (0.033) & (0.030) \\ 
+  & & & \\ 
+ stmktcap & $-$0.226$^{***}$ & $-$0.049 & $-$0.109$^{*}$ \\ 
+  & (0.059) & (0.060) & (0.056) \\ 
+  & & & \\ 
+ pcrdbgdp & 0.119 & $-$0.613$^{***}$ & $-$0.237$^{*}$ \\ 
+  & (0.130) & (0.131) & (0.126) \\ 
+  & & & \\ 
+ kkm & 0.118$^{***}$ & $-$0.131$^{***}$ & $-$0.002 \\ 
+  & (0.031) & (0.033) & (0.031) \\ 
+  & & & \\ 
+ gdp\_growth\_annual & 0.040$^{*}$ & $-$0.018 & 0.035 \\ 
+  & (0.024) & (0.025) & (0.024) \\ 
+  & & & \\ 
+ legal\_traditionCivil & $-$1.277$^{***}$ & $-$0.604$^{***}$ & $-$1.042$^{***}$ \\ 
+  & (0.213) & (0.208) & (0.197) \\ 
+  & & & \\ 
+ legal\_traditionOther & $-$0.991$^{***}$ & $-$0.427$^{**}$ & $-$1.003$^{***}$ \\ 
+  & (0.188) & (0.191) & (0.181) \\ 
+  & & & \\ 
+ currentlegalstatusBank & 0.486$^{*}$ & $-$0.717$^{***}$ & $-$0.682$^{***}$ \\ 
+  & (0.257) & (0.253) & (0.237) \\ 
+  & & & \\ 
+ currentlegalstatusNBFI & $-$0.081 & $-$1.022$^{***}$ & $-$1.234$^{***}$ \\ 
+  & (0.192) & (0.170) & (0.164) \\ 
+  & & & \\ 
+ currentlegalstatusCoop & 0.483$^{***}$ & $-$2.415$^{***}$ & $-$2.105$^{***}$ \\ 
+  & (0.177) & (0.166) & (0.156) \\ 
+  & & & \\ 
+ currentlegalstatusRural Bank & 3.658$^{***}$ & $-$0.905 & 1.627 \\ 
+  & (1.029) & (1.110) & (1.022) \\ 
+  & & & \\ 
+ Constant & 1.029$^{*}$ & 9.384$^{***}$ & 3.956$^{***}$ \\ 
+  & (0.616) & (0.591) & (0.575) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes \\ 
+Data & Full Data & Full Data & Full Data \\ 
+Akaike Inf. Crit. & 10,657.000 & 10,657.000 & 10,657.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\hypertarget{multicollinearity-1}{%
+\subsubsection{multicollinearity}\label{multicollinearity-1}}
+
+This section checks for multi-collinearity among the independent variables by generating the variance inflation factors (VIFs). In this case, the mainstream variables do not have exceptional variance inflation. The VIFs are in Table 6.14. However, the inclusion of year effects is vital in the regressions, given their panel structure.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-164}Variance Inflation Factors for Logit Model}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & GVIF & Df & GVIF\textasciicircum{}(1/(2*Df))\\
+\midrule
+age & 1.437 & 2 & 1.095\\
+assets & 1.626 & 1 & 1.275\\
+stmktcap & 2.533 & 1 & 1.591\\
+pcrdbgdp & 1.660 & 1 & 1.288\\
+kkm & 1.322 & 1 & 1.150\\
+\addlinespace
+gdp\_growth\_annual & 1.154 & 1 & 1.074\\
+legal\_tradition & 3.004 & 2 & 1.317\\
+currentlegalstatus & 2.244 & 4 & 1.106\\
+factor(year) & 1.619 & 20 & 1.012\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Authors' construction}\\
+\end{tabu}
+\end{table}
+
+\hypertarget{conclusion-3}{%
+\subsection{Conclusion}\label{conclusion-3}}
+
+This article examines the extent to which MFIs in Africa achieve their dual objectives - financial and social goals. Although most MFIs tend to succeed financially and socially, a substantial number also fails in both goals. In between, there is an even split between MFIs that achieve one objective and fail in the other. The factors that drive the extent to which MFIs achieve joint financial and social goals include age, size, legal status of the MFI, and country-level indicators like stock market capitalisation and institutional quality. However, rural banks and NGOs are more likely to achieve the dual objectives than banks, NBFIs and credit unions. Thus, the commercial model of microfinance could be more prone to mission drift than NGOs. Also, commercial microfinance MFIs that succeed socially tend to have a degree of financial success. For age, older, more established MFIs tend to appear less prone to mission drift than the relatively younger MFIs, which again underlines the need to support young MFIs in the early stages of transformation. Size shows a similar result, with larger MFIs being less prone to mission drift. The implication is that MFIs need financial support to allow them attain financial sustainability in the early stages of transformation while also fulfilling their social obligations. The country-level drivers of attaining financial and social objectives are capital markets development, institutional quality and legal tradition. MFIs in countries with better institutions and capital markets see lower demand for microfinance, thus suppressing both financial and social goals. However, MFIs in countries following civil law and other legal traditions are likely to fail in both financial and social goals relative to those in common law countries. These results remain robust after removing extreme values and other checks.
+
+\begin{landscape}
+
+\begin{figure}
+
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-165-1} 
+
+}
+
+\caption{Size and Age of Microfinance Institutions in Africa}\label{fig:unnamed-chunk-165}
+\end{figure}
+
+\end{landscape}
+
+\newpage
 
 \hypertarget{Introduction}{%
 \chapter{Sources of Finance for Microfinance Institutions in Africa}\label{Introduction}}
@@ -3915,8 +4114,8 @@ We examine the sources of finance for MFIs in Africa and their associated driver
 
 \newpage
 
-\hypertarget{background-2}{%
-\section{Background}\label{background-2}}
+\hypertarget{background-3}{%
+\section{Background}\label{background-3}}
 
 \textcite{bayai2016financing} cite institutional theory in explaining the way microfinance institutions (MFIs) in Africa fund their operations. They note that most MFIs tend to operate as Non-Governmental Organisations (NGOs) at the early stages. These NGOs derive substantial funding from donations and concessionary funds, given that commercial funders deem the MFIs too risky \autocite{ledgerwood1998microfinance,ledgerwood2006transforming}. Later, in the consolidation stage, the NGOs supplement their funds using government subsidies and equity funding. As they mature, they resort to deposits and debt whilst often using foreign donors as guarantees. At this stage, MFIs are likely to mutate from NGOs that focus on the social aspect of availing financial services to the financially excluded to the commercial model, where financial sustainability matters as much as social performance.
 
@@ -3934,8 +4133,8 @@ The contribution of our study goes beyond previous research in this area of scho
 
 The following section highlights the study results, followed by a review of supporting theory and empirical literature. We then describe data and data sources, followed by the research method. We discuss the results and then conclude.
 
-\hypertarget{summary-of-results-3}{%
-\section{Summary of Results}\label{summary-of-results-3}}
+\hypertarget{summary-of-results-4}{%
+\section{Summary of Results}\label{summary-of-results-4}}
 
 The results of the data analysis show that the age of an MFI and governance/ institutional quality are the chief drivers of leverage (debt to equity ratio). The capital to assets ratio for MFIs in Africa has statistically significant relationships with MFI legal status, age, and legal tradition. MFI legal status, age, legal tradition, and profit margin are the key drivers of the deposits to assets ratio. MFI legal form, age, legal tradition, institutional quality, asset structure, private credit, and profit margin drive the donations to assets ratio. Young and mature MFIs have lower leverage relative to new MFIs. At the same time, institutional quality has a negative relationship with the debt to equity ratio. However, after removing influential observations, MFI legal form, asset structure, and profit margin become statistically significant leverage drivers. Specifically, NGOs have lower leverage than the commercial MFIs: banks, credit unions, NBFIs, and rural banks. Asset structure has a negative relationship with the debt to equity ratio, meaning that MFIs with more tangible assets finance their operations using relatively more equity than debt. Likewise, the profit margin negatively affects the debt to equity ratio, given that profits are part of equity.
 
@@ -3947,7 +4146,7 @@ In comparison, MFIs in civil and other legal traditions have a higher ratio than
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-154}Summary Statistics for Categrical Independent Variables}
+\caption{\label{tab:unnamed-chunk-179}Summary Statistics for Categrical Independent Variables}
 \centering
 \fontsize{8}{10}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
@@ -4031,12 +4230,12 @@ We source panel data from the Microfinance Information Exchange (MIX) pooled dat
 \begingroup\fontsize{9}{11}\selectfont
 
 \begin{longtabu} to \linewidth {>{\raggedright}X}
-\caption{\label{tab:unnamed-chunk-155}Description of Variables}\\
+\caption{\label{tab:unnamed-chunk-180}Description of Variables}\\
 \toprule
 Variable\_Description\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:unnamed-chunk-155}Description of Variables \textit{(continued)}}\\
+\caption[]{\label{tab:unnamed-chunk-180}Description of Variables \textit{(continued)}}\\
 \toprule
 Variable\_Description\\
 \midrule
@@ -4090,7 +4289,7 @@ Figure 1 shows the correlation matrix and scatter plots for the numeric variable
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-156}Summary Statistics}
+\caption{\label{tab:unnamed-chunk-181}Summary Statistics}
 \centering
 \fontsize{10}{12}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
@@ -4121,11 +4320,11 @@ Profit\_margin & -7.739 & 513.299 & -35495.625 & -0.181 & 0.048 & 0.189 & 6.20\\
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-157-1} 
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-182-1} 
 
 }
 
-\caption{Correlation Matrix for Independent Variables}\label{fig:unnamed-chunk-157}
+\caption{Correlation Matrix for Independent Variables}\label{fig:unnamed-chunk-182}
 \end{figure}
 
 \end{landscape}
@@ -4144,11 +4343,11 @@ Finally, Figure 6.4 shows the trends in the dependent variables over time, with 
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-158-1} 
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-183-1} 
 
 }
 
-\caption{Capital Sources by MFI Legal Status}\label{fig:unnamed-chunk-158}
+\caption{Capital Sources by MFI Legal Status}\label{fig:unnamed-chunk-183}
 \end{figure}
 
 \end{landscape}
@@ -4157,11 +4356,11 @@ Finally, Figure 6.4 shows the trends in the dependent variables over time, with 
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-159-1} 
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-184-1} 
 
 }
 
-\caption{Assets, Asset Structure, and Profit margin of MFIs in Africa}\label{fig:unnamed-chunk-159}
+\caption{Assets, Asset Structure, and Profit margin of MFIs in Africa}\label{fig:unnamed-chunk-184}
 \end{figure}
 
 \end{landscape}
@@ -4170,18 +4369,18 @@ Finally, Figure 6.4 shows the trends in the dependent variables over time, with 
 
 \begin{figure}
 
-{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-160-1} 
+{\centering \includegraphics[width=8.8in]{_main_files/figure-latex/unnamed-chunk-185-1} 
 
 }
 
-\caption{Trends in Capital, Debt, Deposits, and Donations}\label{fig:unnamed-chunk-160}
+\caption{Trends in Capital, Debt, Deposits, and Donations}\label{fig:unnamed-chunk-185}
 \end{figure}
 
 \end{landscape}
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-161}Summary Statistics for Categrical Independent Variables}
+\caption{\label{tab:unnamed-chunk-186}Summary Statistics for Categrical Independent Variables}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
@@ -4213,8 +4412,8 @@ For this reason, we ran a random-effects model on the full dataset. We then subs
 
 Tables 5 shows the output of the relevant regression models with debt to equity ratio as the dependent variable. The regressions indicate that MFI age matters the most in determining the debt to equity ratio at the firm level. At the macro-level, institutional quality is a significant driver of leverage.
 
-\hypertarget{age-1}{%
-\subsubsection{Age}\label{age-1}}
+\hypertarget{age-2}{%
+\subsubsection{Age}\label{age-2}}
 
 Regarding age, new MFIs (0-4 years) in Africa have a significantly higher debt to equity ratio than young MFIs (4-8 years), on average. However, there is no significant difference between the leverage of new MFIs and mature MFIs (8 years and above), although the coefficient has a negative sign suggesting lower debt to equity ratio. This result means that the oldest firms and the newest MFIs tend to finance their operations with more equity than debt. Given that equity is riskier than debt, it follows that investors have more confidence in older MFIs and youngest MFIs. The capital structure theory does not mention the age of a firm as a significant driver of capital structure. However, suppose age has a direct correspondence with size. In that case, we expect that older, larger MFIs are more profitable (a source of internal equity) and can attract long term equity funding due to their track record \autocite{barclay2005capital,barclay2006debt}. The relatively high debt to equity ratio of new MFIs could reflect the emphasis on the financial sustainability of MFIs which makes start-ups resort to relatively more debt to finance their operations due to reduced availability of donations and government subsidies \autocite{gwatidzo2009corporate}. Without the initial support from donors, equity funders deem start-up MFIs too risky. Without the initial seed capital in grants and concessionary funds, the institutional lifecycle theory of \textcite{bayai2016financing} may not hold.
 
@@ -4303,13 +4502,13 @@ NGOs consistently have higher capital to assets ratio than other legal tradition
 
 The results also reflect the market conditions where donations and subsidies are getting less available as donors begin to stress sustainability. Mature firms have a long-running relationship with donors to the extent they have a profitable business model and developed a business profile that allows them to make profits and issue equity. Characteristically, commercial banks and other deposit-taking institutions tend to be more leveraged than other financial intermediaries because they have the license and scale to garner deposits and other debt instruments, explaining the pattern of results.
 
-\hypertarget{age-2}{%
-\subsubsection{Age}\label{age-2}}
+\hypertarget{age-3}{%
+\subsubsection{Age}\label{age-3}}
 
 The capital to asset ratio of MFIs in Africa decreases with age. Young (4-8 years) and mature (8 years and over) MFIs have lower capital to assets ratios, on average than new MFIs (0-4 years). The mean and median capital to assets ratio These results are also in line with the literature on capital structure. Older firms are likely larger with more support to pledge as collateral and quickly raise funds in the debt markets \autocite{barclay2005capital}. Also, as MFIs mature, they are likely to graduate from the loans only model to start accepting deposits which further raises their leverage. Overall, this makes the equity component smaller relative to the debt component. In the capital structure literature, age is not a significant driver of the capital structure except through its link to the size of an MFI, as we discuss next.
 
-\hypertarget{legal-tradition-1}{%
-\subsubsection{Legal Tradition}\label{legal-tradition-1}}
+\hypertarget{legal-tradition-2}{%
+\subsubsection{Legal Tradition}\label{legal-tradition-2}}
 
 MFIs located in common law countries have, on average, higher capital to assets ratio than equivalent MFIs in civil law or other legal tradition countries. The results follow from the law and finance literature, showing that common law legal tradition corresponds to a higher level of capital market development, especially stock market development \autocite{la2013law}. Civil law countries have the lowest mean and median capital to assets ratio confirming the law and finance literature in Africa's context \autocite{schnyder2018twenty}. If capital markets and especially equity markets are more developed in common law countries, it means that MFIs can quickly issue equity financial instruments. Also, venture capitalists are more willing to inject private equity in MFIs in common law countries. The public equity markets offer an opportunity to exit the investment once it takes root \autocite{kent2013bankers}.
 
@@ -4401,13 +4600,13 @@ The deposits to assets ratio has a positive relationship with MFI legal form, ag
 
 NGOs have lower deposits to assets ratio than commercial banks, credit unions, NBFIs, and rural banks. These results may arise out of the different business models followed by different legal forms of MFIs. NGOs have taken root dependent on donations and subsidies with little emphasis on deposits mobilisation \autocite{d2013unsubsidized,d2017ngos}. Also, NGOs face legal restrictions on deposit mobilisation given that most are not under the supervision of central banks. Credit unions, on the other hand, thrive on taking deposits from members making them have higher capacity for deposit mobilisation than NGOs \autocite{lauer2008transforming}. As expected, rural banks, commercial banks and cooperatives have the highest mean and median deposits ratios. Like credit unions, commercial banks actively seek donations and are licensed to do so. Hence, commercial banks have higher levels of deposits-driven leverage than NGOs \autocite{abbas2020commercial}.
 
-\hypertarget{age-3}{%
-\subsubsection{Age}\label{age-3}}
+\hypertarget{age-4}{%
+\subsubsection{Age}\label{age-4}}
 
 Older MFIs have higher deposits to assets ratio than younger MFIs. This result reflects the more comprehensive regional presence of older, larger MFIs, which aligns with the capital structure theory \autocite{barclay2005capital,barclay2006debt} and enhanced goodwill from the public. Also, older MFIs have invested in information technology to reach people in remote locations \autocite{di2021technology}. Again, older MFIs are likely to have attained deposit mobilisation licenses from relevant regulatory bodies like central banks. The results are in line with capital structure theory, where the size of an MFI, which is also positively related to age, has a significant relationship with leverage. For most financial intermediaries, the largest deposits are the largest source of debt financing \autocite{gale2020bank}.
 
-\hypertarget{legal-tradition-2}{%
-\subsubsection{Legal Tradition}\label{legal-tradition-2}}
+\hypertarget{legal-tradition-3}{%
+\subsubsection{Legal Tradition}\label{legal-tradition-3}}
 
 MFIs in countries with civil law and other legal traditions tend to have a higher deposit to assets ratio than those in common law countries, with MFIs in civil law countries having the highest proportion. It means that MFIs in common law countries finance their operations using more equity than civil law countries. These results are in line with the higher levels of capital markets development in common law countries \autocite{la2013law,schnyder2018twenty} that allows MFIs to quickly raise equity capital and debt capital in a form other than deposits.
 
@@ -4504,14 +4703,14 @@ In Table 6. 9, donations to assets ratio show the most robust relationship with 
 
 Compared to other legal forms of MFIs, NGOs have the highest proportion of donations to assets. The result is expected because the microfinance industry started as a not-for-profit model with NGO as the legal form of choice \autocite{d2017ngos}. These pioneer NGOs have developed relationships with donors over time than the younger MFIs. Hence, donations are likely to flow to these NGOs from the donors still keen on the welfare approach to microfinance where outreach to the financially excluded is more important than profitability. Late entrants into the microfinance industry find a changed landscape where financial sustainability is also important and hence have to resort to commercial funding \autocite{d2013unsubsidized,armendariz2013subsidy}.
 
-\hypertarget{age-4}{%
-\subsubsection{Age}\label{age-4}}
+\hypertarget{age-5}{%
+\subsubsection{Age}\label{age-5}}
 
 Older, larger firms have smaller donations to assets ratio than younger, smaller firms. The result holds due to the relatively larger assets base of older MFIs. Table 6. 8 shows that older MFIs (that is, young and mature) still receive more donations in absolute terms than younger ones. Hence, as MFIs grow, the relative importance of contributions diminishes as they build their asset base. However, older MFIs still retain a stronger financial relationship with donors \autocite{armendariz2013subsidy,cgap2017}.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-165}Mean and Median Donations and Donations to Assets Ratio}
+\caption{\label{tab:unnamed-chunk-190}Mean and Median Donations and Donations to Assets Ratio}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
@@ -4530,8 +4729,8 @@ Mature & 96894 & 0.028 & 8674 & 0.001\\
 \end{tabu}
 \end{table}
 
-\hypertarget{legal-tradition-3}{%
-\subsubsection{Legal tradition}\label{legal-tradition-3}}
+\hypertarget{legal-tradition-4}{%
+\subsubsection{Legal tradition}\label{legal-tradition-4}}
 
 MFIs located in common law countries have higher and statistically significant donations to assets ratio than those in civil law countries. The theoretical link, in this case, is that from the law and finance literature where common law countries exhibit higher levels of financial development \autocite{la2013law,schnyder2018twenty}. The higher levels of financial development further derive from the better institutional quality. MFIs in countries with better institutional quality are more likely to attract donations, presumably because there is a lower incidence of corruption which may drive donors away. The following section shows that institutional quality positively relates to the donations to assets ratio \autocite{huang2010political}.
 
@@ -4646,8 +4845,8 @@ In panel data settings, cross-sectional dependence (CSD) is an important conside
 
 Extant research deals with CSD in three main ways. The traditional method is the use of seemingly unrelated regressions (SUR) of \textcite{zellner1962further,arouri2013econometric}. SUR allows for the estimation of the individual coefficient \(\beta_{it}\) and hence estimate the effects of the independent variables on the dependent variables for each unit of analysis, in our case, MFIs \autocite{sarafidis2012cross}. Again, the cross-sectional data is not sufficient for SUR analysis. The second method developed by \textcite{esaran2021general} - the panel mean groups- works by averaging individual coefficients across panels. Hence, the technique requires panel data where each panel has sufficient data for a regression, which is not possible in this study. Therefore, we implement the third approach, the Panel Corrected Standard Errors (PCSE) \autocite{bailey2011implementing,croissant2008panel}. PCSE is useful when working with heterogeneous dynamic panel data by correcting autocorrelation and cross-sectional dependence while providing more robust standard errors \autocite{ikpesu2019growth}. The results presented have their standard errors corrected for CSD, resulting in heteroscedastic consistent coefficients.
 
-\hypertarget{conclusion-3}{%
-\section{Conclusion}\label{conclusion-3}}
+\hypertarget{conclusion-4}{%
+\section{Conclusion}\label{conclusion-4}}
 
 This article examined the drivers of four typical indicators of the financing structure of MFIs in Africa: Debt to equity ratio, capital to assets ratio, Deposits to assets ratio and Donations to assets ratio. The results show that the size, legal status, and age of MFIs are consistently related to the financing structure. Profit margin is directly related to leverage and inversely to capital to assets ratio, as capital structure theory predicts. Institutional quality (KKM) pertains mainly to deposits and donations, with lower KKM corresponding to more deposits and donations. Education and asset structure relate weakly to leverage, while financial development is surprisingly not a significant factor that contradicts stylized facts on firms' capital structure. For MFIs, it is the institutional level factors that drive the financing structure. Overall, microfinance in Africa shows a weak linkage to the macro-economy, that is, macroeconomic determinants vis=a-vis the macroeconomic drivers of MFIs activities.
 
@@ -4661,7 +4860,7 @@ This article examined the drivers of four typical indicators of the financing st
 
 \begin{table}[!h]
 
-\caption{\label{tab:unnamed-chunk-167}Hausmann Tests}
+\caption{\label{tab:unnamed-chunk-192}Hausmann Tests}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
@@ -4684,7 +4883,7 @@ Donations/Assets Ratio & 6673.51 & 0.000 & 10 & Hausman Test & one model is inco
 
 \begin{table}[!h]
 
-\caption{\label{tab:unnamed-chunk-168}Variance Inflation Factors}
+\caption{\label{tab:unnamed-chunk-193}Variance Inflation Factors}
 \centering
 \fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
@@ -4849,10 +5048,6 @@ F Statistic (df = 28; 2011) & \multicolumn{1}{c}{5.310$^{***}$} & \multicolumn{1
 \end{table}
 
 \end{landscape}
-
-\begin{savequote}
-He who chases two rabbits catches neither.
-\qauthor{--- Confucius \autocite{caseau2020impact}}\end{savequote}
 
 
 
