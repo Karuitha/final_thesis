@@ -1691,7 +1691,7 @@ stargazer(soceff_reg_fx, soceff_reg_fx3,
 
 
 ### Robustness Tests
-We first run the fixed and random effects models for the entire dataset for robustness, with the results reported in tables 5.5, 5.6 and 5.7. Secondly, we check for outliers by winsorising the data. To do this, we drop the top 10% and bottom 10% observations of the independent variables and rerun the fixed and random effects regressions. The results are in Appendix 3 (Table 4.9). The results correspond to those in Tables 5.5 to 5.7 except for the magnitude of the regression coefficients. 
+We first run the fixed and random effects models for the entire dataset for robustness, with the results reported in Tables 5.5, 5.6 and 5.7. Secondly, we check for outliers by winsorising the data. To do this, we drop the top 10% and bottom 10% observations of the independent variables and rerun the fixed and random effects regressions. The results are in Appendix 3 (Table 4.9). The results correspond to those in Tables 5.5 to 5.7 except for the magnitude of the regression coefficients. 
 
 Given the panel structure of data, there is a possibility of cross-sectional dependence and serial correlation. We correct the standard errors – presenting the panel corrected standard errors to deal with these problems. Appendix 4-6 contain plots examining the normality of residuals for the regression outputs in Table 4.5. The results show slight deviations from normality, which may not be an issue given the large sample size.
             

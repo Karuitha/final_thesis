@@ -486,7 +486,7 @@ Figure 6.1, Figure 6.2, and Tables 3 and 4 show a breakdown of the extent to whi
 Panel A and B  of Figure 6.2 show the counts, while panel C and D show the proportions of MFIs and the extent they meet the twin objectives. Tables 3 and 4 show the respective proportions. We base the discussion on Figure 6.1 panel C and Table 6.4.  The results in Panel C show that cooperatives with the lowest proportion of MFIs succeeding financially and socially at 17.7%. Besides, they have the second lowest proportion (after rural banks with 43.5%) of failing socially and succeeding financially at 40.4%. By contrast, they have the lowest highest chance (after rural banks with 3.6%) of failing financially and succeeding socially at 14.2%. Notably, cooperatives have the highest chance of failing to meet both objectives at 27.6%. The results illustrate the nature of cooperatives as geographically limited entities whose sole focus is on members who can make savings to qualify for loans [@porter1987economic]. Not many  financially excluded individuals may join cooperatives due to limited incomes and information and their situation in remote geographical locations.
 
 
-```{r, fig.width = 7, fig.height=5, fig.align='center', fig.cap = "Financial and Social Performance of MFIs in Africa"}
+```{r, fig.width = 3, fig.height=3, fig.align='center', fig.cap = "Financial and Social Performance of MFIs in Africa"}
 my_data %>% 
   
   count(finsoc, name = "Total") %>% 
@@ -499,9 +499,9 @@ my_data %>%
   
   geom_col() + 
   
-  geom_label(aes(label = round(`Proportion(%)`, 2))) + 
+  geom_label(aes(label = round(`Proportion(%)`))) + 
   
-  theme(legend.position = "none") + 
+  theme(legend.position = "none", legend.title = element_text(size = 8)) + 
   
   labs(y = "Proportions (%)", x = "Financial and Social Performance", 
        

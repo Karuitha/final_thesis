@@ -839,7 +839,7 @@ However, the model does not deal with the potential endogeneity between  $\Delta
 
 ### Variables Definitions and Data Sources 
 
-We source panel data from the Microfinance Information Exchange (MIX) pooled database, the Worldwide Governance Indicators (WGI), and World Development Indicators (WDI) from the World Bank databases. Table 6. 2 below describes the variables.
+We source panel data from the Microfinance Information Exchange (MIX) pooled database, the Worldwide Governance Indicators (WGI), and World Development Indicators (WDI) from the World Bank databases. Table 6.2 below describes the variables.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 tribble(~ Variable_Description, 
@@ -957,7 +957,7 @@ my_data %>%
 
 There is a substantial negative and significant relationship between capital-asset-ratio (which captures the ratio of equity capital to total assets) and deposits-assets-ratio for dependent variables. The correlations indicate that for MFIs that garner deposits, the injection of equity capital is not a priority as these MFIs, like commercial banks, tend to leverage on deposits and just put in enough equity to meet regulatory requirements. The debt to equity ratio and the deposits to asset ratio have a significant positive relationship, although the magnitude is not high. The capital to asset ratio and debt to equity ratio has no meaningful association. For the dependent variables, the highest observed correlation is between education on the one hand and the proxies for capital market development; private credit to GDP and stock market capitalisation to GDP, at 0.461 and 0,538, which is in line with the literature [@allen2013resolving; @allen2014african]. Consequently, we exclude education from our regressions. 
 
-Finally, except for the debt to equity ratio, the other three independent variables significantly correlate with the dependent variables. Specifically, the debt to equity ratio has a low but significant correlation with the other dependent and independent variables. The capital asset ratio has no statistically significant correlation with profit margin and stock market capitalisation to GDP. Likewise, donations have no significant correlation with GDP growth and education, while deposits exhibit a substantial correlation with donations, institutional quality/ governance, and stock market capitalisation to GDP. While correlation does not imply causation, these results point to the need for further investigation. The following section on regression models revisits this result for an in-depth interrogation of the relationships. Table 6. 3 shows the summary statistics for the numeric variables while Table 6. 4 summarises the categorical variables. 
+Finally, except for the debt to equity ratio, the other three independent variables significantly correlate with the dependent variables. Specifically, the debt to equity ratio has a low but significant correlation with the other dependent and independent variables. The capital asset ratio has no statistically significant correlation with profit margin and stock market capitalisation to GDP. Likewise, donations have no significant correlation with GDP growth and education, while deposits exhibit a substantial correlation with donations, institutional quality/ governance, and stock market capitalisation to GDP. While correlation does not imply causation, these results point to the need for further investigation. The following section on regression models revisits this result for an in-depth interrogation of the relationships. Table 6.3 shows the summary statistics for the numeric variables while Table 6.4 summarises the categorical variables. 
 
 Figure 2 shows the breakdown of the dependent variables across MFI legal status. Note that rural banks and commercial banks have the highest median debt to equity and deposits to assets ratios, followed by credit unions, NBFI, and NGOs. The former could indicate ease in accessing capital markets. At the same time, deposits reflect the capacity of banks to mobilise deposits. Their focus on niche rural markets with the unbanked populace makes it easier to garner deposits for rural banks. The visualisation rightly shows that rural banks, commercial banks and cooperatives have the highest deposits to assets ratio.
 
@@ -1285,7 +1285,7 @@ stargazer(fixed_effects_de, fixed_effects_de3,
 \elandscape
 
 ### Drivers of Capital to Assets Ratio
-Regression results for the drivers of the capital-assets ratio among MFIs in Africa appear in Table 6. 6. Capital assets ratio is the ratio of total equity to total assets. Again, legal status, age, legal tradition, and stock market development are related to the equity to total assets ratio. We examine these significant variables in turn. 
+Regression results for the drivers of the capital-assets ratio among MFIs in Africa appear in Table 6.6. Capital assets ratio is the ratio of total equity to total assets. Again, legal status, age, legal tradition, and stock market development are related to the equity to total assets ratio. We examine these significant variables in turn. 
 
 #### Current Legal Status
 NGOs consistently have higher capital to assets ratio than other legal traditions: banks, cooperatives, NBFIs, and rural banks. The definition of debt to equity ratio means that NGOs finance their operations using more equity than debt. The results align with the institutional life cycle theory, which posits that MFIs often start financing operations using donations and concessionary funds, then switch to equity as they mature [@bayai2016financing]. Debt is often for well established MFIs, at which point they are likely financially sustainable and likely to switch to the commercial model [@d2017ngos]. NBFIs have the second-highest mean and median levels of capital to assets ratio, followed by banks, while cooperative and rural banks come last in that order. These results align with the literature confirming the high leverage of banks [@mettenheim2013back], with the bulk of the capital in deposits.
@@ -1365,7 +1365,7 @@ stargazer(fixed_effects_car, fixed_effects_car3,
 
 
 ### Drivers of Deposits to Total Assets
-The deposits to assets ratio has a positive relationship with MFI legal form, age, asset structure, size proxied by the logarithm of assets, and profit margin (see Table 6. 7). Significant drivers of the deposits to assets ratio at the country level are legal tradition and institutional quality, KKM. Proxies for capital markets development, that is, private credit to GDP and stock markets capitalisation to GDP do not significantly affect the ratio. We discuss these relationships next. 
+The deposits to assets ratio has a positive relationship with MFI legal form, age, asset structure, size proxied by the logarithm of assets, and profit margin (see Table 6.7). Significant drivers of the deposits to assets ratio at the country level are legal tradition and institutional quality, KKM. Proxies for capital markets development, that is, private credit to GDP and stock markets capitalisation to GDP do not significantly affect the ratio. We discuss these relationships next. 
 
 #### Current Legal Status
 NGOs have lower deposits to assets ratio than commercial banks, credit unions, NBFIs, and rural banks. These results may arise out of the different business models followed by different legal forms of MFIs. NGOs have taken root dependent on donations and subsidies with little emphasis on deposits mobilisation [@d2013unsubsidized; @d2017ngos]. Also, NGOs face legal restrictions on deposit mobilisation given that most are not under the supervision of central banks. Credit unions, on the other hand, thrive on taking deposits from members making them have higher capacity for deposit mobilisation than NGOs [@lauer2008transforming]. As expected, rural banks, commercial banks and cooperatives have the highest mean and median deposits ratios. Like credit unions, commercial banks actively seek donations and are licensed to do so. Hence, commercial banks have higher levels of deposits-driven leverage than NGOs [@abbas2020commercial].
@@ -1449,13 +1449,13 @@ stargazer(fixed_effects_depo, fixed_effects_depo3,
 
 
 ### Drivers of Donations to Assets Ratio
-In Table 6. 9, donations to assets ratio show the most robust relationship with the variables in the regression, except for stock market to GDP ratio. We discuss these relationships next. 
+In Table 6.9, donations to assets ratio show the most robust relationship with the variables in the regression, except for stock market to GDP ratio. We discuss these relationships next. 
 
 #### Current legal status 
 Compared to other legal forms of MFIs, NGOs have the highest proportion of donations to assets. The result is expected because the microfinance industry started as a not-for-profit model with NGO as the legal form of choice [@d2017ngos]. These pioneer NGOs have developed relationships with donors over time than the younger MFIs. Hence, donations are likely to flow to these NGOs from the donors still keen on the welfare approach to microfinance where outreach to the financially excluded is more important than profitability. Late entrants into the microfinance industry find a changed landscape where financial sustainability is also important and hence have to resort to commercial funding [@d2013unsubsidized; @armendariz2013subsidy]. 
 
 #### Age
-Older, larger firms have smaller donations to assets ratio than younger, smaller firms. The result holds due to the relatively larger assets base of older MFIs. Table 6. 8 shows that older MFIs (that is, young and mature) still receive more donations in absolute terms than younger ones. Hence, as MFIs grow, the relative importance of contributions diminishes as they build their asset base. However, older MFIs still retain a stronger financial relationship with donors [@armendariz2013subsidy; @cgap2017].
+Older, larger firms have smaller donations to assets ratio than younger, smaller firms. The result holds due to the relatively larger assets base of older MFIs. Table 6.8 shows that older MFIs (that is, young and mature) still receive more donations in absolute terms than younger ones. Hence, as MFIs grow, the relative importance of contributions diminishes as they build their asset base. However, older MFIs still retain a stronger financial relationship with donors [@armendariz2013subsidy; @cgap2017].
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 my_data %>% 
@@ -1565,7 +1565,7 @@ stargazer(fixed_effects_dona, fixed_effects_dona3,
 
 \elandscape
 
-However, in the Appendix (Table 13), when we winsorise the data to remove outliers, age is no longer an essential driver of donations, which would explain the mixed results in Table 6. 9.
+However, in the Appendix (Table 13), when we winsorise the data to remove outliers, age is no longer an essential driver of donations, which would explain the mixed results in Table 6.9.
 
 
 ## Robustness Checks 

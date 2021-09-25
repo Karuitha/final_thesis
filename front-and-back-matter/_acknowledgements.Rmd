@@ -2,13 +2,11 @@ While this dissertation bears my name as the author, it is the outcome of many p
 
 Further, much gratitude to the leaders of organizations that have partially funded this research; `The Bradlow Foundation`, [`BANKSETA`](https://www.bankseta.org.za/), and the [`AERC`](https://aercafrica.org). Special thanks to `Karatina University` for granting a four year paid study leave. I also appreciate `Wits University` for support through the PMA award and offering a conducive research environment. 
 
-Many thanks to my family, especially my parents and siblings to whom this work is dedicated (see dedication), for understanding during the many months I was away. Gratitude to Muchiri Githiria, Eddy Ombagi and the residents of `76 Long Street`. I will never forget that wonderful trip to `Maputo, Mozambique`, and the great moments in Bloemfontein, Brits, Gaborone, Durban, Margate, and Mahikeng. The nights at the `Blind PIG` and Melville are worth the memories.  
+Many thanks to my family, especially my parents and siblings to whom this work is dedicated (see dedication), for understanding during the many months I was away. Gratitude to residents of `76 Long Street` - Muchiri Githiria, Eddy Ombagi, Luicer Ingasia, Wycliffe Nduga, Simon Kamau, George Kariuki, Job Mwaura, Wycliffe Oluoch and Felix Mutunga. I will never forget that wonderful trip to `Maputo, Mozambique`, and the great moments in Bloemfontein, Brits, Gaborone, Durban, Margate, and Mahikeng. The nights at the `Blind PIG` and 7th Street `Melville` are worth the memories.  
 
 Credit to the people at the [`R` Foundation](https://www.r-project.org/foundation/) for availing of such a beautiful data analysis software without subscription fees. I appreciate ALL the people at [RStudio](http://rstudio.com) and Hadley Wickham for originating the Tidyverse, thereby making data analysis palatable, accessible, and even, at times, fun. These gratitudes should extend to the entire open source community - I have even switched to [`Linux`](https://www.linuxfoundation.org/). Finally, I thank [`EdX`](https://www.edx.org/) for funding the `Professional Certificate in Data Science` and `15.071x: The Analytics Edge` courses that changed my approach and attitude towards data analysis. Credit to anyone else I may have omitted; a page can only go so far.
 
 \begin{flushright}
 John King'athia Karuitha \\
-Graduate School of Business Administration \\
-University of the Witwatersrand, Johannesburg \\
-\today
+Johannesburg, \today
 \end{flushright}
