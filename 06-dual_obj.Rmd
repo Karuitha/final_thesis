@@ -463,7 +463,7 @@ tribble(~ Variable_Description, "1. Current Legal Status: This is the dependent 
   
   kbl(., caption = "Description of Variables", booktabs = TRUE) %>% 
   
-  kable_paper(full_width = TRUE) %>% 
+  kable_paper(full_width = TRUE, font_size = 9) %>% 
   
   footnote(number = c("MIX Database on www.themix.org and https://datacatalog.worldbank.org/dataset/mix-market", "WDI on https://databank.worldbank.org/source/world-development-indicators.", "WGI/ KKM on https://databank.worldbank.org/source/worldwide-governance-indicators.", "GFDD on https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database"), 
            
@@ -485,8 +485,11 @@ Figure 6.1, Figure 6.2, and Tables 3 and 4 show a breakdown of the extent to whi
 
 Panel A and B  of Figure 6.2 show the counts, while panel C and D show the proportions of MFIs and the extent they meet the twin objectives. Tables 3 and 4 show the respective proportions. We base the discussion on Figure 6.1 panel C and Table 6.4.  The results in Panel C show that cooperatives with the lowest proportion of MFIs succeeding financially and socially at 17.7%. Besides, they have the second lowest proportion (after rural banks with 43.5%) of failing socially and succeeding financially at 40.4%. By contrast, they have the lowest highest chance (after rural banks with 3.6%) of failing financially and succeeding socially at 14.2%. Notably, cooperatives have the highest chance of failing to meet both objectives at 27.6%. The results illustrate the nature of cooperatives as geographically limited entities whose sole focus is on members who can make savings to qualify for loans [@porter1987economic]. Not many  financially excluded individuals may join cooperatives due to limited incomes and information and their situation in remote geographical locations.
 
+\newpage
 
-```{r, fig.width = 3, fig.height=3, fig.align='center', fig.cap = "Financial and Social Performance of MFIs in Africa"}
+\blandscape
+
+```{r, fig.align='center', fig.cap = "Financial and Social Performance of MFIs in Africa"}
 my_data %>% 
   
   count(finsoc, name = "Total") %>% 
@@ -510,8 +513,9 @@ my_data %>%
   coord_flip()
 ```
 
+\elandscape
 
-
+\newpage
 
 ```{r}
 # gmodels::CrossTable 6.(my_data$finsoc, my_data$currentlegalstatus, prop.chisq = FALSE)
@@ -531,8 +535,6 @@ prop.table(table(my_data$finsoc, my_data$currentlegalstatus), margin = 1) %>%
   
   number_title = "Note")
 ```
-
-
 
 We turn to NBFIs. NBFIs have the third-highest proportion, after NGOs and commercial banks, of MFIs that meet the twin objectives at 36.9%. However, they have the second-highest chance, after NGOs of failing financially while succeeding socially. Similarly, after NGOs, NBFIs have the second-lowest chance of succeeding financially while failing socially at 27.2%. NBFIs also have the second highest chance after cooperatives of failing to meet the twin objectives at 13.5%. Also, NBFIs have the second-lowest proportion of MFIs that succeed financially while failing socially at 22.4%. In this respect, NBFIs show some degree of social orientation. NBFIs appear to strike a balance between the extremes of failing in both objectives versus succeeding in both objectives. 
 

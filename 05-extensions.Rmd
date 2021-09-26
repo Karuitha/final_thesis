@@ -966,13 +966,13 @@ my_data %>%
   
   skimr::skim_without_charts() %>%
   
-  select(-n_missing, -complete_rate, -skim_type) %>%
+  select(-n_missing, -complete_rate, -skim_type, -numeric.p0) %>%
   
   rename(Variable = skim_variable, 
          
          Mean = numeric.mean, 
          
-         SD = numeric.sd, Min = numeric.p0,
+         SD = numeric.sd,
          
          Q1 = numeric.p25, Median = numeric.p50, 
          
@@ -988,7 +988,7 @@ my_data %>%
              
              booktabs = TRUE) %>% 
   
-  kable_classic(full_width = FALSE, font_size = 10) %>% 
+  kable_classic(full_width = FALSE, font_size = 9) %>% 
   
   footnote(general = "Source: Authors construction from the data", general_title = "")
 ```

@@ -1160,7 +1160,7 @@ tribble(~ Variable, ~ Counts,
           "Current Legal Status", "Credit Unions: 1427, NBFI: 1315, NGO: 1250, Bank: 619",
           "Age", "Mature: 2558, New: 1200, Young: 1024") %>% 
   
-  kbl(., caption = "Summary Statistics for Categrical Independent Variables", 
+  kbl(., caption = "Summary Statistics for Categorical Independent Variables", 
       
       booktabs = TRUE) %>% 
   
