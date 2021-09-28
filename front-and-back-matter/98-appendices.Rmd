@@ -67,5 +67,3 @@ zoo[@zoo].
 :::
 ::::::::::::::
 
-
-# The Second Appendix, for Fun
