@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  6 AUG 2021 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  28 SEP 2021 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1500,15 +1500,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '02-rmd-basics-markdown.bbl' found.
-(./02-rmd-basics-markdown.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                caseau2020impact
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(./02-rmd-basics-markdown.bbl)
 Package biblatex Info: Reference section=0 on input line 157.
 Package biblatex Info: Reference segment=0 on input line 157.
 Chapter 1.
@@ -1585,7 +1577,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 236.
 [6] [7] [8] [9] [10]
-<02-rmd-basics-markdown_files/figure-latex/unnamed-chunk-5-1.pdf, id=281, 469.7
+<02-rmd-basics-markdown_files/figure-latex/unnamed-chunk-5-1.pdf, id=283, 469.7
 55pt x 325.215pt>
 File: 02-rmd-basics-markdown_files/figure-latex/unnamed-chunk-5-1.pdf Graphic f
 ile (type pdf)
@@ -1627,10 +1619,10 @@ Package logreq Info: Writing requests to '02-rmd-basics-markdown.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26690 strings out of 481745
- 451613 string characters out of 5930830
- 1209832 words of memory out of 5000000
- 40804 multiletter control sequences out of 15000+600000
+ 26692 strings out of 481745
+ 451724 string characters out of 5930830
+ 1209869 words of memory out of 5000000
+ 40805 multiletter control sequences out of 15000+600000
  632716 words of font info for 178 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
  49i,15n,48p,2147b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1646,10 +1638,10 @@ s/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia
 /putb8a.pfb>
-Output written on 02-rmd-basics-markdown.pdf (26 pages, 439228 bytes).
+Output written on 02-rmd-basics-markdown.pdf (26 pages, 439277 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 437 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 492 PDF objects out of 1000 (max. 8388607)
+ 441 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 500000)
  29790 words of extra memory for PDF output out of 29859 (max. 10000000)
 

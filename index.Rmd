@@ -42,7 +42,7 @@ word-count: 10052
 # alternative-title-page: front-and-back-matter/alt-title-page-example.tex
 
 ## correction highlighting ##
-corrections: false
+corrections: true
 
 ## binding / margins ##
 page-layout: nobind #'nobind' for equal margins (PDF output), 'twoside' for two-sided binding (mirror margins and blank pages), leave blank for one-sided binding (left margin > right margin)
